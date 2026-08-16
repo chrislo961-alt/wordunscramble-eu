@@ -6,7 +6,10 @@ function counts(s){const m={};for(const c of s)m[c]=(m[c]||0)+1;return m}
 function canBuild(word,letters){const wild=(letters.match(/\?/g)||[]).length,pool=counts(letters.replace(/\?/g,''));let missing=0;for(const [c,n] of Object.entries(counts(word)))missing+=Math.max(0,n-(pool[c]||0));return missing<=wild}
 async function loadLength(n){if(CACHE[n])return CACHE[n];const r=await fetch(`/data/w${n}.txt`);if(!r.ok)throw new Error('Word data could not load.');const t=await r.text();return CACHE[n]=t.trim().split(/\s+/).filter(Boolean)}
 async function run(){
- const letters=$('letters').value.toLowerCase().replace(/[^a-z?]/g,'').slice(0,15);if(letters.length<2){$('results').innerHTML='<p class="muted">Enter at least 2 letters.</p>';return}
+ const raw=$('letters').value.toLowerCase().replace(/[^a-z?]/g,'');
+ if(raw.length<2){$('results').innerHTML='<p class="muted">Enter at least 2 letters.</p>';return}
+ if(raw.length>15){$('count').textContent='Maximum 15 letters';$('results').innerHTML='<p class="muted">This word index supports searches up to 15 letters. Shorten the input to 15 letters or fewer.</p>';return}
+ const letters=raw;
  $('go').disabled=true;$('go').textContent='SEARCHING…';
  try{
   const exact=+$('length').value||0,max=Math.min(letters.length,15),lengths=exact?[exact]:Array.from({length:max-1},(_,i)=>i+2);
