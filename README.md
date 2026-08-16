@@ -55,3 +55,7 @@ This package can verify ownership and improve review readiness, but AdSense appr
 
 ## SEO Batch 1
 Added 78 useful 5-letter pattern landing pages (starting, ending, containing A-Z), internal navigation, and an updated sitemap. AdSense verification remains intact.
+
+
+## SEO Batch 2
+Added focused anagram/unscrambler landing pages based on early Search Console query signals, plus internal links and sitemap entries.
