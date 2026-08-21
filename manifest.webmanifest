@@ -1,0 +1,18 @@
+{
+  "name": "WordUnscramble.eu",
+  "short_name": "Unscramble",
+  "description": "Fast English word unscrambler, word finder and anagram solver.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
