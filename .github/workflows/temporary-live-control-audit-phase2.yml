@@ -1,0 +1,260 @@
+name: Temporary WordUnscramble.eu live control audit phase 2
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit-phase-2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install browser audit tools
+        run: npm install --no-save lighthouse@12.8.2 playwright-core@1.55.0
+
+      - name: Function-test the word tools
+        continue-on-error: true
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import { chromium } from 'playwright-core';
+
+          const browser = await chromium.launch({
+            executablePath: '/usr/bin/google-chrome',
+            headless: true,
+            args: ['--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage'],
+          });
+          const context = await browser.newContext({
+            viewport: { width: 1365, height: 900 },
+            userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/151 Safari/537.36',
+          });
+          const page = await context.newPage();
+          const findings = [];
+          const consoleMessages = [];
+          const failedRequests = [];
+          page.on('console', (message) => {
+            if (message.type() === 'error' || message.type() === 'warning') {
+              consoleMessages.push(`${message.type()}: ${message.text()}`);
+            }
+          });
+          page.on('pageerror', (error) => consoleMessages.push(`pageerror: ${error.message}`));
+          page.on('requestfailed', (request) => {
+            failedRequests.push(`${request.failure()?.errorText || 'failed'} ${request.url()}`);
+          });
+
+          const response = await page.goto('https://wordunscramble.eu/', {
+            waitUntil: 'domcontentloaded',
+            timeout: 60000,
+          });
+          if (response?.status() !== 200) findings.push(`Homepage returned ${response?.status()}`);
+
+          await page.fill('#letters', 'stare');
+          await page.click('#go');
+          await page.waitForFunction(() => /word(s)? found/i.test(document.querySelector('#count')?.textContent || ''), null, { timeout: 30000 });
+          const firstSearch = await page.evaluate(() => ({
+            count: document.querySelector('#count')?.textContent || '',
+            words: [...document.querySelectorAll('.word')]
+              .map((node) => node.getAttribute('data-word') || '')
+              .filter(Boolean),
+            url: location.href,
+          }));
+          console.log('stare search:', JSON.stringify({ count: firstSearch.count, sample: firstSearch.words.slice(0, 30), url: firstSearch.url }));
+          if (!firstSearch.words.includes('stare')) findings.push('Search for stare did not include stare');
+          if (!firstSearch.url.includes('letters=stare')) findings.push('Search did not update the URL with letters=stare');
+
+          await page.locator('details.advanced').evaluate((element) => {
+            element.open = true;
+          });
+          await page.fill('#starts', 's');
+          await page.selectOption('#length', '5');
+          await page.waitForFunction(() => {
+            const button = document.querySelector('#go');
+            return button instanceof HTMLButtonElement && !button.disabled;
+          }, null, { timeout: 30000 });
+          await page.waitForTimeout(500);
+          const filtered = await page.evaluate(() => ({
+            count: document.querySelector('#count')?.textContent || '',
+            words: [...document.querySelectorAll('.word')]
+              .map((node) => node.getAttribute('data-word') || '')
+              .filter(Boolean),
+          }));
+          console.log('filtered search:', JSON.stringify({ count: filtered.count, words: filtered.words }));
+          if (filtered.words.length === 0) findings.push('Starts-with and length filters produced no results');
+          if (filtered.words.some((word) => word.length !== 5 || !word.startsWith('s'))) {
+            findings.push('Starts-with and exact-length filters returned a word outside the requested pattern');
+          }
+
+          await page.fill('#letters', 'sta?e');
+          await page.fill('#starts', '');
+          await page.selectOption('#length', '5');
+          await page.click('#go');
+          await page.waitForFunction(() => {
+            const button = document.querySelector('#go');
+            return button instanceof HTMLButtonElement && !button.disabled;
+          }, null, { timeout: 30000 });
+          const wildcard = await page.evaluate(() => ({
+            count: document.querySelector('#count')?.textContent || '',
+            words: [...document.querySelectorAll('.word')]
+              .map((node) => node.getAttribute('data-word') || '')
+              .filter(Boolean),
+          }));
+          console.log('wildcard search:', JSON.stringify({ count: wildcard.count, sample: wildcard.words.slice(0, 40) }));
+          if (wildcard.words.length === 0) findings.push('Wildcard search produced no results');
+
+          await page.goto('https://wordunscramble.eu/?letters=listen', {
+            waitUntil: 'domcontentloaded',
+            timeout: 60000,
+          });
+          await page.waitForFunction(() => /word(s)? found/i.test(document.querySelector('#count')?.textContent || ''), null, { timeout: 30000 });
+          const querySearch = await page.evaluate(() => ({
+            input: document.querySelector('#letters') instanceof HTMLInputElement ? document.querySelector('#letters').value : '',
+            words: [...document.querySelectorAll('.word')]
+              .map((node) => node.getAttribute('data-word') || '')
+              .filter(Boolean),
+          }));
+          console.log('query search:', JSON.stringify({ input: querySearch.input, sample: querySearch.words.slice(0, 30) }));
+          if (querySearch.input !== 'listen') findings.push('letters query parameter did not populate the input');
+          if (!querySearch.words.includes('listen') || !querySearch.words.includes('silent')) {
+            findings.push('listen query did not include expected anagrams listen and silent');
+          }
+
+          const firstPartyFailures = failedRequests.filter((entry) => /https:\/\/(?:www\.)?wordunscramble\.eu/i.test(entry));
+          console.log(`Console warnings/errors: ${consoleMessages.length}`);
+          console.log(`Failed requests: ${failedRequests.length}; first-party failed: ${firstPartyFailures.length}`);
+          if (consoleMessages.length) console.log(consoleMessages.slice(0, 40).join('\n'));
+          if (failedRequests.length) console.log(failedRequests.slice(0, 40).join('\n'));
+          if (firstPartyFailures.length) findings.push(`Word tools produced ${firstPartyFailures.length} failed first-party requests`);
+
+          fs.writeFileSync('/tmp/wordunscramble-functional-audit.json', JSON.stringify({ findings, firstSearch, filtered, wildcard, querySearch, consoleMessages, failedRequests }, null, 2));
+          await context.close();
+          await browser.close();
+
+          if (findings.length) {
+            for (const finding of findings) console.error(`FAIL: ${finding}`);
+            process.exit(1);
+          }
+          console.log('Word tool functional verification completed with no first-party failures.');
+          NODE
+
+      - name: Verify AdSense visibility for normal and Mediapartners browsers
+        if: always()
+        run: |
+          for agent in normal mediapartners; do
+            if [ "$agent" = "mediapartners" ]; then
+              USER_AGENT='Mediapartners-Google'
+            else
+              USER_AGENT='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/151 Safari/537.36'
+            fi
+
+            google-chrome \
+              --headless=new \
+              --no-sandbox \
+              --disable-gpu \
+              --disable-dev-shm-usage \
+              --disable-blink-features=AutomationControlled \
+              --user-agent="$USER_AGENT" \
+              --virtual-time-budget=8000 \
+              --dump-dom \
+              https://wordunscramble.eu/ \
+              > "/tmp/$agent-wordunscramble.html" 2> "/tmp/$agent-wordunscramble.stderr" || true
+          done
+
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const result = {};
+          for (const name of ['normal', 'mediapartners']) {
+            const html = fs.readFileSync(`/tmp/${name}-wordunscramble.html`, 'utf8');
+            const stderr = fs.readFileSync(`/tmp/${name}-wordunscramble.stderr`, 'utf8');
+            const adsense = /<script[^>]+src=["'][^"']*pagead2\.googlesyndication\.com/i.test(html);
+            const accountMeta = /google-adsense-account[^>]+ca-pub-9212084765206199/i.test(html);
+            result[name] = { adsense, accountMeta, htmlLength: html.length, stderr: stderr.slice(0, 5000) };
+            console.log(`${name}: adsense=${adsense} accountMeta=${accountMeta} html=${html.length}`);
+          }
+          fs.writeFileSync('/tmp/wordunscramble-adsense-audit-phase2.json', JSON.stringify(result, null, 2));
+          if (!result.normal.adsense || !result.normal.accountMeta || !result.mediapartners.adsense || !result.mediapartners.accountMeta) {
+            throw new Error('AdSense integration was not visible to both normal Chrome and Mediapartners-Google');
+          }
+          NODE
+
+      - name: Run Lighthouse on homepage and word-list page
+        if: always()
+        run: |
+          for target in home wordlist; do
+            if [ "$target" = "home" ]; then
+              URL='https://wordunscramble.eu/'
+            else
+              URL='https://wordunscramble.eu/5-letter-words/'
+            fi
+            npx lighthouse "$URL" \
+              --output=json \
+              --output-path="/tmp/wordunscramble-lighthouse-$target.json" \
+              --only-categories=performance,accessibility,best-practices,seo \
+              --chrome-flags="--headless --no-sandbox --disable-gpu --disable-dev-shm-usage" \
+              --quiet || true
+          done
+
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          for (const target of ['home', 'wordlist']) {
+            const file = `/tmp/wordunscramble-lighthouse-${target}.json`;
+            if (!fs.existsSync(file)) {
+              console.log(`${target}: Lighthouse report missing`);
+              continue;
+            }
+            const report = JSON.parse(fs.readFileSync(file, 'utf8'));
+            const score = (name) => Math.round((report.categories[name]?.score || 0) * 100);
+            console.log(`=== LIGHTHOUSE ${target.toUpperCase()} ===`);
+            console.log(`URL: ${report.finalDisplayedUrl || report.finalUrl}`);
+            console.log(`Performance: ${score('performance')}`);
+            console.log(`Accessibility: ${score('accessibility')}`);
+            console.log(`Best practices: ${score('best-practices')}`);
+            console.log(`SEO: ${score('seo')}`);
+            for (const id of [
+              'first-contentful-paint',
+              'largest-contentful-paint',
+              'speed-index',
+              'total-blocking-time',
+              'cumulative-layout-shift',
+              'render-blocking-resources',
+              'errors-in-console',
+              'robots-txt',
+              'is-crawlable',
+              'tap-targets',
+              'color-contrast',
+              'unused-css-rules',
+              'unused-javascript',
+              'third-party-cookies',
+            ]) {
+              const audit = report.audits[id];
+              if (!audit) continue;
+              console.log(`${id}: score=${audit.score} value=${audit.displayValue || audit.numericValue || ''}`);
+              for (const item of (audit.details?.items || []).slice(0, 12)) console.log(JSON.stringify(item));
+            }
+          }
+          NODE
+
+      - name: Upload phase 2 audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wordunscramble-live-control-audit-phase2
+          path: |
+            /tmp/wordunscramble-functional-audit.json
+            /tmp/wordunscramble-adsense-audit-phase2.json
+            /tmp/wordunscramble-lighthouse-home.json
+            /tmp/wordunscramble-lighthouse-wordlist.json
+          if-no-files-found: warn
+          retention-days: 7
