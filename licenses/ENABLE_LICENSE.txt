@@ -1,0 +1,3 @@
+The ENABLE game-word mode uses the Enhanced North American Benchmark Lexicon (ENABLE).
+Source copy: https://github.com/dolph/dictionary/blob/master/enable1.txt
+ENABLE is distributed as public domain word data. It is a useful open game list, but it is not an official Scrabble, Collins or Words With Friends tournament dictionary.

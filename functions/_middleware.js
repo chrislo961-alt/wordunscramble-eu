@@ -38,7 +38,10 @@ export async function onRequest(context) {
   if (!/property=["']og:title["']/i.test(html)) shared.push(`<meta property="og:title" content="${escapeHtml(title)}">`);
   if (!/property=["']og:description["']/i.test(html)) shared.push(`<meta property="og:description" content="${escapeHtml(description)}">`);
   if (!/property=["']og:url["']/i.test(html)) shared.push(`<meta property="og:url" content="${escapeHtml(canonical)}">`);
-  if (!/name=["']twitter:card["']/i.test(html)) shared.push('<meta name="twitter:card" content="summary">');
+  if (!/property=["']og:image["']/i.test(html)) shared.push('<meta property="og:image" content="https://wordunscramble.eu/social-card.svg">');
+  if (!/property=["']og:image:alt["']/i.test(html)) shared.push('<meta property="og:image:alt" content="WordUnscramble.eu — letters in, words out">');
+  if (!/name=["']twitter:card["']/i.test(html)) shared.push('<meta name="twitter:card" content="summary_large_image">');
+  if (!/name=["']twitter:image["']/i.test(html)) shared.push('<meta name="twitter:image" content="https://wordunscramble.eu/social-card.svg">');
   if (!/application\/ld\+json/i.test(html)) {
     shared.push(`<script type="application/ld+json">${JSON.stringify({
       '@context': 'https://schema.org',
@@ -55,12 +58,6 @@ export async function onRequest(context) {
   }
 
   if (shared.length) html = html.replace(/<\/head>/i, `${shared.join('')}\n</head>`);
-
-  const ua = context.request.headers.get('user-agent') || '';
-  const automatedAudit = /HeadlessChrome|Chrome-Lighthouse|PageSpeed|GTmetrix|Pingdom/i.test(ua) && !/Mediapartners-Google/i.test(ua);
-  if (automatedAudit) {
-    html = html.replace(/<script\s+async\s+src=["']https:\/\/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^>]*><\/script>/gi, '');
-  }
 
   const headers = new Headers(response.headers);
   headers.set('content-type', 'text/html; charset=UTF-8');
