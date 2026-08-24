@@ -19,7 +19,8 @@ export async function onRequest(context) {
   if (!contentType.includes('text/html')) return response;
 
   let html = await response.text();
-  html = html.replace(/href=["']\/assets\/style(?:-[^"']+)?\.css["']/gi, 'href="/assets/style-20260824-blue.css"');
+  html = html.replace(/href=["']\/assets\/style(?:-[^"']+)?\.css["']/gi, 'href="/assets/style-20260824-blue-logo.css"');
+  html = html.replace(/<a class=["']brand["'] href=["']\/["']>WordUnscramble\.eu<\/a>/gi, '<a class="brand" href="/" aria-label="WordUnscramble.eu home"><img class="brand-logo" src="/assets/wordunscramble-logo.png" alt="WordUnscramble.eu"></a>');
 
   const title = html.match(/<title>([^<]*)<\/title>/i)?.[1]?.trim() || 'WordUnscramble.eu';
   let description = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["'][^>]*>/i)?.[1]?.trim() || '';
