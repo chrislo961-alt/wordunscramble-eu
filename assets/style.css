@@ -629,3 +629,124 @@ footer p {
     transition: none;
   }
 }
+
+/* Blue product system — based on the preferred homepage direction. */
+:root {
+  --ink: #152235;
+  --muted: #657487;
+  --line: #d9e1ea;
+  --page: #f5f7fa;
+  --card: #fff;
+  --green: #315f9f;
+  --green-dark: #244b80;
+  --green-soft: #edf3fb;
+  --lime: #dce9f8;
+  --shadow: 0 18px 54px rgba(42, 67, 104, 0.08);
+}
+body {
+  background: var(--page);
+}
+header {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: var(--line);
+}
+.brand:before {
+  background: #315f9f;
+  color: #fff;
+}
+.nav nav a {
+  color: #40516a;
+}
+.nav nav a:hover {
+  background: #f1f5f9;
+  color: #315f9f;
+}
+.tool,
+.content {
+  border-color: #d7e0eb;
+}
+.tool {
+  border-top-width: 1px;
+}
+.tool:after {
+  display: none;
+}
+.eyebrow {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #315f9f;
+  letter-spacing: 0.1em;
+}
+.eyebrow:before {
+  display: none;
+}
+.search-shell {
+  margin-top: 24px;
+  padding: 14px;
+  border: 1px solid #d4deeb;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fafcff 0%, #eef4fb 100%);
+}
+.search-shell .search {
+  margin-top: 0;
+}
+.search {
+  border-color: #adbacb;
+  box-shadow: none;
+}
+.search:focus-within {
+  border-color: #315f9f;
+  box-shadow: 0 0 0 3px #c4d5eb;
+}
+.letters:focus,
+.dictionary:focus,
+.filters input:focus,
+.filters select:focus,
+.sort:focus,
+.solver-grid input:focus,
+.solver-grid select:focus {
+  outline-color: #c4d5eb;
+  border-color: #315f9f;
+}
+.trustline span:before {
+  color: #315f9f;
+}
+.search-shell .trustline span {
+  min-height: 30px;
+  padding: 5px 9px;
+  border: 1px solid #d8e1ec;
+  border-radius: 999px;
+  background: #fff;
+}
+.word-card {
+  background: #edf3fb;
+  border-color: #d5e1f0;
+}
+.word:hover {
+  background: #e2ebf7;
+}
+.define {
+  border-color: #d5e1f0;
+}
+.feature,
+.links a {
+  background: #fafcff;
+}
+.feature:hover,
+.links a:hover {
+  border-color: #b9cde5;
+  background: #f3f7fc;
+}
+.steps div:before {
+  background: #315f9f;
+  color: #fff;
+}
+footer {
+  background: #152235;
+}
+@media (max-width: 760px) {
+  .search-shell {
+    padding: 10px;
+  }
+}
