@@ -79,34 +79,36 @@
           Enter up to 15 letters to find every word you can make. Use
           <b>?</b> for a blank tile, then filter by length, pattern or points.
         </p>
-        <div class="search">
-          <input
-            id="letters"
-            class="letters"
-            maxlength="15"
-            autocomplete="off"
-            aria-label="Letters to unscramble"
-            placeholder="enter letters, e.g. stare"
-          /><button id="go">FIND WORDS</button>
-        </div>
-        <div class="trustline">
-          <span>194,000+ English words</span>
-          <span>Scrabble point values</span>
-          <span>Searches stay in your browser</span>
-        </div>
-        <div class="quick-actions">
-          <button id="shuffle" class="secondary" type="button">
-            Shuffle letters</button
-          ><button id="clear" class="secondary" type="button">Clear</button
-          ><button id="share-search" class="secondary" type="button">
-            Share search
-          </button>
-        </div>
-        <div class="examples">
-          <span class="muted">Try:</span
-          ><button class="example" data-example="stare">STARE</button
-          ><button class="example" data-example="listen">LISTEN</button
-          ><button class="example" data-example="qu?tz">QU?TZ</button>
+        <div class="search-shell">
+          <div class="search">
+            <input
+              id="letters"
+              class="letters"
+              maxlength="15"
+              autocomplete="off"
+              aria-label="Letters to unscramble"
+              placeholder="enter letters, e.g. stare"
+            /><button id="go">FIND WORDS</button>
+          </div>
+          <div class="quick-actions">
+            <button id="shuffle" class="secondary" type="button">
+              Shuffle letters</button
+            ><button id="clear" class="secondary" type="button">Clear</button
+            ><button id="share-search" class="secondary" type="button">
+              Share search
+            </button>
+          </div>
+          <div class="examples">
+            <span class="muted">Try:</span
+            ><button class="example" data-example="stare">STARE</button
+            ><button class="example" data-example="listen">LISTEN</button
+            ><button class="example" data-example="qu?tz">QU?TZ</button>
+          </div>
+          <div class="trustline">
+            <span>194,000+ English words</span>
+            <span>Scrabble point values</span>
+            <span>Searches stay in your browser</span>
+          </div>
         </div>
         <div class="dictionary-row">
           <label for="dictionary">Word list</label
