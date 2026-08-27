@@ -87,7 +87,7 @@ header {
 .brand-logo {
   display: block;
   width: auto;
-  height: 38px;
+  height: 48px;
   max-width: min(260px, 70vw);
   object-fit: contain;
 }
@@ -110,7 +110,7 @@ header {
   color: var(--blue-dark);
 }
 main {
-  padding: 22px 0 34px;
+  padding: 16px 0 34px;
 }
 .tool,
 .content {
@@ -126,6 +126,7 @@ main {
   position: relative;
   overflow: hidden;
   border-top: 5px solid var(--blue);
+  padding: clamp(24px, 3.2vw, 34px);
 }
 .tool:after {
   content: "";
@@ -165,11 +166,11 @@ main {
   background: var(--blue);
 }
 .tool h1 {
-  max-width: 780px;
-  font-size: clamp(2.55rem, 7vw, 5rem);
-  margin: 0 0 12px;
-  line-height: 0.96;
-  letter-spacing: -0.065em;
+  max-width: 700px;
+  font-size: clamp(2.45rem, 5.2vw, 4rem);
+  margin: 0 0 9px;
+  line-height: 1;
+  letter-spacing: -0.055em;
 }
 .lead {
   max-width: 700px;
@@ -258,7 +259,7 @@ button:disabled {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  margin-top: 11px;
+  margin-top: 9px;
 }
 .secondary,
 .example {
@@ -278,7 +279,7 @@ button:disabled {
   grid-template-columns: auto minmax(190px, 280px);
   align-items: center;
   gap: 13px;
-  margin-top: 20px;
+  margin-top: 14px;
 }
 .dictionary-row label {
   font-weight: 800;
@@ -307,7 +308,7 @@ button:disabled {
   border-color: var(--blue);
 }
 .advanced {
-  margin-top: 18px;
+  margin-top: 12px;
   border-top: 1px solid var(--line);
   padding-top: 15px;
 }
@@ -328,10 +329,18 @@ button:disabled {
   justify-content: space-between;
   gap: 12px;
   align-items: center;
-  margin-top: 18px;
-  padding: 15px 0;
+  scroll-margin-top: 82px;
+  margin-top: 12px;
+  padding: 12px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+}
+.meta:focus {
+  outline: 0;
+}
+.result-count {
+  color: var(--ink);
+  font-weight: 850;
 }
 .sort {
   width: auto;
@@ -362,6 +371,7 @@ button:disabled {
   gap: 9px;
 }
 .word-card {
+  position: relative;
   background: #edf3fb;
   border: 1px solid #d5e1f0;
   border-radius: 11px;
@@ -372,7 +382,7 @@ button:disabled {
   background: transparent;
   color: var(--ink);
   border-radius: 0;
-  padding: 12px 9px 7px;
+  padding: 12px 9px 9px;
 }
 .word:hover {
   background: #e2ebf7;
@@ -392,13 +402,52 @@ button:disabled {
   background: #d7e5f5;
 }
 .define {
-  width: 100%;
-  padding: 5px;
+  width: auto;
+  margin: 0 7px 7px;
+  padding: 4px 7px;
   background: transparent;
-  border-top: 1px solid #d5e1f0;
-  border-radius: 0;
+  border: 1px solid #ccd9e9;
+  border-radius: 7px;
   color: var(--blue);
   font-size: 0.65rem;
+}
+.word-type {
+  position: absolute;
+  right: 7px;
+  bottom: 10px;
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-style: normal;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.top-results {
+  margin: 18px 0 8px;
+  padding: 18px;
+  border: 1px solid #cbd9ea;
+  border-radius: 15px;
+  background: linear-gradient(180deg, #f8fbff 0%, #edf3fb 100%);
+}
+.result-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.result-heading .eyebrow {
+  margin-bottom: 2px;
+}
+.result-heading h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+}
+.result-heading > span {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 750;
 }
 .define:hover {
   background: #fff;
@@ -580,8 +629,8 @@ footer p {
   display: none;
 }
 .search-shell {
-  margin-top: 24px;
-  padding: 14px;
+  margin-top: 18px;
+  padding: 12px;
   border: 1px solid #d4deeb;
   border-radius: 16px;
   background: linear-gradient(180deg, #fafcff 0%, #eef4fb 100%);
@@ -590,8 +639,8 @@ footer p {
   margin-top: 0;
 }
 .search-shell .trustline span {
-  min-height: 30px;
-  padding: 5px 9px;
+  min-height: 28px;
+  padding: 4px 8px;
   border: 1px solid #d8e1ec;
   border-radius: 999px;
   background: #fff;
@@ -609,6 +658,9 @@ footer p {
     align-items: flex-start;
     flex-direction: column;
     padding: 13px 0;
+  }
+  .brand-logo {
+    height: 44px;
   }
   .nav nav {
     width: 100%;
@@ -642,6 +694,9 @@ footer p {
     padding: 21px;
     border-radius: 17px;
   }
+  .tool h1 {
+    font-size: clamp(2.25rem, 12vw, 3.2rem);
+  }
   .alphabet-links {
     grid-template-columns: repeat(7, 1fr);
   }
@@ -651,6 +706,9 @@ footer p {
   .meta {
     align-items: flex-start;
     flex-direction: column;
+  }
+  .top-results {
+    padding: 14px;
   }
   .sort {
     width: 100%;
