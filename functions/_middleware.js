@@ -19,6 +19,15 @@ export async function onRequest(context) {
   if (!contentType.includes('text/html')) return response;
 
   let html = await response.text();
+
+  // Keep the real WordUnscramble logo consistent across legacy static pages.
+  // The homepage already ships the image logo, while older long-tail pages
+  // still contain a text-only brand link. Rewrite only that legacy variant.
+  html = html.replace(
+    /<a\s+class=["']brand["']\s+href=["']\/["']>\s*WordUnscramble\.eu\s*<\/a>/gi,
+    '<a class="brand" href="/" aria-label="WordUnscramble.eu home"><img class="brand-logo" src="/assets/wordunscramble-logo.png" alt="WordUnscramble.eu" width="260" height="48"></a>',
+  );
+
   const title = html.match(/<title>([^<]*)<\/title>/i)?.[1]?.trim() || 'WordUnscramble.eu';
   let description = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["'][^>]*>/i)?.[1]?.trim() || '';
   const canonical = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']*)["'][^>]*>/i)?.[1]?.trim() || url.toString();
