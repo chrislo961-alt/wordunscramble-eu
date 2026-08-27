@@ -105,7 +105,7 @@
             ><button class="example" data-example="qu?tz">QU?TZ</button>
           </div>
           <div class="trustline">
-            <span>194,000+ English words</span>
+            <span>Common words shown first</span>
             <span>Scrabble point values</span>
             <span>Searches stay in your browser</span>
           </div>
@@ -113,8 +113,8 @@
         <div class="dictionary-row">
           <label for="dictionary">Word list</label
           ><select id="dictionary" class="dictionary">
+            <option value="common">Common English · best for most searches</option>
             <option value="broad">Broad English · 194k words</option>
-            <option value="common">Common-use English · 19k words</option>
             <option value="enable">ENABLE open game words · 173k</option>
           </select>
         </div>
@@ -143,8 +143,8 @@
             </select>
           </div>
         </details>
-        <div class="meta">
-          <span id="count" class="muted">Enter letters to start</span
+        <div id="result-summary" class="meta" tabindex="-1">
+          <span id="count" class="result-count" role="status" aria-live="polite">Enter letters to start</span
           ><select id="sort" class="sort">
             <option value="length">Longest first</option>
             <option value="score">Highest points</option>
