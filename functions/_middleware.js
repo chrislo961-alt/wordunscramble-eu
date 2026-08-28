@@ -10,6 +10,11 @@ const primaryNav = '<nav><a href="/word-unscrambler/">Unscrambler</a><a href="/w
 
 const lowValueListPath = /^\/(?:\d+-letter-words(?:\/[a-z-]*)?|\d+-letter-words-(?:starting|ending|containing)[^/]*|words-(?:with|ending|starting)[^/]*)(?:\/|$)/i;
 
+// Keep clearly unfinished inventory and large near-duplicate list families out
+// of search results until those pages have enough hand-reviewed value.
+// They stay crawlable so search engines can see the noindex directive.
+const thinIndexPath = /^\/(?:[23678]-letter-words|5-letter-words-(?:starting-with|ending-with|containing)-[a-z]|words-with-(?:q|x|z))\/?$/i;
+
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   if (url.protocol !== 'https:' || url.hostname === 'www.wordunscramble.eu') {
@@ -29,15 +34,19 @@ export async function onRequest(context) {
     '<a class="brand" href="/" aria-label="WordUnscramble.eu home"><img class="brand-logo" src="/assets/wordunscramble-logo.png" alt="WordUnscramble.eu" width="260" height="48"></a>',
   );
 
-  // Keep navigation consistent so every page exposes the real tools and original guides.
   html = html.replace(/(<header[^>]*>[\s\S]*?<div\s+class=["']shell nav["'][^>]*>[\s\S]*?)<nav>[\s\S]*?<\/nav>/i, `$1${primaryNav}`);
 
-  // Programmatic reference lists are useful for browsing, but we deliberately do
-  // not monetize them. Ads are kept on substantial tools, guides and policy pages.
+  // Programmatic reference lists remain useful for browsing, but advertising is
+  // deliberately limited to substantial tools, guides and trust pages.
   if (lowValueListPath.test(url.pathname)) {
     html = html
       .replace(/\s*<meta\s+name=["']google-adsense-account["'][^>]*>/gi, '')
       .replace(/\s*<script[^>]*pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^>]*><\/script>/gi, '');
+  }
+
+  if (thinIndexPath.test(url.pathname)) {
+    html = html.replace(/\s*<meta\s+name=["']robots["'][^>]*>/gi, '');
+    html = html.replace(/<\/head>/i, '<meta name="robots" content="noindex,follow">\n</head>');
   }
 
   if (url.pathname === '/' && !html.includes('Featured solving guides')) {
@@ -45,7 +54,6 @@ export async function onRequest(context) {
     html = html.replace(/<\/main>/i, `${guideSection}</main>`);
   }
 
-  // Surface quality, corrections and transparency links site-wide.
   html = html.replace(
     /<div\s+class=["']footerlinks["'][^>]*>[\s\S]*?<\/div>/i,
     '<div class="footerlinks"><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/how-it-works/">How it works</a><a href="/editorial-policy/">Editorial policy</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div>',
