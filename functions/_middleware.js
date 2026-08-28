@@ -10,6 +10,11 @@ const primaryNav = '<nav><a href="/word-unscrambler/">Unscrambler</a><a href="/w
 
 const lowValueListPath = /^\/(?:\d+-letter-words(?:\/[a-z-]*)?|\d+-letter-words-(?:starting|ending|containing)[^/]*|words-(?:with|ending|starting)[^/]*)(?:\/|$)/i;
 
+// Keep clearly unfinished inventory and the large near-duplicate 5-letter matrix
+// out of search results until those pages have enough hand-reviewed value.
+// We leave them crawlable so search engines can see the noindex directive.
+const thinIndexPath = /^\/(?:[23678]-letter-words|5-letter-words-(?:starting-with|ending-with|containing)-[a-z])\/?$/i;
+
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   if (url.protocol !== 'https:' || url.hostname === 'www.wordunscramble.eu') {
@@ -38,6 +43,15 @@ export async function onRequest(context) {
     html = html
       .replace(/\s*<meta\s+name=["']google-adsense-account["'][^>]*>/gi, '')
       .replace(/\s*<script[^>]*pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^>]*><\/script>/gi, '');
+  }
+
+  // A small set of length pages are still placeholders, while the 5-letter
+  // starting/ending/containing matrix is highly repetitive. Keep these pages
+  // available to users following internal links but do not ask Google to index
+  // them until they are rebuilt with reviewed content.
+  if (thinIndexPath.test(url.pathname)) {
+    html = html.replace(/\s*<meta\s+name=["']robots["'][^>]*>/gi, '');
+    html = html.replace(/<\/head>/i, '<meta name="robots" content="noindex,follow">\n</head>');
   }
 
   if (url.pathname === '/' && !html.includes('Featured solving guides')) {
