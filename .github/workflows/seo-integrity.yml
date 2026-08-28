@@ -1,0 +1,27 @@
+name: SEO integrity
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths:
+      - '**/index.html'
+      - 'sitemap*.xml'
+      - 'robots.txt'
+      - 'functions/**'
+      - 'scripts/check-seo-integrity.cjs'
+      - '.github/workflows/seo-integrity.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check curated SEO integrity
+        run: node scripts/check-seo-integrity.cjs
