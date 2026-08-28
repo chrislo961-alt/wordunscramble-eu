@@ -6,6 +6,10 @@ function escapeHtml(value) {
     .replaceAll('>', '&gt;');
 }
 
+const primaryNav = '<nav><a href="/word-unscrambler/">Unscrambler</a><a href="/wordle-solver/">Wordle Solver</a><a href="/crossword-solver/">Crossword Solver</a><a href="/guides/">Guides</a></nav>';
+
+const lowValueListPath = /^\/(?:\d+-letter-words(?:\/[a-z-]*)?|\d+-letter-words-(?:starting|ending|containing)[^/]*|words-(?:with|ending|starting)[^/]*)(?:\/|$)/i;
+
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   if (url.protocol !== 'https:' || url.hostname === 'www.wordunscramble.eu') {
@@ -20,12 +24,31 @@ export async function onRequest(context) {
 
   let html = await response.text();
 
-  // Keep the real WordUnscramble logo consistent across legacy static pages.
-  // The homepage already ships the image logo, while older long-tail pages
-  // still contain a text-only brand link. Rewrite only that legacy variant.
   html = html.replace(
-    /<a\s+class=["']brand["']\s+href=["']\/["']>\s*WordUnscramble\.eu\s*<\/a>/gi,
+    /<a\s+class=["']brand["']\s+href=["']\/["'][^>]*>\s*WordUnscramble\.eu\s*<\/a>/gi,
     '<a class="brand" href="/" aria-label="WordUnscramble.eu home"><img class="brand-logo" src="/assets/wordunscramble-logo.png" alt="WordUnscramble.eu" width="260" height="48"></a>',
+  );
+
+  // Keep navigation consistent so every page exposes the real tools and original guides.
+  html = html.replace(/(<header[^>]*>[\s\S]*?<div\s+class=["']shell nav["'][^>]*>[\s\S]*?)<nav>[\s\S]*?<\/nav>/i, `$1${primaryNav}`);
+
+  // Programmatic reference lists are useful for browsing, but we deliberately do
+  // not monetize them. Ads are kept on substantial tools, guides and policy pages.
+  if (lowValueListPath.test(url.pathname)) {
+    html = html
+      .replace(/\s*<meta\s+name=["']google-adsense-account["'][^>]*>/gi, '')
+      .replace(/\s*<script[^>]*pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^>]*><\/script>/gi, '');
+  }
+
+  if (url.pathname === '/' && !html.includes('Featured solving guides')) {
+    const guideSection = `<section class="content"><p class="eyebrow">Original help</p><h2>Featured solving guides</h2><p class="content-intro">The solver gives you candidates; these guides explain how to narrow them intelligently and when each word-list mode is useful.</p><div class="links"><a href="/guides/how-to-unscramble-words/">How to Unscramble Words Efficiently</a><a href="/guides/anagram-strategies/">Anagram Strategies That Actually Help</a><a href="/guides/wordle-pattern-strategy/">A Better Wordle Pattern Strategy</a><a href="/guides/crossword-pattern-strategy/">Using Letter Patterns in Crosswords</a><a href="/guides/choosing-word-list/">Broad, Common or ENABLE?</a><a href="/editorial-policy/">Editorial & Content Quality Policy</a></div></section>`;
+    html = html.replace(/<\/main>/i, `${guideSection}</main>`);
+  }
+
+  // Surface quality, corrections and transparency links site-wide.
+  html = html.replace(
+    /<div\s+class=["']footerlinks["'][^>]*>[\s\S]*?<\/div>/i,
+    '<div class="footerlinks"><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/how-it-works/">How it works</a><a href="/editorial-policy/">Editorial policy</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div>',
   );
 
   const title = html.match(/<title>([^<]*)<\/title>/i)?.[1]?.trim() || 'WordUnscramble.eu';
@@ -41,7 +64,7 @@ export async function onRequest(context) {
   const shared = [];
   if (!/rel=["']icon["']/i.test(html)) shared.push('<link rel="icon" href="/favicon.svg" type="image/svg+xml">');
   if (!/manifest\.webmanifest/i.test(html)) shared.push('<link rel="manifest" href="/manifest.webmanifest">');
-  if (!/name=["']theme-color["']/i.test(html)) shared.push('<meta name="theme-color" content="#0f172a">');
+  if (!/name=["']theme-color["']/i.test(html)) shared.push('<meta name="theme-color" content="#315f9f">');
   if (!/property=["']og:type["']/i.test(html)) shared.push('<meta property="og:type" content="website">');
   if (!/property=["']og:site_name["']/i.test(html)) shared.push('<meta property="og:site_name" content="WordUnscramble.eu">');
   if (!/property=["']og:title["']/i.test(html)) shared.push(`<meta property="og:title" content="${escapeHtml(title)}">`);
