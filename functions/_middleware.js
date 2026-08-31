@@ -29,8 +29,10 @@ export async function onRequest(context) {
 
   let html = await response.text();
 
+  // Force one consistent brand treatment everywhere, including older pages
+  // that still contain the legacy text/WU header markup.
   html = html.replace(
-    /<a\s+class=["']brand["']\s+href=["']\/["'][^>]*>\s*WordUnscramble\.eu\s*<\/a>/gi,
+    /<a\s+class=["']brand["']\s+href=["']\/["'][^>]*>[\s\S]*?<\/a>/gi,
     '<a class="brand" href="/" aria-label="WordUnscramble.eu home"><img class="brand-logo" src="/assets/wordunscramble-logo.png" alt="WordUnscramble.eu" width="260" height="48"></a>',
   );
 
