@@ -80,6 +80,7 @@ export async function onRequest(context) {
 
   const shared = [];
   if (!/rel=["']icon["']/i.test(html)) shared.push('<link rel="icon" href="/favicon.svg" type="image/svg+xml">');
+  if (!/rel=["']apple-touch-icon["']/i.test(html)) shared.push('<link rel="apple-touch-icon" href="/apple-touch-icon.png">');
   if (!/manifest\.webmanifest/i.test(html)) shared.push('<link rel="manifest" href="/manifest.webmanifest">');
   if (!/name=["']theme-color["']/i.test(html)) shared.push('<meta name="theme-color" content="#315f9f">');
   if (!/property=["']og:type["']/i.test(html)) shared.push('<meta property="og:type" content="website">');

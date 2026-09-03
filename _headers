@@ -20,7 +20,13 @@
 /favicon.ico
   Cache-Control: public, max-age=604800
 
-/apple-touch-icon.svg
+/apple-touch-icon.png
+  Cache-Control: public, max-age=604800
+
+/icon-192.png
+  Cache-Control: public, max-age=604800
+
+/icon-512.png
   Cache-Control: public, max-age=604800
 
 /manifest.webmanifest
