@@ -64,6 +64,11 @@ for (const route of uniqueRoutes) {
   const robots = match(html, /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["']/i)
     || match(html, /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']robots["']/i)
     || '';
+  const ogTitle = match(html, /<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)["']/i);
+  const ogDescription = match(html, /<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']+)["']/i);
+  const ogUrl = match(html, /<meta[^>]+property=["']og:url["'][^>]+content=["']([^"']+)["']/i);
+  const ogImage = match(html, /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i);
+  const twitterCard = match(html, /<meta[^>]+name=["']twitter:card["'][^>]+content=["']([^"']+)["']/i);
 
   if (!title) failures.push(`Missing title: ${route}`);
   if (!description) failures.push(`Missing meta description: ${route}`);
@@ -72,6 +77,11 @@ for (const route of uniqueRoutes) {
   const expectedCanonical = origin + route;
   if (!canonical) failures.push(`Missing canonical: ${route}`);
   else if (canonical !== expectedCanonical) failures.push(`Non-self canonical: ${route} -> ${canonical}`);
+  if (!ogTitle) failures.push(`Missing Open Graph title: ${route}`);
+  if (!ogDescription) failures.push(`Missing Open Graph description: ${route}`);
+  if (ogUrl !== expectedCanonical) failures.push(`Incorrect Open Graph URL: ${route} -> ${ogUrl || 'missing'}`);
+  if (ogImage !== `${origin}/social-card.png`) failures.push(`Incorrect Open Graph image: ${route}`);
+  if (twitterCard !== 'summary_large_image') failures.push(`Missing large Twitter card: ${route}`);
 }
 
 const middleware = read('functions/_middleware.js');
