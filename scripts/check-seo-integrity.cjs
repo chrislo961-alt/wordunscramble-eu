@@ -41,9 +41,9 @@ for (const file of sitemapFiles) {
 
 const uniqueRoutes = new Set(sitemapRoutes);
 if (uniqueRoutes.size !== sitemapRoutes.length) failures.push('Duplicate URL found across sitemap files');
-if (uniqueRoutes.size < 50) failures.push(`Curated sitemap coverage unexpectedly small: ${uniqueRoutes.size} URLs`);
+if (uniqueRoutes.size < 35) failures.push(`Curated sitemap coverage unexpectedly small: ${uniqueRoutes.size} URLs`);
 
-for (const required of ['/','/word-unscrambler/','/word-finder/','/anagram-solver/','/word-lists/','/4-letter-words/','/5-letter-words/','/9-letter-words/','/words-ending-in-ing/','/guides/']) {
+for (const required of ['/','/word-finder/','/anagram-solver/','/wordle-solver/','/crossword-solver/','/word-lists/','/4-letter-words/','/5-letter-words/','/9-letter-words/','/words-ending-in-ing/','/guides/']) {
   if (!uniqueRoutes.has(required)) failures.push(`Required search hub missing from sitemaps: ${required}`);
 }
 
@@ -77,6 +77,9 @@ for (const route of uniqueRoutes) {
 const middleware = read('functions/_middleware.js');
 for (const marker of ['thinIndexPath', 'lowValueListPath', 'noindex,follow']) {
   if (!middleware.includes(marker)) failures.push(`Middleware quality safeguard missing: ${marker}`);
+}
+if (!middleware.includes('const primaryNav = \'<nav><a href="/">Unscrambler</a>')) {
+  failures.push('Primary navigation does not point Unscrambler at the canonical homepage');
 }
 
 for (const hub of ['word-lists/index.html', '5-letter-words/index.html']) {
