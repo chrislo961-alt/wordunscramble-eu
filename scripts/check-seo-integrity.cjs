@@ -25,6 +25,10 @@ function isRuntimeNoindex(route) {
   return /^\/(?:[23678]-letter-words|5-letter-words-(?:starting-with|ending-with|containing)-[a-z]|words-with-(?:q|x|z))\/?$/i.test(route);
 }
 
+function isLowValueList(route) {
+  return /^\/(?:\d+-letter-words(?:\/[a-z-]*)?|\d+-letter-words-(?:starting|ending|containing)[^/]*|words-(?:with|ending|starting)[^/]*)\/?$/i.test(route);
+}
+
 const sitemapRoutes = [];
 for (const file of sitemapFiles) {
   if (!fs.existsSync(path.join(root, file))) {
@@ -117,6 +121,9 @@ for (const file of fs.readdirSync(root, { recursive: true })) {
     || '';
   if (isRuntimeNoindex(route) && !/noindex,follow/i.test(robots)) {
     failures.push(`Thin page missing static noindex: ${route}`);
+  }
+  if (isLowValueList(route) && /(?:google-adsense-account|pagead2\.googlesyndication\.com)/i.test(html)) {
+    failures.push(`List page still loads advertising code: ${route}`);
   }
 }
 
