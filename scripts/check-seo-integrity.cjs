@@ -117,6 +117,24 @@ for (const sitemap of sitemapFiles) {
   if (!robots.includes(`Sitemap: ${origin}/${sitemap}`)) failures.push(`robots.txt missing ${sitemap} declaration`);
 }
 
+const manifest = JSON.parse(read('manifest.webmanifest'));
+if (manifest.theme_color !== '#315f9f') failures.push('Manifest theme color does not match the site theme');
+for (const icon of [
+  ['/apple-touch-icon.png', 'apple touch icon'],
+  ['/icon-192.png', '192px PWA icon'],
+  ['/icon-512.png', '512px PWA icon'],
+]) {
+  if (!fs.existsSync(path.join(root, icon[0].slice(1)))) failures.push(`Missing ${icon[1]}`);
+}
+for (const size of ['192x192', '512x512']) {
+  if (!manifest.icons?.some((icon) => icon.sizes === size && icon.type === 'image/png')) {
+    failures.push(`Manifest missing ${size} PNG icon`);
+  }
+}
+if (!middleware.includes('rel="apple-touch-icon" href="/apple-touch-icon.png"')) {
+  failures.push('Middleware does not add the Apple touch icon');
+}
+
 console.log(`SEO integrity: ${uniqueRoutes.size} curated sitemap URLs checked across ${sitemapFiles.length} sitemaps.`);
 if (failures.length) {
   console.error('\nFAILURES\n- ' + failures.join('\n- '));
