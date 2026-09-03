@@ -88,6 +88,9 @@ const middleware = read('functions/_middleware.js');
 for (const marker of ['thinIndexPath', 'lowValueListPath', 'noindex,follow']) {
   if (!middleware.includes(marker)) failures.push(`Middleware quality safeguard missing: ${marker}`);
 }
+if (!middleware.includes('word-unscrambler|free-word-unscrambler')) {
+  failures.push('Duplicate unscrambler routes are not redirected to the canonical homepage');
+}
 if (!middleware.includes('const primaryNav = \'<nav><a href="/">Unscrambler</a>')) {
   failures.push('Primary navigation does not point Unscrambler at the canonical homepage');
 }
@@ -98,6 +101,14 @@ for (const hub of ['word-lists/index.html', '5-letter-words/index.html']) {
     let route;
     try { route = new URL(found[1], origin + '/').pathname; } catch { continue; }
     if (isRuntimeNoindex(route)) failures.push(`${hub} links directly to runtime-noindex inventory: ${route}`);
+  }
+}
+
+for (const file of fs.readdirSync(root, { recursive: true })) {
+  if (!file.endsWith('index.html')) continue;
+  const html = read(file);
+  if (/href=["']\/word-unscrambler\/["']/i.test(html)) {
+    failures.push(`Legacy unscrambler link found: ${file}`);
   }
 }
 
