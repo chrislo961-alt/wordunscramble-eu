@@ -88,8 +88,9 @@ const middleware = read('functions/_middleware.js');
 for (const marker of ['thinIndexPath', 'lowValueListPath', 'noindex,follow']) {
   if (!middleware.includes(marker)) failures.push(`Middleware quality safeguard missing: ${marker}`);
 }
-if (!middleware.includes('word-unscrambler|free-word-unscrambler')) {
-  failures.push('Duplicate unscrambler routes are not redirected to the canonical homepage');
+const redirects = read('_redirects');
+for (const route of ['/word-unscrambler', '/word-unscrambler/', '/free-word-unscrambler', '/free-word-unscrambler/']) {
+  if (!redirects.includes(`${route} / 301`)) failures.push(`Missing canonical redirect: ${route}`);
 }
 if (!middleware.includes('const primaryNav = \'<nav><a href="/">Unscrambler</a>')) {
   failures.push('Primary navigation does not point Unscrambler at the canonical homepage');
@@ -109,6 +110,13 @@ for (const file of fs.readdirSync(root, { recursive: true })) {
   const html = read(file);
   if (/href=["']\/word-unscrambler\/["']/i.test(html)) {
     failures.push(`Legacy unscrambler link found: ${file}`);
+  }
+  const route = file === 'index.html' ? '/' : `/${file.replace(/\/index\.html$/, '')}/`;
+  const robots = match(html, /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["']/i)
+    || match(html, /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']robots["']/i)
+    || '';
+  if (isRuntimeNoindex(route) && !/noindex,follow/i.test(robots)) {
+    failures.push(`Thin page missing static noindex: ${route}`);
   }
 }
 
