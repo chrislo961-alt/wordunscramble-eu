@@ -6,7 +6,7 @@ function escapeHtml(value) {
     .replaceAll('>', '&gt;');
 }
 
-const primaryNav = '<nav><a href="/word-unscrambler/">Unscrambler</a><a href="/wordle-solver/">Wordle Solver</a><a href="/crossword-solver/">Crossword Solver</a><a href="/guides/">Guides</a></nav>';
+const primaryNav = '<nav><a href="/">Unscrambler</a><a href="/wordle-solver/">Wordle Solver</a><a href="/crossword-solver/">Crossword Solver</a><a href="/guides/">Guides</a></nav>';
 
 const lowValueListPath = /^\/(?:\d+-letter-words(?:\/[a-z-]*)?|\d+-letter-words-(?:starting|ending|containing)[^/]*|words-(?:with|ending|starting)[^/]*)(?:\/|$)/i;
 
