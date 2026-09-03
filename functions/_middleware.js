@@ -23,6 +23,13 @@ export async function onRequest(context) {
     return Response.redirect(url.toString(), 301);
   }
 
+  // Retire duplicate keyword variants now that the homepage is the canonical
+  // word-unscrambler experience. Preserve query parameters such as shared racks.
+  if (/^\/(?:word-unscrambler|free-word-unscrambler)\/?$/i.test(url.pathname)) {
+    url.pathname = '/';
+    return Response.redirect(url.toString(), 301);
+  }
+
   const response = await context.next();
   const contentType = response.headers.get('content-type') || '';
   if (!contentType.includes('text/html')) return response;
@@ -80,10 +87,10 @@ export async function onRequest(context) {
   if (!/property=["']og:title["']/i.test(html)) shared.push(`<meta property="og:title" content="${escapeHtml(title)}">`);
   if (!/property=["']og:description["']/i.test(html)) shared.push(`<meta property="og:description" content="${escapeHtml(description)}">`);
   if (!/property=["']og:url["']/i.test(html)) shared.push(`<meta property="og:url" content="${escapeHtml(canonical)}">`);
-  if (!/property=["']og:image["']/i.test(html)) shared.push('<meta property="og:image" content="https://wordunscramble.eu/social-card.svg">');
+  if (!/property=["']og:image["']/i.test(html)) shared.push('<meta property="og:image" content="https://wordunscramble.eu/social-card.png">');
   if (!/property=["']og:image:alt["']/i.test(html)) shared.push('<meta property="og:image:alt" content="WordUnscramble.eu — letters in, words out">');
   if (!/name=["']twitter:card["']/i.test(html)) shared.push('<meta name="twitter:card" content="summary_large_image">');
-  if (!/name=["']twitter:image["']/i.test(html)) shared.push('<meta name="twitter:image" content="https://wordunscramble.eu/social-card.svg">');
+  if (!/name=["']twitter:image["']/i.test(html)) shared.push('<meta name="twitter:image" content="https://wordunscramble.eu/social-card.png">');
   if (!/application\/ld\+json/i.test(html)) {
     shared.push(`<script type="application/ld+json">${JSON.stringify({
       '@context': 'https://schema.org',
