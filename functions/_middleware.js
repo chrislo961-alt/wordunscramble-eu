@@ -14,7 +14,7 @@ const lowValueListPath = /^\/(?:\d+-letter-words(?:\/[a-z-]*)?|\d+-letter-words-
 // of search results until those pages have enough hand-reviewed value.
 // They stay crawlable so search engines can see the noindex directive.
 const thinIndexPath = /^\/(?:[23678]-letter-words|5-letter-words-(?:starting-with|ending-with|containing)-[a-z]|words-with-(?:q|x|z))\/?$/i;
-const promotedFiveLetterPath = /^\/5-letter-words-(?:starting-with-(?:a|c|s)|ending-with-(?:e|r|y)|containing-(?:a|e))\/?$/i;
+const promotedFiveLetterPath = /^\/5-letter-words-(?:starting-with-(?:a|b|c|p|s|t)|ending-with-(?:d|e|n|r|t|y)|containing-(?:a|e|i|o))\/?$/i;
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
