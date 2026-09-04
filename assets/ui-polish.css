@@ -1,0 +1,138 @@
+/* Shared visual polish for tools, curated pages and programmatic SEO pages. */
+
+.content > h1 {
+  max-width: 26ch;
+  margin: 0 0 0.38em;
+  font-size: clamp(2rem, 4vw, 3.05rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.content > p,
+.content > .content-intro {
+  max-width: 75ch;
+}
+
+.content .breadcrumb {
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.content .statline {
+  margin: 14px 0 4px;
+}
+
+/* Generated word lists use .word directly rather than the interactive .word-card wrapper. */
+.content .wordgrid > .word {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 8px;
+  border: 1px solid #dbe4ef;
+  border-radius: 10px;
+  background: #f7faff;
+  font-weight: 850;
+  line-height: 1.15;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.content .wordgrid > .word:hover {
+  border-color: #c5d5e8;
+  background: #edf3fb;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  line-height: 1.28;
+}
+
+.nav nav {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav nav::-webkit-scrollbar {
+  display: none;
+}
+
+.footerlinks a {
+  padding: 3px 0;
+}
+
+@media (max-width: 760px) {
+  .brand-logo {
+    height: 40px;
+  }
+
+  .nav {
+    gap: 8px;
+  }
+
+  .tool h1 {
+    font-size: clamp(2rem, 10vw, 2.65rem);
+    line-height: 1.03;
+    text-wrap: balance;
+  }
+
+  .content > h1 {
+    max-width: none;
+    font-size: clamp(1.85rem, 8.5vw, 2.5rem);
+    line-height: 1.07;
+  }
+
+  .letters {
+    min-height: 52px;
+    padding: 11px 12px;
+    font-size: 1.12rem;
+    letter-spacing: 0.08em;
+  }
+
+  .search button {
+    min-height: 48px;
+  }
+
+  .quick-actions .secondary,
+  .examples .example {
+    min-height: 40px;
+  }
+
+  .content .wordgrid {
+    gap: 7px;
+  }
+
+  .content .wordgrid > .word {
+    min-height: 42px;
+    padding: 8px 6px;
+    font-size: 0.92rem;
+  }
+
+  .content .statline {
+    gap: 6px;
+  }
+
+  .content .stat {
+    padding: 6px 9px;
+    font-size: 0.74rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .tool,
+  .content {
+    padding: 18px;
+  }
+
+  .tool h1 {
+    font-size: clamp(1.9rem, 9.5vw, 2.35rem);
+  }
+
+  .content > h1 {
+    font-size: clamp(1.72rem, 8vw, 2.15rem);
+  }
+}
