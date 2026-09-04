@@ -9,6 +9,58 @@ function json(data, status = 200, cache = false) {
   return new Response(JSON.stringify(data), { status, headers });
 }
 
+function parseDatamuseDefinition(item) {
+  if (!item || !Array.isArray(item.defs) || !item.defs.length) return null;
+  const raw = item.defs.find(Boolean);
+  if (!raw) return null;
+  const tab = raw.indexOf('\t');
+  const code = tab >= 0 ? raw.slice(0, tab) : '';
+  const definition = tab >= 0 ? raw.slice(tab + 1) : raw;
+  const parts = {
+    n: 'noun',
+    v: 'verb',
+    adj: 'adjective',
+    adv: 'adverb',
+    u: 'definition',
+  };
+  return {
+    partOfSpeech: parts[code] || code || 'Definition',
+    definition: definition.trim(),
+  };
+}
+
+async function lookupDatamuse(word, signal) {
+  const response = await fetch(
+    `https://api.datamuse.com/words?sp=${encodeURIComponent(word)}&md=dp&max=8`,
+    { signal, headers: { accept: 'application/json' } },
+  );
+  if (!response.ok) return null;
+  const items = await response.json();
+  if (!Array.isArray(items)) return null;
+  const exact = items.find((item) => String(item?.word || '').toLowerCase() === word);
+  return parseDatamuseDefinition(exact);
+}
+
+async function lookupFreeDictionary(word, signal) {
+  const response = await fetch(
+    `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`,
+    { signal, headers: { accept: 'application/json' } },
+  );
+  if (!response.ok) return null;
+  const entries = await response.json();
+  const entry = Array.isArray(entries) ? entries[0] : null;
+  const meanings = Array.isArray(entry?.meanings) ? entry.meanings : [];
+  const meaning = meanings.find(
+    (item) => Array.isArray(item?.definitions) && item.definitions.some((d) => d?.definition),
+  );
+  const definition = meaning?.definitions?.find((item) => item?.definition)?.definition;
+  if (!definition) return null;
+  return {
+    partOfSpeech: meaning?.partOfSpeech || 'Definition',
+    definition,
+  };
+}
+
 export async function onRequestGet({ request }) {
   const url = new URL(request.url);
   const word = (url.searchParams.get('word') || '').trim().toLowerCase();
@@ -18,33 +70,26 @@ export async function onRequestGet({ request }) {
   }
 
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 3500);
+  const timer = setTimeout(() => controller.abort(), 6500);
 
   try {
-    const response = await fetch(
-      `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`,
-      {
-        signal: controller.signal,
-        headers: {
-          accept: 'application/json',
-          'user-agent': 'WordUnscramble.eu definition proxy',
-        },
-      },
-    );
+    let result = null;
 
-    if (!response.ok) {
-      return json({ ok: true, found: false, word }, 200, true);
+    try {
+      result = await lookupDatamuse(word, controller.signal);
+    } catch {
+      result = null;
     }
 
-    const entries = await response.json();
-    const entry = Array.isArray(entries) ? entries[0] : null;
-    const meanings = Array.isArray(entry?.meanings) ? entry.meanings : [];
-    const meaning = meanings.find(
-      (item) => Array.isArray(item?.definitions) && item.definitions.some((d) => d?.definition),
-    );
-    const definition = meaning?.definitions?.find((item) => item?.definition)?.definition;
+    if (!result) {
+      try {
+        result = await lookupFreeDictionary(word, controller.signal);
+      } catch {
+        result = null;
+      }
+    }
 
-    if (!definition) {
+    if (!result?.definition) {
       return json({ ok: true, found: false, word }, 200, true);
     }
 
@@ -53,8 +98,9 @@ export async function onRequestGet({ request }) {
         ok: true,
         found: true,
         word,
-        partOfSpeech: meaning?.partOfSpeech || 'Definition',
-        definition,
+        partOfSpeech: result.partOfSpeech || 'Definition',
+        definition: result.definition,
+        source: 'Datamuse / lexical dictionary data',
       },
       200,
       true,
