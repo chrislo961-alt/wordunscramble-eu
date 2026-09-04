@@ -69,3 +69,23 @@ Added focused anagram/unscrambler landing pages based on early Search Console qu
 - Promoted eight high-utility starting, ending and containing-letter pages from the noindex inventory.
 - Added common-word quick answers, useful pattern groups, solving guidance and page-specific FAQs.
 - Kept the remaining programmatic family noindexed and all list pages free of advertising code.
+
+<!-- programmatic-seo:start -->
+## Programmatic SEO expansion - 2026-09-04
+
+The site now uses a quality-gated programmatic architecture instead of mass-indexing thin pages.
+
+- 1,258 generated browse/search routes
+- 1,161 generated routes are indexable and included in the sitemap
+- 97 low-volume generated routes remain browseable with `noindex,follow`
+- 2-15 letter word hubs
+- A-Z start, end and contains hubs
+- 2-8 letter + single-letter filters
+- 5-letter start + end combinations
+- 5-letter fixed-position pages
+- 5-letter two-character prefix, suffix and contains pages
+- static canonicals, breadcrumbs, Open Graph metadata and internal navigation on every generated page
+- programmatic list pages remain ad-free
+
+The quality gate uses actual broad-list and common-word match counts. Low-volume combinations are not placed in the sitemap.
+<!-- programmatic-seo:end -->

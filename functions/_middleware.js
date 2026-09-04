@@ -8,13 +8,11 @@ function escapeHtml(value) {
 
 const primaryNav = '<nav><a href="/">Unscrambler</a><a href="/wordle-solver/">Wordle Solver</a><a href="/crossword-solver/">Crossword Solver</a><a href="/guides/">Guides</a></nav>';
 
-const lowValueListPath = /^\/(?:\d+-letter-words(?:\/[a-z-]*)?|\d+-letter-words-(?:starting|ending|containing)[^/]*|words-(?:with|ending|starting)[^/]*)(?:\/|$)/i;
+const lowValueListPath = /^\/(?:\d+-letter-words(?:\/[a-z-]*)?|\d+-letter-words-(?:starting|ending|containing|with)[^/]*|words-(?:with|ending|starting|that|containing)[^/]*)(?:\/|$)/i;
 
-// Keep clearly unfinished inventory and large near-duplicate list families out
-// of search results until those pages have enough hand-reviewed value.
-// They stay crawlable so search engines can see the noindex directive.
-const thinIndexPath = /^\/(?:[23678]-letter-words|5-letter-words-(?:starting-with|ending-with|containing)-[a-z]|words-with-(?:q|x|z))\/?$/i;
-const promotedFiveLetterPath = /^\/5-letter-words-(?:starting-with-(?:a|b|c|p|s|t)|ending-with-(?:d|e|n|r|t|y)|containing-(?:a|e|i|o))\/?$/i;
+// Keep only a small legacy thin-page family out of search results.
+// The generated SEO families carry their own static robots directives.
+const thinIndexPath = /^\/(?:words-with-(?:q|x|z))\/?$/i;
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
@@ -54,7 +52,7 @@ export async function onRequest(context) {
       .replace(/\s*<script[^>]*pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^>]*><\/script>/gi, '');
   }
 
-  if (thinIndexPath.test(url.pathname) && !promotedFiveLetterPath.test(url.pathname)) {
+  if (thinIndexPath.test(url.pathname)) {
     html = html.replace(/\s*<meta\s+name=["']robots["'][^>]*>/gi, '');
     html = html.replace(/<\/head>/i, '<meta name="robots" content="noindex,follow">\n</head>');
   }
