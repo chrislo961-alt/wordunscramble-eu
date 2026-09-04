@@ -1,0 +1,45 @@
+name: Build programmatic SEO
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build-programmatic-seo.cjs'
+      - 'scripts/check-programmatic-seo.cjs'
+      - 'scripts/apply-indexing-policy-v2.cjs'
+      - '.github/workflows/seo-expand.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: programmatic-seo-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Generate SEO architecture
+        run: node scripts/build-programmatic-seo.cjs
+      - name: Verify generated SEO
+        run: node scripts/check-programmatic-seo.cjs
+      - name: Commit generated site
+        shell: bash
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No generated changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Build full programmatic SEO architecture"
+          git push
