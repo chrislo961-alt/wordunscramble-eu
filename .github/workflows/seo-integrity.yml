@@ -9,7 +9,8 @@ on:
       - 'sitemap*.xml'
       - 'robots.txt'
       - 'functions/**'
-      - 'scripts/check-seo-integrity.cjs'
+      - 'data/programmatic-seo-routes.json'
+      - 'scripts/check-programmatic-seo.cjs'
       - '.github/workflows/seo-integrity.yml'
 
 permissions:
@@ -23,5 +24,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Check curated SEO integrity
-        run: node scripts/check-seo-integrity.cjs
+      - name: Check programmatic SEO integrity
+        run: node scripts/check-programmatic-seo.cjs
