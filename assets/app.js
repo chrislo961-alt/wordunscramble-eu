@@ -93,6 +93,17 @@ function saveUrl() {
     v ? u.searchParams.set(k, v) : u.searchParams.delete(k);
   history.replaceState(null, "", u);
 }
+function wiktionaryUrl(word) {
+  return `https://en.wiktionary.org/wiki/${encodeURIComponent(word)}`;
+}
+function escapeText(value) {
+  return String(value || "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
 async function define(word, button) {
   const card = button.closest(".word-card"),
     old = card.querySelector(".definition");
@@ -100,21 +111,36 @@ async function define(word, button) {
     old.remove();
     return;
   }
+
   const box = document.createElement("div");
   box.className = "definition";
   box.textContent = "Looking up definition…";
   card.append(box);
+  button.disabled = true;
+
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 5000);
+  const fallback = () => {
+    box.innerHTML = `Definition unavailable. <a target="_blank" rel="noreferrer" href="${wiktionaryUrl(word)}">Wiktionary →</a>`;
+  };
+
   try {
-    const r = await fetch(
-      `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`,
-    );
-    if (!r.ok) throw Error();
-    const d = (await r.json())?.[0]?.meanings?.[0];
-    box.innerHTML = d?.definitions?.[0]?.definition
-      ? `<strong>${d.partOfSpeech || "Definition"}:</strong> ${d.definitions[0].definition}`
-      : `No short definition found. <a target="_blank" rel="noreferrer" href="https://en.wiktionary.org/wiki/${word}">Wiktionary →</a>`;
+    const r = await fetch(`/api/definition?word=${encodeURIComponent(word)}`, {
+      signal: controller.signal,
+      headers: { accept: "application/json" },
+    });
+    if (!r.ok) throw Error("definition_unavailable");
+    const data = await r.json();
+    if (data?.found && data?.definition) {
+      box.innerHTML = `<strong>${escapeText(data.partOfSpeech || "Definition")}:</strong> ${escapeText(data.definition)}`;
+    } else {
+      box.innerHTML = `No short definition found. <a target="_blank" rel="noreferrer" href="${wiktionaryUrl(word)}">Wiktionary →</a>`;
+    }
   } catch {
-    box.innerHTML = `Definition unavailable. <a target="_blank" rel="noreferrer" href="https://en.wiktionary.org/wiki/${word}">Wiktionary →</a>`;
+    fallback();
+  } finally {
+    clearTimeout(timer);
+    button.disabled = false;
   }
 }
 async function run({ focusResults = false } = {}) {
