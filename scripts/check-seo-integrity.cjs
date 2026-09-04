@@ -125,6 +125,18 @@ for (const file of fs.readdirSync(root, { recursive: true })) {
   if (isLowValueList(route) && /(?:google-adsense-account|pagead2\.googlesyndication\.com)/i.test(html)) {
     failures.push(`List page still loads advertising code: ${route}`);
   }
+  if (!html.includes('class="brand-logo" src="/assets/wordunscramble-logo.png"')) {
+    failures.push(`Page missing standard logo: ${route}`);
+  }
+  if (!html.includes('<nav><a href="/">Unscrambler</a><a href="/wordle-solver/">Wordle Solver</a>')) {
+    failures.push(`Page missing standard navigation: ${route}`);
+  }
+  if (!html.includes('<div class="footerlinks"><a href="/guides/">Guides</a>')) {
+    failures.push(`Page missing standard footer: ${route}`);
+  }
+  for (const marker of ['/favicon.svg', '/favicon.ico', '/apple-touch-icon.png', '/manifest.webmanifest', 'name="theme-color" content="#315f9f"']) {
+    if (!html.includes(marker)) failures.push(`Page missing shared head marker ${marker}: ${route}`);
+  }
 }
 
 const robots = read('robots.txt');
