@@ -78,6 +78,7 @@ export async function onRequest(context) {
   }
 
   const shared = [];
+  if (!/ui-polish\.css/i.test(html)) shared.push('<link rel="stylesheet" href="/assets/ui-polish.css?v=20260904-1">');
   if (!/rel=["']icon["']/i.test(html)) shared.push('<link rel="icon" href="/favicon.svg" type="image/svg+xml">');
   if (!/rel=["']apple-touch-icon["']/i.test(html)) shared.push('<link rel="apple-touch-icon" href="/apple-touch-icon.png">');
   if (!/manifest\.webmanifest/i.test(html)) shared.push('<link rel="manifest" href="/manifest.webmanifest">');
