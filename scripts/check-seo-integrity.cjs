@@ -6,6 +6,7 @@ const root = path.resolve(__dirname, '..');
 const origin = 'https://wordunscramble.eu';
 const sitemapFiles = ['sitemap.xml', 'sitemap-guides.xml'];
 const failures = [];
+const promotedRoutes = new Set(JSON.parse(read('data/indexable-five-letter-routes.json')));
 
 function routeToFile(route) {
   return route === '/'
@@ -34,7 +35,8 @@ function parseJsonLd(html, route) {
 }
 
 function isRuntimeNoindex(route) {
-  return /^\/(?:[23678]-letter-words|5-letter-words-(?:starting-with|ending-with|containing)-[a-z]|words-with-(?:q|x|z))\/?$/i.test(route);
+  return /^\/(?:[23678]-letter-words|5-letter-words-(?:starting-with|ending-with|containing)-[a-z]|words-with-(?:q|x|z))\/?$/i.test(route)
+    && !promotedRoutes.has(route);
 }
 
 function isLowValueList(route) {
@@ -57,10 +59,13 @@ for (const file of sitemapFiles) {
 
 const uniqueRoutes = new Set(sitemapRoutes);
 if (uniqueRoutes.size !== sitemapRoutes.length) failures.push('Duplicate URL found across sitemap files');
-if (uniqueRoutes.size < 35) failures.push(`Curated sitemap coverage unexpectedly small: ${uniqueRoutes.size} URLs`);
+if (uniqueRoutes.size < 59) failures.push(`Curated sitemap coverage unexpectedly small: ${uniqueRoutes.size} URLs`);
 
 for (const required of ['/','/word-finder/','/anagram-solver/','/wordle-solver/','/crossword-solver/','/word-lists/','/4-letter-words/','/5-letter-words/','/9-letter-words/','/words-ending-in-ing/','/guides/']) {
   if (!uniqueRoutes.has(required)) failures.push(`Required search hub missing from sitemaps: ${required}`);
+}
+for (const route of promotedRoutes) {
+  if (!uniqueRoutes.has(route)) failures.push(`Promoted content page missing from sitemap: ${route}`);
 }
 
 for (const route of uniqueRoutes) {
@@ -144,6 +149,10 @@ for (const hub of ['word-lists/index.html', '5-letter-words/index.html']) {
     if (isRuntimeNoindex(route)) failures.push(`${hub} links directly to runtime-noindex inventory: ${route}`);
   }
 }
+const fiveLetterHub = read('5-letter-words/index.html');
+for (const route of promotedRoutes) {
+  if (!fiveLetterHub.includes(`href="${route}"`)) failures.push(`5-letter hub does not link to promoted page: ${route}`);
+}
 
 for (const file of fs.readdirSync(root, { recursive: true })) {
   if (!file.endsWith('index.html')) continue;
@@ -157,6 +166,12 @@ for (const file of fs.readdirSync(root, { recursive: true })) {
     || '';
   if (isRuntimeNoindex(route) && !/noindex,follow/i.test(robots)) {
     failures.push(`Thin page missing static noindex: ${route}`);
+  }
+  if (promotedRoutes.has(route)) {
+    if (!/index,follow/i.test(robots) || /noindex/i.test(robots)) failures.push(`Promoted page is not indexable: ${route}`);
+    if (!html.includes('data-content-tier="curated"')) failures.push(`Promoted page is missing curated content marker: ${route}`);
+    if (!html.includes('<h2>Quick answer: common matches</h2>')) failures.push(`Promoted page is missing quick answers: ${route}`);
+    if (!html.includes('<h2>Frequently asked questions</h2>')) failures.push(`Promoted page is missing FAQ content: ${route}`);
   }
   if (isLowValueList(route) && /(?:google-adsense-account|pagead2\.googlesyndication\.com)/i.test(html)) {
     failures.push(`List page still loads advertising code: ${route}`);
