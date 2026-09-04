@@ -29,6 +29,7 @@ const $ = (id) => document.getElementById(id),
     z: 10,
   };
 let COMMON, ENABLE;
+const DEFINITION_CACHE = new Map();
 function counts(s) {
   const m = {};
   for (const c of s) m[c] = (m[c] || 0) + 1;
@@ -104,6 +105,105 @@ function escapeText(value) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
 }
+async function fetchJson(url, timeout = 3500) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeout);
+  try {
+    const r = await fetch(url, {
+      signal: controller.signal,
+      headers: { accept: "application/json" },
+    });
+    if (!r.ok) throw Error(`HTTP ${r.status}`);
+    return await r.json();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+function parseDatamuse(items, word) {
+  if (!Array.isArray(items)) return null;
+  const exact = items.find(
+    (item) => String(item?.word || "").toLowerCase() === word.toLowerCase(),
+  );
+  const raw = exact?.defs?.find(Boolean);
+  if (!raw) return null;
+  const tab = raw.indexOf("\t"),
+    code = tab >= 0 ? raw.slice(0, tab) : "",
+    definition = (tab >= 0 ? raw.slice(tab + 1) : raw).trim(),
+    parts = {
+      n: "noun",
+      v: "verb",
+      adj: "adjective",
+      adv: "adverb",
+      u: "definition",
+    };
+  if (!definition) return null;
+  return {
+    partOfSpeech: parts[code] || code || "Definition",
+    definition,
+    source: "Datamuse",
+  };
+}
+function parseFreeDictionary(entries) {
+  const entry = Array.isArray(entries) ? entries[0] : null,
+    meanings = Array.isArray(entry?.meanings) ? entry.meanings : [],
+    meaning = meanings.find(
+      (item) =>
+        Array.isArray(item?.definitions) &&
+        item.definitions.some((definition) => definition?.definition),
+    ),
+    definition = meaning?.definitions?.find(
+      (item) => item?.definition,
+    )?.definition;
+  if (!definition) return null;
+  return {
+    partOfSpeech: meaning?.partOfSpeech || "Definition",
+    definition,
+    source: "Free Dictionary API",
+  };
+}
+async function lookupDefinition(word) {
+  if (DEFINITION_CACHE.has(word)) return DEFINITION_CACHE.get(word);
+
+  const attempts = [
+    async () => {
+      const data = await fetchJson(
+        `https://api.datamuse.com/words?sp=${encodeURIComponent(word)}&md=d&max=8`,
+      );
+      const parsed = parseDatamuse(data, word);
+      if (!parsed) throw Error("No Datamuse definition");
+      return parsed;
+    },
+    async () => {
+      const data = await fetchJson(
+        `/api/definition?word=${encodeURIComponent(word)}`,
+      );
+      if (!data?.found || !data?.definition)
+        throw Error("No local API definition");
+      return {
+        partOfSpeech: data.partOfSpeech || "Definition",
+        definition: data.definition,
+        source: "WordUnscramble.eu",
+      };
+    },
+    async () => {
+      const data = await fetchJson(
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`,
+      );
+      const parsed = parseFreeDictionary(data);
+      if (!parsed) throw Error("No Free Dictionary definition");
+      return parsed;
+    },
+  ];
+
+  try {
+    const result = await Promise.any(attempts.map((attempt) => attempt()));
+    DEFINITION_CACHE.set(word, result);
+    return result;
+  } catch {
+    DEFINITION_CACHE.set(word, null);
+    return null;
+  }
+}
 async function define(word, button) {
   const card = button.closest(".word-card"),
     old = card.querySelector(".definition");
@@ -114,32 +214,22 @@ async function define(word, button) {
 
   const box = document.createElement("div");
   box.className = "definition";
+  box.setAttribute("role", "status");
+  box.setAttribute("aria-live", "polite");
   box.textContent = "Looking up definition…";
   card.append(box);
   button.disabled = true;
 
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 5000);
-  const fallback = () => {
-    box.innerHTML = `Definition unavailable. <a target="_blank" rel="noreferrer" href="${wiktionaryUrl(word)}">Wiktionary →</a>`;
-  };
-
   try {
-    const r = await fetch(`/api/definition?word=${encodeURIComponent(word)}`, {
-      signal: controller.signal,
-      headers: { accept: "application/json" },
-    });
-    if (!r.ok) throw Error("definition_unavailable");
-    const data = await r.json();
-    if (data?.found && data?.definition) {
+    const data = await lookupDefinition(word);
+    if (data?.definition) {
       box.innerHTML = `<strong>${escapeText(data.partOfSpeech || "Definition")}:</strong> ${escapeText(data.definition)}`;
     } else {
-      box.innerHTML = `No short definition found. <a target="_blank" rel="noreferrer" href="${wiktionaryUrl(word)}">Wiktionary →</a>`;
+      box.innerHTML = `No inline definition found. <a target="_blank" rel="noreferrer" href="${wiktionaryUrl(word)}">Wiktionary →</a>`;
     }
   } catch {
-    fallback();
+    box.innerHTML = `No inline definition found. <a target="_blank" rel="noreferrer" href="${wiktionaryUrl(word)}">Wiktionary →</a>`;
   } finally {
-    clearTimeout(timer);
     button.disabled = false;
   }
 }
