@@ -21,6 +21,18 @@ function match(html, pattern) {
   return html.match(pattern)?.[1]?.trim() || null;
 }
 
+function parseJsonLd(html, route) {
+  const blocks = [];
+  for (const found of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
+    try {
+      blocks.push(JSON.parse(found[1]));
+    } catch {
+      failures.push(`Invalid JSON-LD: ${route}`);
+    }
+  }
+  return blocks.flatMap((block) => Array.isArray(block) ? block : [block]);
+}
+
 function isRuntimeNoindex(route) {
   return /^\/(?:[23678]-letter-words|5-letter-words-(?:starting-with|ending-with|containing)-[a-z]|words-with-(?:q|x|z))\/?$/i.test(route);
 }
@@ -73,6 +85,7 @@ for (const route of uniqueRoutes) {
   const ogUrl = match(html, /<meta[^>]+property=["']og:url["'][^>]+content=["']([^"']+)["']/i);
   const ogImage = match(html, /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i);
   const twitterCard = match(html, /<meta[^>]+name=["']twitter:card["'][^>]+content=["']([^"']+)["']/i);
+  const jsonLd = parseJsonLd(html, route);
 
   if (!title) failures.push(`Missing title: ${route}`);
   if (!description) failures.push(`Missing meta description: ${route}`);
@@ -86,6 +99,29 @@ for (const route of uniqueRoutes) {
   if (ogUrl !== expectedCanonical) failures.push(`Incorrect Open Graph URL: ${route} -> ${ogUrl || 'missing'}`);
   if (ogImage !== `${origin}/social-card.png`) failures.push(`Incorrect Open Graph image: ${route}`);
   if (twitterCard !== 'summary_large_image') failures.push(`Missing large Twitter card: ${route}`);
+  if (route === '/') {
+    const website = jsonLd.find((item) => item?.['@type'] === 'WebSite');
+    if (!website || website.name !== 'WordUnscramble.eu' || website.url !== `${origin}/`) {
+      failures.push('Homepage is missing the preferred WebSite identity');
+    }
+  } else {
+    if (!html.includes('<nav class="breadcrumb" aria-label="Breadcrumb">')) {
+      failures.push(`Missing semantic breadcrumb navigation: ${route}`);
+    }
+    if (!html.includes('aria-current="page"')) {
+      failures.push(`Breadcrumb does not identify the current page: ${route}`);
+    }
+    const breadcrumb = jsonLd.find((item) => item?.['@type'] === 'BreadcrumbList');
+    const items = breadcrumb?.itemListElement;
+    if (!Array.isArray(items) || items.length < 2) {
+      failures.push(`Missing BreadcrumbList structured data: ${route}`);
+    } else {
+      const last = items.at(-1);
+      if (last?.position !== items.length || last?.item !== expectedCanonical) {
+        failures.push(`Incorrect final breadcrumb item: ${route}`);
+      }
+    }
+  }
 }
 
 const middleware = read('functions/_middleware.js');

@@ -59,3 +59,8 @@ Added 78 useful 5-letter pattern landing pages (starting, ending, containing A-Z
 
 ## SEO Batch 2
 Added focused anagram/unscrambler landing pages based on early Search Console query signals, plus internal links and sitemap entries.
+
+## Structured navigation
+- Added a preferred `WebSite` identity to the homepage for Google site-name discovery.
+- Added visible, accessible breadcrumbs and matching `BreadcrumbList` data to every curated inner page.
+- Extended the SEO integrity check to validate all JSON-LD and breadcrumb destinations.
