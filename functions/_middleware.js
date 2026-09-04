@@ -14,6 +14,7 @@ const lowValueListPath = /^\/(?:\d+-letter-words(?:\/[a-z-]*)?|\d+-letter-words-
 // of search results until those pages have enough hand-reviewed value.
 // They stay crawlable so search engines can see the noindex directive.
 const thinIndexPath = /^\/(?:[23678]-letter-words|5-letter-words-(?:starting-with|ending-with|containing)-[a-z]|words-with-(?:q|x|z))\/?$/i;
+const promotedFiveLetterPath = /^\/5-letter-words-(?:starting-with-(?:a|c|s)|ending-with-(?:e|r|y)|containing-(?:a|e))\/?$/i;
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
@@ -53,7 +54,7 @@ export async function onRequest(context) {
       .replace(/\s*<script[^>]*pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^>]*><\/script>/gi, '');
   }
 
-  if (thinIndexPath.test(url.pathname)) {
+  if (thinIndexPath.test(url.pathname) && !promotedFiveLetterPath.test(url.pathname)) {
     html = html.replace(/\s*<meta\s+name=["']robots["'][^>]*>/gi, '');
     html = html.replace(/<\/head>/i, '<meta name="robots" content="noindex,follow">\n</head>');
   }

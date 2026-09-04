@@ -64,3 +64,8 @@ Added focused anagram/unscrambler landing pages based on early Search Console qu
 - Added a preferred `WebSite` identity to the homepage for Google site-name discovery.
 - Added visible, accessible breadcrumbs and matching `BreadcrumbList` data to every curated inner page.
 - Extended the SEO integrity check to validate all JSON-LD and breadcrumb destinations.
+
+## Curated five-letter content pilot
+- Promoted eight high-utility starting, ending and containing-letter pages from the noindex inventory.
+- Added common-word quick answers, useful pattern groups, solving guidance and page-specific FAQs.
+- Kept the remaining programmatic family noindexed and all list pages free of advertising code.
