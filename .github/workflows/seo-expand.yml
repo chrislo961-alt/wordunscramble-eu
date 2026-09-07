@@ -31,13 +31,13 @@ jobs:
           node-version: 22
       - name: Generate SEO architecture
         run: node scripts/build-programmatic-seo.cjs
-      - name: Materialize canonical search intent navigation
-        run: node scripts/materialize-site-chrome.cjs
       - name: Verify generated SEO
         run: node scripts/check-programmatic-seo.cjs
+      - name: Materialize canonical search intent navigation
+        run: node scripts/materialize-site-chrome.cjs
       - name: Verify search intent ownership
         run: node scripts/check-intent-ownership.cjs
-      # Commit only after the generated architecture passes integrity checks.
+      # Commit only after the generated architecture and intent ownership pass integrity checks.
       - name: Commit generated site
         shell: bash
         run: |
