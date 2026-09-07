@@ -11,6 +11,8 @@ on:
       - 'functions/**'
       - 'data/programmatic-seo-routes.json'
       - 'scripts/check-programmatic-seo.cjs'
+      - 'scripts/materialize-site-chrome.cjs'
+      - 'scripts/check-intent-ownership.cjs'
       - '.github/workflows/seo-integrity.yml'
 
 permissions:
@@ -26,3 +28,7 @@ jobs:
           node-version: 22
       - name: Check programmatic SEO integrity
         run: node scripts/check-programmatic-seo.cjs
+      - name: Materialize canonical search intent navigation
+        run: node scripts/materialize-site-chrome.cjs
+      - name: Check search intent ownership
+        run: node scripts/check-intent-ownership.cjs
