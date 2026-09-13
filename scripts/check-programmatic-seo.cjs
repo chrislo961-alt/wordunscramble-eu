@@ -5,6 +5,10 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const origin = 'https://wordunscramble.eu';
 const failures = [];
+const baselineNav = '<nav><a href="/">Unscrambler</a><a href="/wordle-solver/">Wordle Solver</a><a href="/crossword-solver/">Crossword Solver</a><a href="/guides/">Guides</a></nav>';
+const canonicalNav = '<nav><a href="/">Word Unscrambler</a><a href="/anagram-solver/">Anagram Solver</a><a href="/word-finder/">Word Finder</a><a href="/wordle-solver/">Wordle Solver</a><a href="/crossword-solver/">Crossword Solver</a><a href="/guides/">Guides</a></nav>';
+const baselineFooter = '<div class="footerlinks"><a href="/guides/">Guides</a>';
+const canonicalFooter = '<div class="footerlinks"><a href="/">Word Unscrambler</a><a href="/anagram-solver/">Anagram Solver</a><a href="/word-finder/">Word Finder</a><a href="/guides/">Guides</a>';
 
 function read(relative) {
   return fs.readFileSync(path.join(root, relative), 'utf8');
@@ -118,8 +122,8 @@ for (const item of manifest) {
   if (!html.includes('<nav class="breadcrumb" aria-label="Breadcrumb">')) failures.push(`Missing breadcrumb: ${item.route}`);
   if (!html.includes('"@type":"BreadcrumbList"')) failures.push(`Missing BreadcrumbList: ${item.route}`);
   if (!html.includes('class="brand-logo" src="/assets/wordunscramble-logo.png"')) failures.push(`Missing logo: ${item.route}`);
-  if (!html.includes('<nav><a href="/">Unscrambler</a><a href="/wordle-solver/">Wordle Solver</a>')) failures.push(`Missing standard navigation: ${item.route}`);
-  if (!html.includes('<div class="footerlinks"><a href="/guides/">Guides</a>')) failures.push(`Missing standard footer: ${item.route}`);
+  if (!html.includes(baselineNav) && !html.includes(canonicalNav)) failures.push(`Missing recognized navigation: ${item.route}`);
+  if (!html.includes(baselineFooter) && !html.includes(canonicalFooter)) failures.push(`Missing recognized footer: ${item.route}`);
   if (!html.includes('property="og:url"') || !html.includes('name="twitter:card" content="summary_large_image"')) failures.push(`Missing social metadata: ${item.route}`);
   if (/(?:google-adsense-account|pagead2\.googlesyndication\.com)/i.test(html)) failures.push(`Generated list page contains advertising code: ${item.route}`);
 }
