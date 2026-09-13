@@ -7,6 +7,7 @@ const skippedDirs = new Set(['.git', 'node_modules']);
 
 const replacements = [
   ['Quick answer: common matches', 'Quick answer: common-use matches'],
+  ['Common matches by word length', 'Common-use matches by word length'],
   ['Start with familiar words, then use the broader list or a solver when the obvious answer is not enough.', "These examples come from the site's corpus-derived common-use subset; use the broader list or a solver when you need more coverage."],
   ['Familiar words are shown first, followed by a broader sample from the English word list.', 'Common-use matches are shown first, followed by a broader sample from the English word list.'],
   ['with familiar examples first.', 'with common-use examples first.'],
@@ -21,6 +22,7 @@ const replacements = [
   ['Browse starting with A-Z', 'Browse starting letters A-Z'],
   ['Browse ending with A-Z', 'Browse ending letters A-Z'],
   ['Browse containing A-Z', 'Browse required letters A-Z'],
+  ['Words Containing  ', 'Words Containing '],
 ];
 
 function walk(dir, out = []) {
@@ -54,7 +56,9 @@ for (const file of walk(root)) {
     html.includes('know the word is containing ') ||
     html.includes('know the word is starting with ') ||
     html.includes('know the word is ending with ') ||
-    html.includes('Start with familiar words, then use the broader list')
+    html.includes('Start with familiar words, then use the broader list') ||
+    html.includes('Words Containing  ') ||
+    html.includes('Common matches by word length')
   ) {
     leftovers.push(path.relative(root, file));
   }
