@@ -4,6 +4,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const skippedDirs = new Set(['.git', 'node_modules']);
+const legacySitemapRoutes = ['/words-with-j/', '/words-with-k/', '/words-with-v/'];
 
 const replacements = [
   ['Quick answer: common matches', 'Quick answer: common-use matches'],
@@ -38,6 +39,10 @@ function walk(dir, out = []) {
   return out;
 }
 
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 let processed = 0;
 let changed = 0;
 const leftovers = [];
@@ -69,10 +74,36 @@ for (const file of walk(root)) {
   }
 }
 
+const sitemapPath = path.join(root, 'sitemap.xml');
+let sitemapChanged = false;
+if (fs.existsSync(sitemapPath)) {
+  let sitemap = fs.readFileSync(sitemapPath, 'utf8');
+  const before = sitemap;
+
+  for (const route of legacySitemapRoutes) {
+    const escapedRoute = escapeRegExp(route);
+    sitemap = sitemap.replace(
+      new RegExp(`\\s*<url><loc>https://wordunscramble\\.eu${escapedRoute}<\\/loc><lastmod>[^<]+<\\/lastmod><\\/url>`, 'g'),
+      ''
+    );
+  }
+
+  for (const route of legacySitemapRoutes) {
+    if (sitemap.includes(`https://wordunscramble.eu${route}`)) {
+      leftovers.push(`sitemap.xml still contains legacy route ${route}`);
+    }
+  }
+
+  if (sitemap !== before) {
+    fs.writeFileSync(sitemapPath, sitemap);
+    sitemapChanged = true;
+  }
+}
+
 if (leftovers.length) {
-  console.error('Programmatic copy normalization left stale wording in:');
+  console.error('Programmatic normalization left stale content in:');
   for (const file of leftovers) console.error(`- ${file}`);
   process.exit(1);
 }
 
-console.log(`Programmatic copy normalization complete: ${processed} pages checked, ${changed} pages updated.`);
+console.log(`Programmatic normalization complete: ${processed} pages checked, ${changed} pages updated, sitemap ${sitemapChanged ? 'updated' : 'unchanged'}.`);
