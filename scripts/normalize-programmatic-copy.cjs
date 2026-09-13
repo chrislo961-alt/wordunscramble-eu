@@ -16,6 +16,11 @@ const replacements = [
   ['marked as common English words', 'included in the common-use subset'],
   ['common-word matches', 'common-use matches'],
   ['know the word is containing ', 'know the word contains '],
+  ['know the word is starting with ', 'know the word starts with '],
+  ['know the word is ending with ', 'know the word ends with '],
+  ['Browse starting with A-Z', 'Browse starting letters A-Z'],
+  ['Browse ending with A-Z', 'Browse ending letters A-Z'],
+  ['Browse containing A-Z', 'Browse required letters A-Z'],
 ];
 
 function walk(dir, out = []) {
@@ -45,7 +50,12 @@ for (const file of walk(root)) {
     html = html.split(from).join(to);
   }
 
-  if (html.includes('know the word is containing ') || html.includes('Start with familiar words, then use the broader list')) {
+  if (
+    html.includes('know the word is containing ') ||
+    html.includes('know the word is starting with ') ||
+    html.includes('know the word is ending with ') ||
+    html.includes('Start with familiar words, then use the broader list')
+  ) {
     leftovers.push(path.relative(root, file));
   }
 
