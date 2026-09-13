@@ -10,6 +10,7 @@ on:
       - 'robots.txt'
       - 'functions/**'
       - 'data/programmatic-seo-routes.json'
+      - 'scripts/normalize-programmatic-copy.cjs'
       - 'scripts/check-programmatic-seo.cjs'
       - 'scripts/materialize-site-chrome.cjs'
       - 'scripts/check-intent-ownership.cjs'
@@ -26,6 +27,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Normalize generated programmatic copy
+        run: node scripts/normalize-programmatic-copy.cjs
       - name: Check programmatic SEO integrity
         run: node scripts/check-programmatic-seo.cjs
       - name: Materialize canonical search intent navigation
