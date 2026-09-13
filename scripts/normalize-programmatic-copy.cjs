@@ -4,7 +4,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const skippedDirs = new Set(['.git', 'node_modules']);
-const legacySitemapRoutes = ['/words-with-j/', '/words-with-k/', '/words-with-v/'];
+const legacySitemapRoutes = ['/word-unscrambler-uk/', '/words-with-j/', '/words-with-k/', '/words-with-v/'];
 
 const replacements = [
   ['Quick answer: common matches', 'Quick answer: common-use matches'],
