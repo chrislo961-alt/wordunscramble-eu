@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/build-programmatic-seo.cjs'
+      - 'scripts/normalize-programmatic-copy.cjs'
       - 'scripts/enrich-programmatic-seo.cjs'
       - 'scripts/check-programmatic-seo.cjs'
       - 'scripts/apply-indexing-policy-v2.cjs'
@@ -32,6 +33,8 @@ jobs:
           node-version: 22
       - name: Generate SEO architecture
         run: node scripts/build-programmatic-seo.cjs
+      - name: Normalize generated programmatic copy
+        run: node scripts/normalize-programmatic-copy.cjs
       - name: Enrich generated pages for GEO and AEO
         run: node scripts/enrich-programmatic-seo.cjs
       - name: Verify generated SEO
