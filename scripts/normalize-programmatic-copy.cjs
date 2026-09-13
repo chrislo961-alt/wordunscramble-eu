@@ -5,6 +5,7 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const skippedDirs = new Set(['.git', 'node_modules']);
 const legacySitemapRoutes = ['/word-unscrambler-uk/', '/words-with-j/', '/words-with-k/', '/words-with-v/'];
+const retiredHomepageLinks = ['<a href="/word-unscrambler-uk/">Word Unscrambler UK</a>'];
 
 const replacements = [
   ['Quick answer: common matches', 'Quick answer: common-use matches'],
@@ -74,6 +75,26 @@ for (const file of walk(root)) {
   }
 }
 
+const homepagePath = path.join(root, 'index.html');
+let homepageChanged = false;
+if (fs.existsSync(homepagePath)) {
+  let homepage = fs.readFileSync(homepagePath, 'utf8');
+  const before = homepage;
+
+  for (const link of retiredHomepageLinks) {
+    homepage = homepage.split(link).join('');
+  }
+
+  if (homepage.includes('href="/word-unscrambler-uk/"')) {
+    leftovers.push('index.html still links to retired /word-unscrambler-uk/');
+  }
+
+  if (homepage !== before) {
+    fs.writeFileSync(homepagePath, homepage);
+    homepageChanged = true;
+  }
+}
+
 const sitemapPath = path.join(root, 'sitemap.xml');
 let sitemapChanged = false;
 if (fs.existsSync(sitemapPath)) {
@@ -106,4 +127,4 @@ if (leftovers.length) {
   process.exit(1);
 }
 
-console.log(`Programmatic normalization complete: ${processed} pages checked, ${changed} pages updated, sitemap ${sitemapChanged ? 'updated' : 'unchanged'}.`);
+console.log(`Programmatic normalization complete: ${processed} pages checked, ${changed} pages updated, homepage ${homepageChanged ? 'updated' : 'unchanged'}, sitemap ${sitemapChanged ? 'updated' : 'unchanged'}.`);
