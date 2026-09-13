@@ -71,7 +71,7 @@ Added focused anagram/unscrambler landing pages based on early Search Console qu
 - Kept the remaining programmatic family noindexed and all list pages free of advertising code.
 
 <!-- programmatic-seo:start -->
-## Programmatic SEO expansion - 2026-09-07
+## Programmatic SEO expansion - 2026-09-13
 
 The site now uses a quality-gated programmatic architecture instead of mass-indexing thin pages.
 
