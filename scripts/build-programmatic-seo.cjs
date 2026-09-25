@@ -191,6 +191,7 @@ function generateLengthHubs() {
         [`/${length}-letter-words-containing-s/`, `${length} letter words containing S`],
       );
     }
+    if (length === 9) related.unshift(['/', 'Open the 9 letter word unscrambler']);
     related.push(
       ['/words-that-start-with/', 'Browse words by starting letter'],
       ['/words-that-end-with/', 'Browse words by ending letter'],
@@ -198,10 +199,10 @@ function generateLengthHubs() {
     );
     writePage(route, renderPage({
       route,
-      title: `${length} Letter Words`,
-      description: `Browse ${length} letter English words, common examples and fast links for starting, ending and containing-letter searches.`,
-      h1: `${length} Letter Words`,
-      intro: `Browse ${length}-letter words with familiar examples first. Use the focused letter pages or interactive solvers to narrow the list by beginning, ending, included letters or exact positions.`,
+      title: `${length} Letter Words${length === 9 ? ' & 9 Letter Word Unscrambler' : ''}`,
+      description: length === 9 ? 'Browse 9 letter English words and use the free 9 letter word unscrambler to make words from nine letters, with common examples and focused filters.' : `Browse ${length} letter English words, common examples and fast links for starting, ending and containing-letter searches.`,
+      h1: `${length} Letter Words${length === 9 ? ' & Word Unscrambler' : ''}`,
+      intro: length === 9 ? 'Browse 9-letter words with familiar examples first, or open the Word Unscrambler when you have nine scrambled letters and want to find possible words from them.' : `Browse ${length}-letter words with familiar examples first. Use the focused letter pages or interactive solvers to narrow the list by beginning, ending, included letters or exact positions.`,
       broadMatches: broad,
       commonMatches: common,
       indexable: true,
