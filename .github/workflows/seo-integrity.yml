@@ -14,6 +14,8 @@ on:
       - 'scripts/check-programmatic-seo.cjs'
       - 'scripts/materialize-site-chrome.cjs'
       - 'scripts/check-intent-ownership.cjs'
+      - 'scripts/check-live-solver-qa.cjs'
+      - 'assets/app.js'
       - '.github/workflows/seo-integrity.yml'
 
 permissions:
@@ -35,3 +37,5 @@ jobs:
         run: node scripts/materialize-site-chrome.cjs
       - name: Check search intent ownership
         run: node scripts/check-intent-ownership.cjs
+      - name: Check live solver contracts
+        run: node scripts/check-live-solver-qa.cjs
