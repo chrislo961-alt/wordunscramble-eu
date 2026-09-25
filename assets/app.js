@@ -281,7 +281,7 @@ async function run({ focusResults = false } = {}) {
       preferCommon = (a, b) => Number(b.isCommon) - Number(a.isCommon);
     out.sort(
       sort === "az"
-        ? (a, b) => preferCommon(a, b) || a.word.localeCompare(b.word)
+        ? (a, b) => a.word.localeCompare(b.word)
         : sort === "score"
           ? (a, b) =>
               score(b.word, b.blanks) - score(a.word, a.blanks) ||
