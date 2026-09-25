@@ -15,6 +15,7 @@ on:
       - 'scripts/materialize-site-chrome.cjs'
       - 'scripts/check-intent-ownership.cjs'
       - 'scripts/check-live-solver-qa.cjs'
+      - 'scripts/check-solver-regressions.cjs'
       - 'assets/app.js'
       - '.github/workflows/seo-integrity.yml'
 
@@ -39,3 +40,5 @@ jobs:
         run: node scripts/check-intent-ownership.cjs
       - name: Check live solver contracts
         run: node scripts/check-live-solver-qa.cjs
+      - name: Run solver regression suite
+        run: node scripts/check-solver-regressions.cjs
