@@ -234,26 +234,29 @@ async function define(word, button) {
   }
 }
 async function run({ focusResults = false } = {}) {
-  const raw = ($("letters")?.value || "")
+  const lettersInput = $("letters");
+  const whitespaceReplacement = lettersInput?.dataset.ignoreSpaces === "true" ? "" : "?";
+  const raw = (lettersInput?.value || "")
     .toLowerCase()
-    .replace(/\s/g, "?")
+    .replace(/\s/g, whitespaceReplacement)
     .replace(/[^a-z?*]/g, "");
   if (raw.length < 2) {
     $("results").innerHTML = '<p class="muted">Enter at least 2 letters.</p>';
     return;
   }
-  if (raw.length > 15) {
-    status("Maximum 15 letters");
+  const inputLimit = Math.max(2, Number(lettersInput?.maxLength) || 15);
+  if (raw.length > inputLimit) {
+    status(`Maximum ${inputLimit} letters`);
     return;
   }
-  $("letters").value = raw;
+  lettersInput.value = raw;
   $("go").disabled = true;
   $("go").textContent = "SEARCHING…";
   try {
     const exact = +$("length").value || 0,
-      max = raw.length,
+      max = Math.min(raw.length, 15),
       lens = exact ? [exact] : Array.from({ length: max - 1 }, (_, i) => i + 2),
-      sets = await Promise.all(lens.filter((n) => n <= max).map(loadLength));
+      sets = await Promise.all(lens.filter((n) => n <= max && n <= 15).map(loadLength));
     let out = sets
       .flat()
       .map((word) => ({ word, blanks: build(word, raw) }))
