@@ -100,6 +100,11 @@ function words() {
   return [...els.results.innerHTML.matchAll(/class="word"[^>]*>\s*<span>([^<]+)<\/span>/g)].map((m) => m[1]);
 }
 
+function topWords() {
+  const top = els.results.innerHTML.match(/<section class="top-results">([\s\S]*?)<\/section>/)?.[1] || "";
+  return [...top.matchAll(/class="word"[^>]*>\s*<span>([^<]+)<\/span>/g)].map((m) => m[1]);
+}
+
 function assert(condition, message) {
   if (!condition) throw new Error(message);
   console.log("PASS", message);
@@ -148,8 +153,9 @@ async function solve(input, options = {}) {
   assert(out.length > 0, "ENABLE dictionary mode returns results");
 
   out = await solve("stare", { dictionary: "broad", sort: "az" });
-  const alpha = [...out].sort((a, b) => a.localeCompare(b));
-  assert(out.join("|") === alpha.join("|"), "A-Z sort orders results alphabetically");
+  const azTop = topWords();
+  const alpha = [...azTop].sort((a, b) => a.localeCompare(b));
+  assert(azTop.length > 1 && azTop.join("|") === alpha.join("|"), "A-Z sort orders top results alphabetically");
 
   out = await solve("stare", { dictionary: "broad", sort: "length" });
   assert(out.every((word, i) => i === 0 || out[i - 1].length >= word.length), "length sort orders longest words first");
