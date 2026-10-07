@@ -728,3 +728,48 @@ footer p {
     transition: none;
   }
 }
+
+
+/* Homepage V2: faster first-use solver flow */
+.tool{padding-top:26px}
+.tool h1{font-size:clamp(2.8rem,6.2vw,4.65rem);max-width:620px;margin-bottom:10px}
+.tool .lead{max-width:650px;font-size:clamp(1rem,1.8vw,1.12rem)}
+.hero-meta{display:flex;gap:10px 18px;flex-wrap:wrap;align-items:center;margin:12px 0 0;color:var(--muted);font-size:.78rem;font-weight:700}
+.hero-meta span:before{content:"✓";margin-right:6px;color:var(--blue);font-weight:900}
+.hero-meta a{font-weight:800;text-decoration:none}
+.search-shell{margin-top:14px}
+.search{min-height:64px}
+.letters{font-size:1.45rem}
+.quick-actions{margin-top:7px}
+.quick-actions .secondary{padding:7px 10px}
+.dictionary-row{grid-template-columns:minmax(160px,1fr) minmax(220px,300px);margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.dictionary-row>div{display:grid;gap:1px}
+.dictionary-row label{font-size:.82rem}
+.dictionary-row small{color:var(--muted);font-size:.72rem}
+.advanced{margin-top:10px;padding-top:12px}
+.advanced summary{display:flex;align-items:center;gap:7px}
+.advanced summary small{color:var(--muted);font-weight:700;font-size:.72rem}
+.filter-icon{font-size:.86rem}
+.sample-results{margin:18px 0 8px;padding:18px;border:1px solid #cbd9ea;border-radius:15px;background:linear-gradient(180deg,#f8fbff 0%,#edf3fb 100%)}
+.sample-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:13px}
+.sample-heading .eyebrow{margin:0 0 2px}
+.sample-heading h2{margin:0;font-size:1.45rem;letter-spacing:-.035em}
+.sample-run{padding:8px 11px}
+.sample-group{display:grid;grid-template-columns:90px repeat(4,minmax(0,1fr));gap:8px;align-items:center;padding:9px 0;border-top:1px solid #d9e3ef}
+.sample-group strong{font-size:.78rem;color:var(--muted)}
+.sample-group span{display:block;padding:8px 9px;border:1px solid #d5e1f0;border-radius:9px;background:#fff;text-align:center;font-weight:850;font-size:.82rem}
+@media (min-width:761px){
+  main{padding-top:8px}
+  .tool{margin-top:14px}
+}
+@media (max-width:760px){
+  .tool{padding-top:20px}
+  .tool h1{font-size:clamp(2.55rem,13vw,3.6rem)}
+  .hero-meta{gap:7px 12px}
+  .dictionary-row{grid-template-columns:1fr}
+  .advanced summary{align-items:flex-start;flex-wrap:wrap}
+  .advanced summary small{width:100%;padding-left:24px}
+  .sample-heading{align-items:flex-start;flex-direction:column}
+  .sample-group{grid-template-columns:1fr 1fr}
+  .sample-group strong{grid-column:1/-1}
+}
