@@ -30,6 +30,20 @@ const $ = (id) => document.getElementById(id),
   };
 let COMMON, ENABLE;
 const DEFINITION_CACHE = new Map();
+const SAMPLE_RESULTS = '<section class="sample-results" aria-label="Example results"><div class="sample-heading"><div><p class="eyebrow">Example results</p><h2>STARE</h2></div><button type="button" class="example sample-run" data-example="stare">Try this rack</button></div><div class="sample-group"><strong>5 letters</strong><span>STARE</span><span>RATES</span><span>TEARS</span><span>TARES</span></div><div class="sample-group"><strong>4 letters</strong><span>STAR</span><span>RATE</span><span>SEAT</span><span>EAST</span></div></section>';
+function bindExampleButtons() {
+  document.querySelectorAll("[data-example]").forEach((b) => {
+    b.onclick = () => {
+      $("letters").value = b.dataset.example;
+      run({ focusResults: true });
+    };
+  });
+}
+function showSampleResults() {
+  if ($("results")) $("results").innerHTML = SAMPLE_RESULTS;
+  status("Try a rack or enter your own letters");
+  bindExampleButtons();
+}
 function counts(s) {
   const m = {};
   for (const c of s) m[c] = (m[c] || 0) + 1;
@@ -93,6 +107,9 @@ function saveUrl() {
   for (const [k, v] of Object.entries(state()))
     v ? u.searchParams.set(k, v) : u.searchParams.delete(k);
   history.replaceState(null, "", u);
+  try {
+    if ($("dictionary")?.value) localStorage.setItem("wu-dictionary", $("dictionary").value);
+  } catch {}
 }
 function wiktionaryUrl(word) {
   return `https://en.wiktionary.org/wiki/${encodeURIComponent(word)}`;
@@ -360,8 +377,7 @@ function clearAll() {
     if ($(id)) $(id).value = "";
   });
   $("length").value = "";
-  $("results").innerHTML = "";
-  status("Enter letters to start");
+  showSampleResults();
   history.replaceState(null, "", location.pathname);
 }
 $("go")?.addEventListener("click", () => run({ focusResults: true }));
@@ -378,13 +394,7 @@ $("shuffle")?.addEventListener("click", () => {
     .join("");
 });
 $("share-search")?.addEventListener("click", share);
-document.querySelectorAll("[data-example]").forEach(
-  (b) =>
-    (b.onclick = () => {
-      $("letters").value = b.dataset.example;
-      run({ focusResults: true });
-    }),
-);
+bindExampleButtons();
 const p = new URLSearchParams(location.search);
 for (const id of [
   "letters",
@@ -396,4 +406,10 @@ for (const id of [
   "dictionary",
 ])
   if (p.get(id) && $(id)) $(id).value = p.get(id);
+if (!p.get("dictionary") && $("dictionary")) {
+  try {
+    const savedDictionary = localStorage.getItem("wu-dictionary");
+    if (["common", "broad", "enable"].includes(savedDictionary)) $("dictionary").value = savedDictionary;
+  } catch {}
+}
 if (p.get("letters") && $("letters")) run();
