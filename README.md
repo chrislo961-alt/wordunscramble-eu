@@ -13,6 +13,12 @@ Major upgrade from the 528-word test build.
 
 SEO note: do not mass-generate thin pages. Add new indexable patterns only when they provide a distinct useful browse/search experience and Search Console shows demand.
 
+## Internal link discovery
+
+Length hubs link to indexable letter lists. Five-letter lists then offer related two-letter sequences, first-and-last-letter combinations and fixed-position clues. The generator maintains this navigation; noindex inventory is excluded from these links.
+
+Run `node scripts/check-link-discovery.cjs` to verify that every submitted sitemap page can be reached from the homepage through links on other submitted pages. This check also runs as part of the programmatic SEO audit, so a valid sitemap cannot hide disconnected pages.
+
 Before launch: replace the Contact placeholder with a real public contact method.
 
 

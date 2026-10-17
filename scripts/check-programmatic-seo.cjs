@@ -2,6 +2,8 @@
 const fs = require('fs');
 const path = require('path');
 
+require('./check-link-discovery.cjs');
+
 const root = path.resolve(__dirname, '..');
 const origin = 'https://wordunscramble.eu';
 const failures = [];

@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/build-programmatic-seo.cjs'
+      - 'scripts/word-list-navigation.cjs'
+      - 'scripts/check-link-discovery.cjs'
       - 'scripts/normalize-programmatic-copy.cjs'
       - 'scripts/enrich-programmatic-seo.cjs'
       - 'scripts/check-programmatic-seo.cjs'

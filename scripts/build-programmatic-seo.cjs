@@ -561,38 +561,6 @@ function rewriteLegacyApplyPolicy() {
   write('scripts/apply-indexing-policy.cjs', "#!/usr/bin/env node\nrequire('./apply-indexing-policy-v2.cjs');\n");
 }
 
-function rewriteIntegrityWorkflow() {
-  write('.github/workflows/seo-integrity.yml', `name: SEO integrity
-
-on:
-  pull_request:
-  push:
-    branches: [main]
-    paths:
-      - '**/index.html'
-      - 'sitemap*.xml'
-      - 'robots.txt'
-      - 'functions/**'
-      - 'data/programmatic-seo-routes.json'
-      - 'scripts/check-programmatic-seo.cjs'
-      - '.github/workflows/seo-integrity.yml'
-
-permissions:
-  contents: read
-
-jobs:
-  audit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: Check programmatic SEO integrity
-        run: node scripts/check-programmatic-seo.cjs
-`);
-}
-
 function buildSitemap() {
   const coreRoutes = [
     '/',
@@ -683,10 +651,10 @@ generateLengthLetterPages();
 generateFiveLetterStartEndPages();
 generateFiveLetterPositionPages();
 generateFiveLetterDigrams();
+require('./word-list-navigation.cjs').addWordListNavigation(root, manifest);
 patchHomepageAndWordLists();
 rewriteMiddlewarePolicy();
 rewriteLegacyApplyPolicy();
-rewriteIntegrityWorkflow();
 updateCompatibilityData();
 
 manifest.sort((a, b) => a.route.localeCompare(b.route));
