@@ -50,7 +50,7 @@ async function run() {
   assert.equal(await plain.text(), robots);
 
   const sitemap = read('sitemap.xml');
-  for (const route of ['/', '/anagram-solver/', '/6-letter-anagram-solver/', '/phrase-anagram-solver/']) {
+  for (const route of ['/', '/word-finder/', '/anagram-solver/', '/6-letter-anagram-solver/', '/phrase-anagram-solver/']) {
     const html = read(route === '/' ? 'index.html' : `${route.slice(1)}index.html`);
     const entry = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].find((m) => m[1].includes(`<loc>https://wordunscramble.eu${route}</loc>`));
     const lastmod = entry?.[1].match(/<lastmod>([^<]+)<\/lastmod>/)?.[1];
