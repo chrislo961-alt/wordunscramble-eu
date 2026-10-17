@@ -12,6 +12,8 @@ on:
       - 'data/programmatic-seo-routes.json'
       - 'scripts/normalize-programmatic-copy.cjs'
       - 'scripts/check-programmatic-seo.cjs'
+      - 'scripts/word-list-navigation.cjs'
+      - 'scripts/check-link-discovery.cjs'
       - 'scripts/materialize-site-chrome.cjs'
       - 'scripts/check-intent-ownership.cjs'
       - 'scripts/check-live-solver-qa.cjs'
