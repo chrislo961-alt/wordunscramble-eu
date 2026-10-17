@@ -6,7 +6,8 @@ function escapeHtml(value) {
     .replaceAll('>', '&gt;');
 }
 
-const primaryNav = '<nav><a href="/">Unscrambler</a><a href="/wordle-solver/">Wordle Solver</a><a href="/crossword-solver/">Crossword Solver</a><a href="/guides/">Guides</a></nav>';
+const primaryNav = '<nav><a href="/">Word Unscrambler</a><a href="/anagram-solver/">Anagram Solver</a><a href="/word-finder/">Word Finder</a><a href="/wordle-solver/">Wordle Solver</a><a href="/crossword-solver/">Crossword Solver</a><a href="/guides/">Guides</a></nav>';
+const footerLinks = '<div class="footerlinks"><a href="/">Word Unscrambler</a><a href="/anagram-solver/">Anagram Solver</a><a href="/word-finder/">Word Finder</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/how-it-works/">How it works</a><a href="/editorial-policy/">Editorial policy</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div>';
 
 const lowValueListPath = /^\/(?:\d+-letter-words(?:\/[a-z-]*)?|\d+-letter-words-(?:starting|ending|containing|with)[^/]*|words-(?:with|ending|starting|that|containing)[^/]*)(?:\/|$)/i;
 
@@ -64,7 +65,7 @@ export async function onRequest(context) {
 
   html = html.replace(
     /<div\s+class=["']footerlinks["'][^>]*>[\s\S]*?<\/div>/i,
-    '<div class="footerlinks"><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/how-it-works/">How it works</a><a href="/editorial-policy/">Editorial policy</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div>',
+    footerLinks,
   );
 
   const title = html.match(/<title>([^<]*)<\/title>/i)?.[1]?.trim() || 'WordUnscramble.eu';

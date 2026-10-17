@@ -48,3 +48,7 @@ for (const [label, href] of [
 
 if (process.exitCode) process.exit(process.exitCode);
 console.log('Search intent ownership checks passed.');
+
+// Check the response after middleware too: static navigation alone can pass
+// even when the edge rewrite removes links before crawlers receive the page.
+require('./check-runtime-seo.cjs');
