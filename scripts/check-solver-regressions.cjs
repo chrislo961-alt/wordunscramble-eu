@@ -176,6 +176,21 @@ async function solve(input, options = {}) {
 
   assert(els.go.disabled === false, "search button is re-enabled after solver runs");
 
+  // Published sample answers must remain reproducible with the linked filters.
+  const finder = fs.readFileSync(path.join(root, "word-finder/index.html"), "utf8");
+  const examples = [...finder.matchAll(/<a data-finder-example href="([^"]+)">([\s\S]*?)<\/a>/g)];
+  assert(examples.length === 3, "Word Finder publishes three runnable examples");
+  for (const [, href, body] of examples) {
+    const params = new URL(href.replaceAll('&amp;', '&'), 'https://wordunscramble.eu').searchParams;
+    out = await solve(params.get('letters'), {
+      dictionary: params.get('dictionary'),
+      length: +params.get('length'),
+      starts: params.get('starts'),
+    });
+    const answers = body.match(/<span data-example-answers>([^<]+)<\/span>/)[1].toLowerCase().split(', ');
+    assert(answers.every((word) => out.includes(word)), `${params.get('letters')} example answers match the live solver`);
+  }
+
   console.log("Solver regression suite passed.");
 })().catch((error) => {
   console.error("FAIL", error.message);
