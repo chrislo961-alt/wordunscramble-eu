@@ -1,0 +1,92 @@
+{
+  "origin": "https://wordunscramble.eu",
+  "key": "90d8c1acc34bb7900bf9f9f776398a46",
+  "sitemaps": [
+    "sitemap.xml",
+    "sitemap-guides.xml"
+  ],
+  "deploymentCheck": {
+    "name": "Workers Builds: wordunscramble-eu",
+    "appSlug": "cloudflare-workers-and-pages"
+  },
+  "generatorWorkflow": "Build programmatic SEO",
+  "globalFiles": [
+    "functions/_middleware.js",
+    "_headers",
+    "_redirects",
+    "robots.txt"
+  ],
+  "assetDependencies": {
+    "assets/app.js": [
+      "data/w2.txt",
+      "data/w3.txt",
+      "data/w4.txt",
+      "data/w5.txt",
+      "data/w6.txt",
+      "data/w7.txt",
+      "data/w8.txt",
+      "data/w9.txt",
+      "data/w10.txt",
+      "data/w11.txt",
+      "data/w12.txt",
+      "data/w13.txt",
+      "data/w14.txt",
+      "data/w15.txt",
+      "data/common.txt",
+      "data/enable.txt",
+      "functions/api/definition.js"
+    ],
+    "assets/solvers.js": [],
+    "manifest.webmanifest": [
+      "icon-192.png",
+      "icon-512.png"
+    ]
+  },
+  "routeAssets": {
+    "*": [
+      "assets/ui-polish.css",
+      "assets/wordunscramble-logo.png",
+      "favicon.svg",
+      "apple-touch-icon.png",
+      "manifest.webmanifest",
+      "social-card.png"
+    ],
+    "/wordle-solver/": [
+      "data/w5.txt",
+      "data/common.txt"
+    ],
+    "/crossword-solver/": [
+      "data/w2.txt",
+      "data/w3.txt",
+      "data/w4.txt",
+      "data/w5.txt",
+      "data/w6.txt",
+      "data/w7.txt",
+      "data/w8.txt",
+      "data/w9.txt",
+      "data/w10.txt",
+      "data/w11.txt",
+      "data/w12.txt",
+      "data/w13.txt",
+      "data/w14.txt",
+      "data/w15.txt",
+      "data/common.txt"
+    ],
+    "/word-checker/": [
+      "data/w2.txt",
+      "data/w3.txt",
+      "data/w4.txt",
+      "data/w5.txt",
+      "data/w6.txt",
+      "data/w7.txt",
+      "data/w8.txt",
+      "data/w9.txt",
+      "data/w10.txt",
+      "data/w11.txt",
+      "data/w12.txt",
+      "data/w13.txt",
+      "data/w14.txt",
+      "data/w15.txt"
+    ]
+  }
+}
