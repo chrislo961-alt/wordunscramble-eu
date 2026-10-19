@@ -1,0 +1,39 @@
+EIGHT LETTER RACKS: PRACTICE SHEET AND ANSWER KEY
+WordUnscramble.eu
+Checked: 19 October 2026
+Source: https://wordunscramble.eu/guides/how-to-unscramble-words/#practice-racks
+
+INSTRUCTIONS
+Try each task before checking the answers. A question mark is one blank tile.
+Use the stated exact length and word list. Leave all other filters empty unless
+the task specifies one. Example answers are not exhaustive.
+
+TASKS
+1. LISTEN. Length 6. Common English. Find a rearrangement.
+2. REACTS. Length 6. Starts with CR. Common English.
+3. LETER. Length 6. Common English. Can this rack make LETTER?
+4. LET?ER. Length 6. Common English. Can one blank fix task 3?
+5. QU?TZ. Length 6. Broad English. Can this rack make QUARTZ?
+6. QU?RTZ. Length 6. Broad English. Which letter does the blank supply?
+7. STARE. Length 5. Contains AR. Common English.
+8. AELPP. Length 5. Common English. Find a word using both Ps.
+
+ANSWER KEY
+1. SILENT is one checked answer: each letter is used once.
+2. CRATES fits the length and the required CR beginning.
+3. No six-letter result. LETTER needs two Ts; the rack has only one and
+   contains only five letters in total.
+4. LETTER fits. The blank supplies the second T, alongside the supplied T.
+5. No six-letter result. QUARTZ needs both A and R, but there is only one
+   blank and five tiles in total.
+6. QUARTZ fits. R is supplied, so the blank supplies A.
+7. STARE and TEARS fit. AR means that A is immediately followed by R.
+8. APPLE fits because the rack supplies two Ps.
+
+WORD-LIST NOTE
+The QUARTZ tasks use Broad English. QUARTZ is absent from this site's current
+Common English subset. A missing result can reflect the selected word list,
+the available letters, or the active filters.
+
+These examples describe the site's solver and word lists. They do not establish
+whether a particular branded game or tournament accepts a word.

@@ -1,0 +1,58 @@
+name: IndexNow changed URLs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_run:
+    workflows: ['Build programmatic SEO']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      commit_sha:
+        description: 'Optional full commit SHA; default selected commit. Only its first-parent diff is used.'
+        required: false
+        type: string
+      dry_run:
+        description: 'Preview changed URLs without sending requests'
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+  checks: read
+
+concurrency:
+  # Preserve every push's baseline. A later README-only push must not cancel an
+  # earlier content notification; that run can retarget to the newer deployment.
+  group: indexnow-${{ github.event_name }}-${{ github.event_name == 'pull_request' && github.event.pull_request.number || github.event_name == 'workflow_run' && github.event.workflow_run.id || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  changed-urls:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == 'main' &&
+       github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test change selection and submission safeguards
+        run: node --test scripts/indexnow.test.mjs
+      - name: Preview or submit changed URLs after production deploy
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          INDEXNOW_COMMIT_SHA: ${{ inputs.commit_sha }}
+          INDEXNOW_DRY_RUN: ${{ github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
+        run: node scripts/indexnow.mjs
