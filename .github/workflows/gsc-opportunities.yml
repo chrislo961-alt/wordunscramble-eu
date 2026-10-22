@@ -1,0 +1,24 @@
+name: Weekly GSC report
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 7 * * 1'
+permissions:
+  contents: read
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch GSC query data
+        run: node scripts/gsc-export.mjs
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+      - name: Analyze opportunities
+        run: node scripts/gsc-opportunities.mjs reports/gsc-queries.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gsc-seo-report
+          path: reports/gsc-opportunities.md
+          retention-days: 30
