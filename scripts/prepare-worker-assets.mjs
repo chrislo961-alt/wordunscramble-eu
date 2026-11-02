@@ -11,6 +11,8 @@ const excluded = new Set([
   ".git",
   ".github",
   "dist",
+  "node_modules",
+  ".wrangler",
   "functions",
   "scripts",
   "README.md",
