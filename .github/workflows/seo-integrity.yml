@@ -10,6 +10,7 @@ on:
       - 'robots.txt'
       - 'functions/**'
       - 'data/programmatic-seo-routes.json'
+      - 'scripts/build-programmatic-seo.cjs'
       - 'scripts/normalize-programmatic-copy.cjs'
       - 'scripts/check-programmatic-seo.cjs'
       - 'scripts/word-list-navigation.cjs'
@@ -32,6 +33,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Generate programmatic SEO architecture
+        run: node scripts/build-programmatic-seo.cjs
       - name: Normalize generated programmatic copy
         run: node scripts/normalize-programmatic-copy.cjs
       - name: Check programmatic SEO integrity
