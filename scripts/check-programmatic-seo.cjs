@@ -53,8 +53,8 @@ const indexable = manifest.filter((item) => item.indexable);
 const noindex = manifest.filter((item) => !item.indexable);
 
 if (manifest.length < 600) failures.push(`Generated coverage unexpectedly small: ${manifest.length}`);
-if (indexable.length < 350) failures.push(`Indexable generated coverage unexpectedly small: ${indexable.length}`);
-if (!noindex.length) failures.push('Quality gate produced no noindex pages; thresholds may be ineffective');
+if (indexable.length < 400 || indexable.length > 600) failures.push(`Indexable generated coverage outside quality target: ${indexable.length}`);
+if (noindex.length < 600) failures.push(`Quality gate is too permissive: only ${noindex.length} generated pages are noindex`);
 if (new Set(manifest.map((item) => item.route)).size !== manifest.length) failures.push('Duplicate route in programmatic manifest');
 
 const families = new Set(manifest.map((item) => item.family));
