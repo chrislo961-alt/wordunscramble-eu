@@ -1,0 +1,11 @@
+{
+  "name": "wordunscramble-eu",
+  "private": true,
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "scripts": {
+    "build:worker": "node scripts/prepare-worker-assets.mjs && wrangler pages functions build functions --outdir=dist/worker --project-directory=.",
+    "deploy": "wrangler deploy"
+  }
+}

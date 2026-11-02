@@ -1,0 +1,42 @@
+name: Worker migration QA
+
+on:
+  pull_request:
+    paths:
+      - 'wrangler.jsonc'
+      - 'package.json'
+      - 'functions/**'
+      - 'scripts/prepare-worker-assets.mjs'
+      - '.github/workflows/worker-migration-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'wrangler.jsonc'
+      - 'package.json'
+      - 'functions/**'
+      - 'scripts/prepare-worker-assets.mjs'
+      - '.github/workflows/worker-migration-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-worker-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - run: npm run build:worker
+      - name: Verify migration artifacts
+        run: |
+          test -f dist/worker/index.js
+          test -f dist/client/index.html
+          test -f dist/client/data/common.txt
+          test -f dist/client/sitemap.xml
+          test ! -e dist/client/functions
+          test ! -e dist/client/scripts
+          node -e "const c=require('./wrangler.jsonc'); if(c.name!=='wordunscramble-eu') process.exit(1); if(c.main!=='./dist/worker/index.js') process.exit(1); if(c.assets?.directory!=='./dist/client'||c.assets?.run_worker_first!==true) process.exit(1)"

@@ -25,14 +25,47 @@ export async function onRequest(context) {
 
   // Retire duplicate keyword variants now that the homepage is the canonical
   // word-unscrambler experience. Preserve query parameters such as shared racks.
-  if (/^\/(?:word-unscrambler|free-word-unscrambler)\/?$/i.test(url.pathname)) {
-    url.pathname = '/';
+  const permanentRedirects = new Map([
+    ['/word-unscrambler', '/'],
+    ['/word-unscrambler/', '/'],
+    ['/free-word-unscrambler', '/'],
+    ['/free-word-unscrambler/', '/'],
+    ['/word-unscrambler-uk', '/'],
+    ['/word-unscrambler-uk/', '/'],
+    ['/words-with-j', '/words-containing/j/'],
+    ['/words-with-j/', '/words-containing/j/'],
+    ['/words-with-k', '/words-containing/k/'],
+    ['/words-with-k/', '/words-containing/k/'],
+    ['/words-with-v', '/words-containing/v/'],
+    ['/words-with-v/', '/words-containing/v/'],
+  ]);
+  const redirectPath = permanentRedirects.get(url.pathname);
+  if (redirectPath) {
+    url.pathname = redirectPath;
     return Response.redirect(url.toString(), 301);
   }
 
   const response = await context.next();
   const contentType = response.headers.get('content-type') || '';
-  if (!contentType.includes('text/html')) return response;
+
+  if (!contentType.includes('text/html')) {
+    const headers = new Headers(response.headers);
+    headers.set('X-Content-Type-Options', 'nosniff');
+    headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+    headers.set('X-Frame-Options', 'SAMEORIGIN');
+    headers.set('Permissions-Policy', 'accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()');
+    headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+    if (url.pathname.startsWith('/data/')) headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+    else if (url.pathname.startsWith('/assets/')) headers.set('Cache-Control', 'public, max-age=3600, must-revalidate');
+    else if (['/social-card.svg','/social-card.png','/favicon.ico','/apple-touch-icon.png','/icon-192.png','/icon-512.png','/manifest.webmanifest'].includes(url.pathname)) {
+      headers.set('Cache-Control', 'public, max-age=604800');
+    }
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers,
+    });
+  }
 
   let html = await response.text();
 
