@@ -148,10 +148,13 @@ function writePage(route, html) {
 }
 
 function singleLetterQuality(type, length, broadCount, commonCount) {
+  // A programmatic page should only compete in Search when it has enough
+  // familiar vocabulary to be a useful standalone answer. Sparse result sets
+  // stay available to visitors but are noindex and omitted from the sitemap.
   if (type === 'containing') {
-    return broadCount >= Math.max(12, length * 2) && commonCount >= Math.max(5, Math.ceil(length / 2));
+    return broadCount >= Math.max(40, length * 8) && commonCount >= 50;
   }
-  return broadCount >= Math.max(6, length) && commonCount >= Math.max(3, Math.ceil(length / 2));
+  return broadCount >= Math.max(25, length * 5) && commonCount >= 50;
 }
 
 const typeConfig = {
@@ -262,7 +265,7 @@ function generateCategoryHubsAndLetterHubs() {
       const broad = allBroad.filter(matcher);
       const common = allCommon.filter(matcher);
       const route = config.letterRoute(letter);
-      const indexable = broad.length >= 20 && common.length >= 8;
+      const indexable = broad.length >= 100 && common.length >= 50;
       const perLength = filterLengths.map((length) => {
         const b = broadByLength.get(length).filter(matcher);
         const c = commonByLength.get(length).filter(matcher);
@@ -371,7 +374,7 @@ function generateFiveLetterStartEndPages() {
         intro: `This page combines two strong clues: the first letter is ${start.toUpperCase()} and the final letter is ${end.toUpperCase()}. Use the common matches first, then add any known middle positions in the Crossword Solver.`,
         broadMatches: broad,
         commonMatches: common,
-        indexable: true,
+        indexable: common.length >= 20,
         family: 'programmatic',
         breadcrumbItems: [['5 Letter Words', '/5-letter-words/']],
         related: [
@@ -384,7 +387,7 @@ function generateFiveLetterStartEndPages() {
           ['How do I narrow the middle three letters?', 'Enter the pattern in the Crossword Solver and replace unknown positions with question marks.'],
         ],
       }));
-      addManifest(route, 'start-end', true, broad.length, common.length, { length: 5, start, end });
+      addManifest(route, 'start-end', common.length >= 20, broad.length, common.length, { length: 5, start, end });
     }
   }
 }
@@ -411,7 +414,7 @@ function generateFiveLetterPositionPages() {
         intro: `Use this position page when ${letter.toUpperCase()} is fixed as the ${name} letter in a five-letter word. Exact positions are especially useful for crosswords and Wordle-style pattern searches.`,
         broadMatches: broad,
         commonMatches: common,
-        indexable: true,
+        indexable: common.length >= 50,
         family: 'programmatic',
         breadcrumbItems: [['5 Letter Words', '/5-letter-words/']],
         related: [
@@ -424,7 +427,7 @@ function generateFiveLetterPositionPages() {
           ['Can I add more fixed positions?', 'Yes. The Crossword Solver supports a full five-character pattern, so you can combine several confirmed positions.'],
         ],
       }));
-      addManifest(route, 'position', true, broad.length, common.length, { length: 5, position: position + 1, letter });
+      addManifest(route, 'position', common.length >= 50, broad.length, common.length, { length: 5, position: position + 1, letter });
     }
   }
 }
@@ -492,7 +495,7 @@ function generateFiveLetterDigrams() {
         intro: `This focused list keeps the two-letter sequence ${token.toUpperCase()} together while filtering to exactly five letters. Use it when a crossword, anagram or Wordle-style clue confirms that sequence.`,
         broadMatches: broad,
         commonMatches: common,
-        indexable: true,
+        indexable: common.length >= 50,
         family: 'programmatic',
         breadcrumbItems: [['5 Letter Words', '/5-letter-words/']],
         related: [
@@ -505,7 +508,7 @@ function generateFiveLetterDigrams() {
           ['What if the two letters are not next to each other?', 'Use Wordle Solver or Crossword Solver instead. This page only matches the exact two-letter sequence shown in the heading.'],
         ],
       }));
-      addManifest(route, 'digram', true, broad.length, common.length, { length: 5, type: config.type, token });
+      addManifest(route, 'digram', common.length >= 50, broad.length, common.length, { length: 5, type: config.type, token });
     }
   }
 }
