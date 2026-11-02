@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wordunscramble-eu",
+  "compatibility_date": "2026-11-02",
+  "main": "./dist/worker/index.js",
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "build": {
+    "command": "node scripts/prepare-worker-assets.mjs && npx wrangler pages functions build functions --outdir=dist/worker --project-directory=."
+  }
+}
