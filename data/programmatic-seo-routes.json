@@ -50,7 +50,7 @@
   {
     "route": "/2-letter-words-containing-a/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 30,
     "commonCount": 28,
     "type": "containing",
@@ -90,7 +90,7 @@
   {
     "route": "/2-letter-words-containing-e/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 26,
     "commonCount": 23,
     "type": "containing",
@@ -130,7 +130,7 @@
   {
     "route": "/2-letter-words-containing-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 20,
     "commonCount": 20,
     "type": "containing",
@@ -170,7 +170,7 @@
   {
     "route": "/2-letter-words-containing-m/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 12,
     "commonCount": 12,
     "type": "containing",
@@ -190,7 +190,7 @@
   {
     "route": "/2-letter-words-containing-o/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 32,
     "commonCount": 30,
     "type": "containing",
@@ -250,7 +250,7 @@
   {
     "route": "/2-letter-words-containing-u/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 14,
     "commonCount": 11,
     "type": "containing",
@@ -290,7 +290,7 @@
   {
     "route": "/2-letter-words-containing-y/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 12,
     "commonCount": 8,
     "type": "containing",
@@ -310,7 +310,7 @@
   {
     "route": "/2-letter-words-ending-with-a/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 15,
     "commonCount": 13,
     "type": "ending",
@@ -350,7 +350,7 @@
   {
     "route": "/2-letter-words-ending-with-e/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 14,
     "commonCount": 13,
     "type": "ending",
@@ -380,7 +380,7 @@
   {
     "route": "/2-letter-words-ending-with-h/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 6,
     "commonCount": 6,
     "type": "ending",
@@ -390,7 +390,7 @@
   {
     "route": "/2-letter-words-ending-with-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 14,
     "commonCount": 14,
     "type": "ending",
@@ -430,7 +430,7 @@
   {
     "route": "/2-letter-words-ending-with-m/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 6,
     "commonCount": 6,
     "type": "ending",
@@ -450,7 +450,7 @@
   {
     "route": "/2-letter-words-ending-with-o/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 17,
     "commonCount": 17,
     "type": "ending",
@@ -510,7 +510,7 @@
   {
     "route": "/2-letter-words-ending-with-u/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 6,
     "commonCount": 6,
     "type": "ending",
@@ -550,7 +550,7 @@
   {
     "route": "/2-letter-words-ending-with-y/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 8,
     "commonCount": 4,
     "type": "ending",
@@ -570,7 +570,7 @@
   {
     "route": "/2-letter-words-starting-with-a/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 16,
     "commonCount": 16,
     "type": "starting",
@@ -610,7 +610,7 @@
   {
     "route": "/2-letter-words-starting-with-e/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 13,
     "commonCount": 11,
     "type": "starting",
@@ -650,7 +650,7 @@
   {
     "route": "/2-letter-words-starting-with-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 6,
     "commonCount": 6,
     "type": "starting",
@@ -690,7 +690,7 @@
   {
     "route": "/2-letter-words-starting-with-m/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 7,
     "commonCount": 7,
     "type": "starting",
@@ -710,7 +710,7 @@
   {
     "route": "/2-letter-words-starting-with-o/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 16,
     "commonCount": 14,
     "type": "starting",
@@ -770,7 +770,7 @@
   {
     "route": "/2-letter-words-starting-with-u/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 8,
     "commonCount": 5,
     "type": "starting",
@@ -858,7 +858,7 @@
   {
     "route": "/3-letter-words-containing-c/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 88,
     "commonCount": 45,
     "type": "containing",
@@ -888,7 +888,7 @@
   {
     "route": "/3-letter-words-containing-f/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 92,
     "commonCount": 37,
     "type": "containing",
@@ -928,7 +928,7 @@
   {
     "route": "/3-letter-words-containing-j/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 35,
     "commonCount": 20,
     "type": "containing",
@@ -938,7 +938,7 @@
   {
     "route": "/3-letter-words-containing-k/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 86,
     "commonCount": 24,
     "type": "containing",
@@ -1048,7 +1048,7 @@
   {
     "route": "/3-letter-words-containing-v/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 53,
     "commonCount": 16,
     "type": "containing",
@@ -1068,7 +1068,7 @@
   {
     "route": "/3-letter-words-containing-x/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 48,
     "commonCount": 21,
     "type": "containing",
@@ -1088,7 +1088,7 @@
   {
     "route": "/3-letter-words-containing-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 48,
     "commonCount": 10,
     "type": "containing",
@@ -1098,7 +1098,7 @@
   {
     "route": "/3-letter-words-ending-with-a/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 61,
     "commonCount": 22,
     "type": "ending",
@@ -1108,7 +1108,7 @@
   {
     "route": "/3-letter-words-ending-with-b/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 57,
     "commonCount": 23,
     "type": "ending",
@@ -1118,7 +1118,7 @@
   {
     "route": "/3-letter-words-ending-with-c/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 25,
     "commonCount": 8,
     "type": "ending",
@@ -1128,7 +1128,7 @@
   {
     "route": "/3-letter-words-ending-with-d/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 78,
     "commonCount": 46,
     "type": "ending",
@@ -1148,7 +1148,7 @@
   {
     "route": "/3-letter-words-ending-with-f/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 27,
     "commonCount": 7,
     "type": "ending",
@@ -1158,7 +1158,7 @@
   {
     "route": "/3-letter-words-ending-with-g/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 78,
     "commonCount": 42,
     "type": "ending",
@@ -1168,7 +1168,7 @@
   {
     "route": "/3-letter-words-ending-with-h/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 39,
     "commonCount": 18,
     "type": "ending",
@@ -1178,7 +1178,7 @@
   {
     "route": "/3-letter-words-ending-with-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 33,
     "commonCount": 16,
     "type": "ending",
@@ -1198,7 +1198,7 @@
   {
     "route": "/3-letter-words-ending-with-k/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 37,
     "commonCount": 11,
     "type": "ending",
@@ -1208,7 +1208,7 @@
   {
     "route": "/3-letter-words-ending-with-l/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 40,
     "commonCount": 22,
     "type": "ending",
@@ -1218,7 +1218,7 @@
   {
     "route": "/3-letter-words-ending-with-m/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 65,
     "commonCount": 42,
     "type": "ending",
@@ -1238,7 +1238,7 @@
   {
     "route": "/3-letter-words-ending-with-o/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 54,
     "commonCount": 23,
     "type": "ending",
@@ -1248,7 +1248,7 @@
   {
     "route": "/3-letter-words-ending-with-p/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 70,
     "commonCount": 40,
     "type": "ending",
@@ -1268,7 +1268,7 @@
   {
     "route": "/3-letter-words-ending-with-r/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 51,
     "commonCount": 22,
     "type": "ending",
@@ -1278,7 +1278,7 @@
   {
     "route": "/3-letter-words-ending-with-s/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 109,
     "commonCount": 29,
     "type": "ending",
@@ -1298,7 +1298,7 @@
   {
     "route": "/3-letter-words-ending-with-u/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 31,
     "commonCount": 5,
     "type": "ending",
@@ -1308,7 +1308,7 @@
   {
     "route": "/3-letter-words-ending-with-v/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 16,
     "commonCount": 5,
     "type": "ending",
@@ -1318,7 +1318,7 @@
   {
     "route": "/3-letter-words-ending-with-w/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 46,
     "commonCount": 26,
     "type": "ending",
@@ -1328,7 +1328,7 @@
   {
     "route": "/3-letter-words-ending-with-x/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 42,
     "commonCount": 20,
     "type": "ending",
@@ -1338,7 +1338,7 @@
   {
     "route": "/3-letter-words-ending-with-y/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 68,
     "commonCount": 40,
     "type": "ending",
@@ -1348,7 +1348,7 @@
   {
     "route": "/3-letter-words-ending-with-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 26,
     "commonCount": 5,
     "type": "ending",
@@ -1358,7 +1358,7 @@
   {
     "route": "/3-letter-words-starting-with-a/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 95,
     "commonCount": 45,
     "type": "starting",
@@ -1368,7 +1368,7 @@
   {
     "route": "/3-letter-words-starting-with-b/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 61,
     "commonCount": 43,
     "type": "starting",
@@ -1378,7 +1378,7 @@
   {
     "route": "/3-letter-words-starting-with-c/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 51,
     "commonCount": 31,
     "type": "starting",
@@ -1388,7 +1388,7 @@
   {
     "route": "/3-letter-words-starting-with-d/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 69,
     "commonCount": 43,
     "type": "starting",
@@ -1398,7 +1398,7 @@
   {
     "route": "/3-letter-words-starting-with-e/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 62,
     "commonCount": 19,
     "type": "starting",
@@ -1408,7 +1408,7 @@
   {
     "route": "/3-letter-words-starting-with-f/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 59,
     "commonCount": 27,
     "type": "starting",
@@ -1418,7 +1418,7 @@
   {
     "route": "/3-letter-words-starting-with-g/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 63,
     "commonCount": 27,
     "type": "starting",
@@ -1428,7 +1428,7 @@
   {
     "route": "/3-letter-words-starting-with-h/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 60,
     "commonCount": 37,
     "type": "starting",
@@ -1438,7 +1438,7 @@
   {
     "route": "/3-letter-words-starting-with-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 27,
     "commonCount": 13,
     "type": "starting",
@@ -1448,7 +1448,7 @@
   {
     "route": "/3-letter-words-starting-with-j/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 30,
     "commonCount": 18,
     "type": "starting",
@@ -1458,7 +1458,7 @@
   {
     "route": "/3-letter-words-starting-with-k/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 41,
     "commonCount": 10,
     "type": "starting",
@@ -1468,7 +1468,7 @@
   {
     "route": "/3-letter-words-starting-with-l/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 61,
     "commonCount": 34,
     "type": "starting",
@@ -1478,7 +1478,7 @@
   {
     "route": "/3-letter-words-starting-with-m/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 67,
     "commonCount": 37,
     "type": "starting",
@@ -1488,7 +1488,7 @@
   {
     "route": "/3-letter-words-starting-with-n/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 52,
     "commonCount": 22,
     "type": "starting",
@@ -1498,7 +1498,7 @@
   {
     "route": "/3-letter-words-starting-with-o/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 71,
     "commonCount": 19,
     "type": "starting",
@@ -1508,7 +1508,7 @@
   {
     "route": "/3-letter-words-starting-with-p/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 76,
     "commonCount": 41,
     "type": "starting",
@@ -1528,7 +1528,7 @@
   {
     "route": "/3-letter-words-starting-with-r/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 64,
     "commonCount": 39,
     "type": "starting",
@@ -1538,7 +1538,7 @@
   {
     "route": "/3-letter-words-starting-with-s/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 91,
     "commonCount": 46,
     "type": "starting",
@@ -1548,7 +1548,7 @@
   {
     "route": "/3-letter-words-starting-with-t/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 73,
     "commonCount": 47,
     "type": "starting",
@@ -1558,7 +1558,7 @@
   {
     "route": "/3-letter-words-starting-with-u/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 28,
     "commonCount": 7,
     "type": "starting",
@@ -1568,7 +1568,7 @@
   {
     "route": "/3-letter-words-starting-with-v/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 30,
     "commonCount": 7,
     "type": "starting",
@@ -1578,7 +1578,7 @@
   {
     "route": "/3-letter-words-starting-with-w/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 47,
     "commonCount": 23,
     "type": "starting",
@@ -1598,7 +1598,7 @@
   {
     "route": "/3-letter-words-starting-with-y/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 37,
     "commonCount": 16,
     "type": "starting",
@@ -1608,7 +1608,7 @@
   {
     "route": "/3-letter-words-starting-with-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 23,
     "commonCount": 5,
     "type": "starting",
@@ -1716,7 +1716,7 @@
   {
     "route": "/4-letter-words-containing-j/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 145,
     "commonCount": 45,
     "type": "containing",
@@ -1786,7 +1786,7 @@
   {
     "route": "/4-letter-words-containing-q/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 26,
     "commonCount": 5,
     "type": "containing",
@@ -1856,7 +1856,7 @@
   {
     "route": "/4-letter-words-containing-x/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 87,
     "commonCount": 14,
     "type": "containing",
@@ -1876,7 +1876,7 @@
   {
     "route": "/4-letter-words-containing-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 146,
     "commonCount": 22,
     "type": "containing",
@@ -1896,7 +1896,7 @@
   {
     "route": "/4-letter-words-ending-with-b/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 83,
     "commonCount": 26,
     "type": "ending",
@@ -1906,7 +1906,7 @@
   {
     "route": "/4-letter-words-ending-with-c/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 42,
     "commonCount": 7,
     "type": "ending",
@@ -1936,7 +1936,7 @@
   {
     "route": "/4-letter-words-ending-with-f/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 115,
     "commonCount": 29,
     "type": "ending",
@@ -1966,7 +1966,7 @@
   {
     "route": "/4-letter-words-ending-with-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 154,
     "commonCount": 16,
     "type": "ending",
@@ -2086,7 +2086,7 @@
   {
     "route": "/4-letter-words-ending-with-u/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 82,
     "commonCount": 10,
     "type": "ending",
@@ -2106,7 +2106,7 @@
   {
     "route": "/4-letter-words-ending-with-w/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 74,
     "commonCount": 31,
     "type": "ending",
@@ -2116,7 +2116,7 @@
   {
     "route": "/4-letter-words-ending-with-x/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 32,
     "commonCount": 4,
     "type": "ending",
@@ -2136,7 +2136,7 @@
   {
     "route": "/4-letter-words-ending-with-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 40,
     "commonCount": 8,
     "type": "ending",
@@ -2186,7 +2186,7 @@
   {
     "route": "/4-letter-words-starting-with-e/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 162,
     "commonCount": 31,
     "type": "starting",
@@ -2226,7 +2226,7 @@
   {
     "route": "/4-letter-words-starting-with-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 70,
     "commonCount": 14,
     "type": "starting",
@@ -2236,7 +2236,7 @@
   {
     "route": "/4-letter-words-starting-with-j/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 122,
     "commonCount": 40,
     "type": "starting",
@@ -2246,7 +2246,7 @@
   {
     "route": "/4-letter-words-starting-with-k/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 203,
     "commonCount": 31,
     "type": "starting",
@@ -2276,7 +2276,7 @@
   {
     "route": "/4-letter-words-starting-with-n/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 169,
     "commonCount": 39,
     "type": "starting",
@@ -2286,7 +2286,7 @@
   {
     "route": "/4-letter-words-starting-with-o/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 163,
     "commonCount": 30,
     "type": "starting",
@@ -2306,7 +2306,7 @@
   {
     "route": "/4-letter-words-starting-with-q/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 19,
     "commonCount": 4,
     "type": "starting",
@@ -2346,7 +2346,7 @@
   {
     "route": "/4-letter-words-starting-with-u/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 62,
     "commonCount": 10,
     "type": "starting",
@@ -2356,7 +2356,7 @@
   {
     "route": "/4-letter-words-starting-with-v/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 112,
     "commonCount": 27,
     "type": "starting",
@@ -2386,7 +2386,7 @@
   {
     "route": "/4-letter-words-starting-with-y/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 122,
     "commonCount": 17,
     "type": "starting",
@@ -2396,7 +2396,7 @@
   {
     "route": "/4-letter-words-starting-with-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 57,
     "commonCount": 6,
     "type": "starting",
@@ -2424,7 +2424,7 @@
   {
     "route": "/5-letter-words-containing-ab/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 145,
     "commonCount": 25,
     "length": 5,
@@ -2454,7 +2454,7 @@
   {
     "route": "/5-letter-words-containing-ag/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 156,
     "commonCount": 25,
     "length": 5,
@@ -2474,7 +2474,7 @@
   {
     "route": "/5-letter-words-containing-ak/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 131,
     "commonCount": 35,
     "length": 5,
@@ -2494,7 +2494,7 @@
   {
     "route": "/5-letter-words-containing-am/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 255,
     "commonCount": 46,
     "length": 5,
@@ -2514,7 +2514,7 @@
   {
     "route": "/5-letter-words-containing-ap/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 181,
     "commonCount": 34,
     "length": 5,
@@ -2554,7 +2554,7 @@
   {
     "route": "/5-letter-words-containing-au/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 159,
     "commonCount": 17,
     "length": 5,
@@ -2564,7 +2564,7 @@
   {
     "route": "/5-letter-words-containing-av/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 122,
     "commonCount": 27,
     "length": 5,
@@ -2574,7 +2574,7 @@
   {
     "route": "/5-letter-words-containing-aw/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 138,
     "commonCount": 18,
     "length": 5,
@@ -2594,7 +2594,7 @@
   {
     "route": "/5-letter-words-containing-ba/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 226,
     "commonCount": 34,
     "length": 5,
@@ -2604,7 +2604,7 @@
   {
     "route": "/5-letter-words-containing-be/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 230,
     "commonCount": 45,
     "length": 5,
@@ -2614,7 +2614,7 @@
   {
     "route": "/5-letter-words-containing-bi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 138,
     "commonCount": 24,
     "length": 5,
@@ -2624,7 +2624,7 @@
   {
     "route": "/5-letter-words-containing-bl/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 110,
     "commonCount": 32,
     "length": 5,
@@ -2634,7 +2634,7 @@
   {
     "route": "/5-letter-words-containing-bo/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 243,
     "commonCount": 47,
     "length": 5,
@@ -2644,7 +2644,7 @@
   {
     "route": "/5-letter-words-containing-br/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 129,
     "commonCount": 34,
     "length": 5,
@@ -2654,7 +2654,7 @@
   {
     "route": "/5-letter-words-containing-bu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 142,
     "commonCount": 28,
     "length": 5,
@@ -2674,7 +2674,7 @@
   {
     "route": "/5-letter-words-containing-ca/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 247,
     "commonCount": 45,
     "length": 5,
@@ -2684,7 +2684,7 @@
   {
     "route": "/5-letter-words-containing-ce/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 165,
     "commonCount": 45,
     "length": 5,
@@ -2714,7 +2714,7 @@
   {
     "route": "/5-letter-words-containing-cl/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 100,
     "commonCount": 32,
     "length": 5,
@@ -2734,7 +2734,7 @@
   {
     "route": "/5-letter-words-containing-cr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 137,
     "commonCount": 44,
     "length": 5,
@@ -2744,7 +2744,7 @@
   {
     "route": "/5-letter-words-containing-cu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 116,
     "commonCount": 18,
     "length": 5,
@@ -2764,7 +2764,7 @@
   {
     "route": "/5-letter-words-containing-da/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 132,
     "commonCount": 28,
     "length": 5,
@@ -2784,7 +2784,7 @@
   {
     "route": "/5-letter-words-containing-di/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 160,
     "commonCount": 23,
     "length": 5,
@@ -2794,7 +2794,7 @@
   {
     "route": "/5-letter-words-containing-do/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 206,
     "commonCount": 27,
     "length": 5,
@@ -2804,7 +2804,7 @@
   {
     "route": "/5-letter-words-containing-dr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 89,
     "commonCount": 30,
     "length": 5,
@@ -2814,7 +2814,7 @@
   {
     "route": "/5-letter-words-containing-ds/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 216,
     "commonCount": 44,
     "length": 5,
@@ -2824,7 +2824,7 @@
   {
     "route": "/5-letter-words-containing-dy/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 111,
     "commonCount": 27,
     "length": 5,
@@ -2854,7 +2854,7 @@
   {
     "route": "/5-letter-words-containing-ec/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 97,
     "commonCount": 18,
     "length": 5,
@@ -2894,7 +2894,7 @@
   {
     "route": "/5-letter-words-containing-em/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 136,
     "commonCount": 19,
     "length": 5,
@@ -2914,7 +2914,7 @@
   {
     "route": "/5-letter-words-containing-ep/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 93,
     "commonCount": 16,
     "length": 5,
@@ -2944,7 +2944,7 @@
   {
     "route": "/5-letter-words-containing-et/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 223,
     "commonCount": 33,
     "length": 5,
@@ -2964,7 +2964,7 @@
   {
     "route": "/5-letter-words-containing-fa/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 115,
     "commonCount": 26,
     "length": 5,
@@ -2974,7 +2974,7 @@
   {
     "route": "/5-letter-words-containing-fe/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 106,
     "commonCount": 17,
     "length": 5,
@@ -2984,7 +2984,7 @@
   {
     "route": "/5-letter-words-containing-ff/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 102,
     "commonCount": 18,
     "length": 5,
@@ -2994,7 +2994,7 @@
   {
     "route": "/5-letter-words-containing-fi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 107,
     "commonCount": 31,
     "length": 5,
@@ -3004,7 +3004,7 @@
   {
     "route": "/5-letter-words-containing-fl/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 95,
     "commonCount": 37,
     "length": 5,
@@ -3014,7 +3014,7 @@
   {
     "route": "/5-letter-words-containing-fo/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 90,
     "commonCount": 19,
     "length": 5,
@@ -3024,7 +3024,7 @@
   {
     "route": "/5-letter-words-containing-fr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 72,
     "commonCount": 17,
     "length": 5,
@@ -3034,7 +3034,7 @@
   {
     "route": "/5-letter-words-containing-ft/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 62,
     "commonCount": 17,
     "length": 5,
@@ -3054,7 +3054,7 @@
   {
     "route": "/5-letter-words-containing-ga/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 207,
     "commonCount": 27,
     "length": 5,
@@ -3074,7 +3074,7 @@
   {
     "route": "/5-letter-words-containing-gh/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 66,
     "commonCount": 19,
     "length": 5,
@@ -3084,7 +3084,7 @@
   {
     "route": "/5-letter-words-containing-gi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 105,
     "commonCount": 16,
     "length": 5,
@@ -3094,7 +3094,7 @@
   {
     "route": "/5-letter-words-containing-go/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 170,
     "commonCount": 24,
     "length": 5,
@@ -3104,7 +3104,7 @@
   {
     "route": "/5-letter-words-containing-gr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 114,
     "commonCount": 38,
     "length": 5,
@@ -3114,7 +3114,7 @@
   {
     "route": "/5-letter-words-containing-gs/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 132,
     "commonCount": 20,
     "length": 5,
@@ -3154,7 +3154,7 @@
   {
     "route": "/5-letter-words-containing-hi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 186,
     "commonCount": 49,
     "length": 5,
@@ -3174,7 +3174,7 @@
   {
     "route": "/5-letter-words-containing-hu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 99,
     "commonCount": 19,
     "length": 5,
@@ -3204,7 +3204,7 @@
   {
     "route": "/5-letter-words-containing-id/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 202,
     "commonCount": 42,
     "length": 5,
@@ -3214,7 +3214,7 @@
   {
     "route": "/5-letter-words-containing-ie/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 190,
     "commonCount": 42,
     "length": 5,
@@ -3224,7 +3224,7 @@
   {
     "route": "/5-letter-words-containing-ig/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 103,
     "commonCount": 23,
     "length": 5,
@@ -3244,7 +3244,7 @@
   {
     "route": "/5-letter-words-containing-im/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 157,
     "commonCount": 26,
     "length": 5,
@@ -3264,7 +3264,7 @@
   {
     "route": "/5-letter-words-containing-ip/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 93,
     "commonCount": 18,
     "length": 5,
@@ -3274,7 +3274,7 @@
   {
     "route": "/5-letter-words-containing-ir/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 219,
     "commonCount": 42,
     "length": 5,
@@ -3284,7 +3284,7 @@
   {
     "route": "/5-letter-words-containing-is/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 322,
     "commonCount": 45,
     "length": 5,
@@ -3304,7 +3304,7 @@
   {
     "route": "/5-letter-words-containing-iv/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 83,
     "commonCount": 22,
     "length": 5,
@@ -3314,7 +3314,7 @@
   {
     "route": "/5-letter-words-containing-j/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 252,
     "commonCount": 38,
     "type": "containing",
@@ -3354,7 +3354,7 @@
   {
     "route": "/5-letter-words-containing-ky/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 127,
     "commonCount": 23,
     "length": 5,
@@ -3384,7 +3384,7 @@
   {
     "route": "/5-letter-words-containing-ld/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 69,
     "commonCount": 19,
     "length": 5,
@@ -3444,7 +3444,7 @@
   {
     "route": "/5-letter-words-containing-lt/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 90,
     "commonCount": 21,
     "length": 5,
@@ -3454,7 +3454,7 @@
   {
     "route": "/5-letter-words-containing-lu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 171,
     "commonCount": 29,
     "length": 5,
@@ -3464,7 +3464,7 @@
   {
     "route": "/5-letter-words-containing-ly/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 161,
     "commonCount": 42,
     "length": 5,
@@ -3504,7 +3504,7 @@
   {
     "route": "/5-letter-words-containing-mi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 199,
     "commonCount": 28,
     "length": 5,
@@ -3514,7 +3514,7 @@
   {
     "route": "/5-letter-words-containing-mm/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 55,
     "commonCount": 17,
     "length": 5,
@@ -3524,7 +3524,7 @@
   {
     "route": "/5-letter-words-containing-mo/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 219,
     "commonCount": 48,
     "length": 5,
@@ -3534,7 +3534,7 @@
   {
     "route": "/5-letter-words-containing-mp/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 118,
     "commonCount": 29,
     "length": 5,
@@ -3544,7 +3544,7 @@
   {
     "route": "/5-letter-words-containing-ms/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 134,
     "commonCount": 26,
     "length": 5,
@@ -3564,7 +3564,7 @@
   {
     "route": "/5-letter-words-containing-na/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 234,
     "commonCount": 30,
     "length": 5,
@@ -3574,7 +3574,7 @@
   {
     "route": "/5-letter-words-containing-nc/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 84,
     "commonCount": 23,
     "length": 5,
@@ -3584,7 +3584,7 @@
   {
     "route": "/5-letter-words-containing-nd/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 144,
     "commonCount": 48,
     "length": 5,
@@ -3614,7 +3614,7 @@
   {
     "route": "/5-letter-words-containing-ni/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 155,
     "commonCount": 20,
     "length": 5,
@@ -3624,7 +3624,7 @@
   {
     "route": "/5-letter-words-containing-nk/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 136,
     "commonCount": 35,
     "length": 5,
@@ -3634,7 +3634,7 @@
   {
     "route": "/5-letter-words-containing-nn/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 81,
     "commonCount": 19,
     "length": 5,
@@ -3644,7 +3644,7 @@
   {
     "route": "/5-letter-words-containing-no/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 166,
     "commonCount": 35,
     "length": 5,
@@ -3654,7 +3654,7 @@
   {
     "route": "/5-letter-words-containing-ns/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 245,
     "commonCount": 41,
     "length": 5,
@@ -3674,7 +3674,7 @@
   {
     "route": "/5-letter-words-containing-ny/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 82,
     "commonCount": 23,
     "length": 5,
@@ -3694,7 +3694,7 @@
   {
     "route": "/5-letter-words-containing-oa/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 108,
     "commonCount": 24,
     "length": 5,
@@ -3704,7 +3704,7 @@
   {
     "route": "/5-letter-words-containing-oc/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 100,
     "commonCount": 23,
     "length": 5,
@@ -3714,7 +3714,7 @@
   {
     "route": "/5-letter-words-containing-od/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 130,
     "commonCount": 23,
     "length": 5,
@@ -3724,7 +3724,7 @@
   {
     "route": "/5-letter-words-containing-oi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 110,
     "commonCount": 19,
     "length": 5,
@@ -3734,7 +3734,7 @@
   {
     "route": "/5-letter-words-containing-ok/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 106,
     "commonCount": 22,
     "length": 5,
@@ -3744,7 +3744,7 @@
   {
     "route": "/5-letter-words-containing-ol/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 260,
     "commonCount": 48,
     "length": 5,
@@ -3754,7 +3754,7 @@
   {
     "route": "/5-letter-words-containing-om/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 157,
     "commonCount": 33,
     "length": 5,
@@ -3784,7 +3784,7 @@
   {
     "route": "/5-letter-words-containing-op/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 155,
     "commonCount": 28,
     "length": 5,
@@ -3804,7 +3804,7 @@
   {
     "route": "/5-letter-words-containing-os/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 316,
     "commonCount": 40,
     "length": 5,
@@ -3814,7 +3814,7 @@
   {
     "route": "/5-letter-words-containing-ot/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 217,
     "commonCount": 46,
     "length": 5,
@@ -3834,7 +3834,7 @@
   {
     "route": "/5-letter-words-containing-ov/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 62,
     "commonCount": 19,
     "length": 5,
@@ -3844,7 +3844,7 @@
   {
     "route": "/5-letter-words-containing-ow/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 197,
     "commonCount": 49,
     "length": 5,
@@ -3864,7 +3864,7 @@
   {
     "route": "/5-letter-words-containing-pa/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 258,
     "commonCount": 45,
     "length": 5,
@@ -3884,7 +3884,7 @@
   {
     "route": "/5-letter-words-containing-pi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 182,
     "commonCount": 36,
     "length": 5,
@@ -3894,7 +3894,7 @@
   {
     "route": "/5-letter-words-containing-pl/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 79,
     "commonCount": 21,
     "length": 5,
@@ -3904,7 +3904,7 @@
   {
     "route": "/5-letter-words-containing-po/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 200,
     "commonCount": 36,
     "length": 5,
@@ -3914,7 +3914,7 @@
   {
     "route": "/5-letter-words-containing-pr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 121,
     "commonCount": 24,
     "length": 5,
@@ -3924,7 +3924,7 @@
   {
     "route": "/5-letter-words-containing-ps/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 205,
     "commonCount": 49,
     "length": 5,
@@ -3934,7 +3934,7 @@
   {
     "route": "/5-letter-words-containing-pu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 108,
     "commonCount": 17,
     "length": 5,
@@ -3944,7 +3944,7 @@
   {
     "route": "/5-letter-words-containing-q/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 104,
     "commonCount": 20,
     "type": "containing",
@@ -3954,7 +3954,7 @@
   {
     "route": "/5-letter-words-containing-qu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 89,
     "commonCount": 20,
     "length": 5,
@@ -3984,7 +3984,7 @@
   {
     "route": "/5-letter-words-containing-rd/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 90,
     "commonCount": 22,
     "length": 5,
@@ -4004,7 +4004,7 @@
   {
     "route": "/5-letter-words-containing-rg/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 62,
     "commonCount": 17,
     "length": 5,
@@ -4024,7 +4024,7 @@
   {
     "route": "/5-letter-words-containing-rk/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 78,
     "commonCount": 19,
     "length": 5,
@@ -4034,7 +4034,7 @@
   {
     "route": "/5-letter-words-containing-rm/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 57,
     "commonCount": 16,
     "length": 5,
@@ -4044,7 +4044,7 @@
   {
     "route": "/5-letter-words-containing-rn/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 80,
     "commonCount": 16,
     "length": 5,
@@ -4064,7 +4064,7 @@
   {
     "route": "/5-letter-words-containing-rr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 91,
     "commonCount": 21,
     "length": 5,
@@ -4074,7 +4074,7 @@
   {
     "route": "/5-letter-words-containing-rs/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 219,
     "commonCount": 42,
     "length": 5,
@@ -4084,7 +4084,7 @@
   {
     "route": "/5-letter-words-containing-rt/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 116,
     "commonCount": 33,
     "length": 5,
@@ -4094,7 +4094,7 @@
   {
     "route": "/5-letter-words-containing-ru/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 177,
     "commonCount": 35,
     "length": 5,
@@ -4104,7 +4104,7 @@
   {
     "route": "/5-letter-words-containing-ry/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 114,
     "commonCount": 36,
     "length": 5,
@@ -4124,7 +4124,7 @@
   {
     "route": "/5-letter-words-containing-sa/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 202,
     "commonCount": 30,
     "length": 5,
@@ -4134,7 +4134,7 @@
   {
     "route": "/5-letter-words-containing-sc/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 110,
     "commonCount": 25,
     "length": 5,
@@ -4164,7 +4164,7 @@
   {
     "route": "/5-letter-words-containing-si/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 133,
     "commonCount": 27,
     "length": 5,
@@ -4174,7 +4174,7 @@
   {
     "route": "/5-letter-words-containing-sk/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 118,
     "commonCount": 16,
     "length": 5,
@@ -4184,7 +4184,7 @@
   {
     "route": "/5-letter-words-containing-sl/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 87,
     "commonCount": 27,
     "length": 5,
@@ -4194,7 +4194,7 @@
   {
     "route": "/5-letter-words-containing-so/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 167,
     "commonCount": 24,
     "length": 5,
@@ -4204,7 +4204,7 @@
   {
     "route": "/5-letter-words-containing-sp/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 164,
     "commonCount": 39,
     "length": 5,
@@ -4214,7 +4214,7 @@
   {
     "route": "/5-letter-words-containing-ss/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 98,
     "commonCount": 30,
     "length": 5,
@@ -4234,7 +4234,7 @@
   {
     "route": "/5-letter-words-containing-sw/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 68,
     "commonCount": 22,
     "length": 5,
@@ -4264,7 +4264,7 @@
   {
     "route": "/5-letter-words-containing-tc/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 38,
     "commonCount": 21,
     "length": 5,
@@ -4294,7 +4294,7 @@
   {
     "route": "/5-letter-words-containing-ti/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 178,
     "commonCount": 30,
     "length": 5,
@@ -4314,7 +4314,7 @@
   {
     "route": "/5-letter-words-containing-tr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 149,
     "commonCount": 44,
     "length": 5,
@@ -4334,7 +4334,7 @@
   {
     "route": "/5-letter-words-containing-tt/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 100,
     "commonCount": 23,
     "length": 5,
@@ -4344,7 +4344,7 @@
   {
     "route": "/5-letter-words-containing-tu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 108,
     "commonCount": 19,
     "length": 5,
@@ -4354,7 +4354,7 @@
   {
     "route": "/5-letter-words-containing-ty/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 161,
     "commonCount": 34,
     "length": 5,
@@ -4374,7 +4374,7 @@
   {
     "route": "/5-letter-words-containing-uc/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 78,
     "commonCount": 19,
     "length": 5,
@@ -4384,7 +4384,7 @@
   {
     "route": "/5-letter-words-containing-ud/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 94,
     "commonCount": 18,
     "length": 5,
@@ -4394,7 +4394,7 @@
   {
     "route": "/5-letter-words-containing-ue/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 91,
     "commonCount": 17,
     "length": 5,
@@ -4404,7 +4404,7 @@
   {
     "route": "/5-letter-words-containing-ug/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 86,
     "commonCount": 16,
     "length": 5,
@@ -4414,7 +4414,7 @@
   {
     "route": "/5-letter-words-containing-ui/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 71,
     "commonCount": 23,
     "length": 5,
@@ -4424,7 +4424,7 @@
   {
     "route": "/5-letter-words-containing-ul/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 198,
     "commonCount": 25,
     "length": 5,
@@ -4434,7 +4434,7 @@
   {
     "route": "/5-letter-words-containing-um/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 194,
     "commonCount": 31,
     "length": 5,
@@ -4454,7 +4454,7 @@
   {
     "route": "/5-letter-words-containing-ur/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 290,
     "commonCount": 43,
     "length": 5,
@@ -4464,7 +4464,7 @@
   {
     "route": "/5-letter-words-containing-us/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 283,
     "commonCount": 42,
     "length": 5,
@@ -4474,7 +4474,7 @@
   {
     "route": "/5-letter-words-containing-ut/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 163,
     "commonCount": 33,
     "length": 5,
@@ -4504,7 +4504,7 @@
   {
     "route": "/5-letter-words-containing-vi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 114,
     "commonCount": 23,
     "length": 5,
@@ -4514,7 +4514,7 @@
   {
     "route": "/5-letter-words-containing-vo/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 65,
     "commonCount": 18,
     "length": 5,
@@ -4534,7 +4534,7 @@
   {
     "route": "/5-letter-words-containing-wa/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 186,
     "commonCount": 37,
     "length": 5,
@@ -4544,7 +4544,7 @@
   {
     "route": "/5-letter-words-containing-we/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 159,
     "commonCount": 33,
     "length": 5,
@@ -4554,7 +4554,7 @@
   {
     "route": "/5-letter-words-containing-wh/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 64,
     "commonCount": 19,
     "length": 5,
@@ -4564,7 +4564,7 @@
   {
     "route": "/5-letter-words-containing-wi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 125,
     "commonCount": 30,
     "length": 5,
@@ -4574,7 +4574,7 @@
   {
     "route": "/5-letter-words-containing-wn/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 47,
     "commonCount": 19,
     "length": 5,
@@ -4584,7 +4584,7 @@
   {
     "route": "/5-letter-words-containing-wo/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 67,
     "commonCount": 20,
     "length": 5,
@@ -4594,7 +4594,7 @@
   {
     "route": "/5-letter-words-containing-x/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 258,
     "commonCount": 29,
     "type": "containing",
@@ -4614,7 +4614,7 @@
   {
     "route": "/5-letter-words-containing-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 336,
     "commonCount": 26,
     "type": "containing",
@@ -4634,7 +4634,7 @@
   {
     "route": "/5-letter-words-ending-with-ad/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 41,
     "commonCount": 10,
     "length": 5,
@@ -4644,7 +4644,7 @@
   {
     "route": "/5-letter-words-ending-with-al/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 160,
     "commonCount": 29,
     "length": 5,
@@ -4654,7 +4654,7 @@
   {
     "route": "/5-letter-words-ending-with-an/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 98,
     "commonCount": 18,
     "length": 5,
@@ -4664,7 +4664,7 @@
   {
     "route": "/5-letter-words-ending-with-ar/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 95,
     "commonCount": 17,
     "length": 5,
@@ -4674,7 +4674,7 @@
   {
     "route": "/5-letter-words-ending-with-b/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 49,
     "commonCount": 7,
     "type": "ending",
@@ -4684,7 +4684,7 @@
   {
     "route": "/5-letter-words-ending-with-bs/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 81,
     "commonCount": 10,
     "length": 5,
@@ -4694,7 +4694,7 @@
   {
     "route": "/5-letter-words-ending-with-by/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 46,
     "commonCount": 10,
     "length": 5,
@@ -4704,7 +4704,7 @@
   {
     "route": "/5-letter-words-ending-with-c/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 124,
     "commonCount": 20,
     "type": "ending",
@@ -4714,7 +4714,7 @@
   {
     "route": "/5-letter-words-ending-with-ce/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 59,
     "commonCount": 26,
     "length": 5,
@@ -4734,7 +4734,7 @@
   {
     "route": "/5-letter-words-ending-with-ck/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 72,
     "commonCount": 38,
     "length": 5,
@@ -4754,7 +4754,7 @@
   {
     "route": "/5-letter-words-ending-with-de/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 64,
     "commonCount": 18,
     "length": 5,
@@ -4764,7 +4764,7 @@
   {
     "route": "/5-letter-words-ending-with-ds/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 206,
     "commonCount": 43,
     "length": 5,
@@ -4774,7 +4774,7 @@
   {
     "route": "/5-letter-words-ending-with-dy/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 95,
     "commonCount": 26,
     "length": 5,
@@ -4804,7 +4804,7 @@
   {
     "route": "/5-letter-words-ending-with-el/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 103,
     "commonCount": 23,
     "length": 5,
@@ -4814,7 +4814,7 @@
   {
     "route": "/5-letter-words-ending-with-en/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 91,
     "commonCount": 22,
     "length": 5,
@@ -4844,7 +4844,7 @@
   {
     "route": "/5-letter-words-ending-with-et/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 84,
     "commonCount": 15,
     "length": 5,
@@ -4854,7 +4854,7 @@
   {
     "route": "/5-letter-words-ending-with-ey/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 80,
     "commonCount": 10,
     "length": 5,
@@ -4864,7 +4864,7 @@
   {
     "route": "/5-letter-words-ending-with-f/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 74,
     "commonCount": 21,
     "type": "ending",
@@ -4874,7 +4874,7 @@
   {
     "route": "/5-letter-words-ending-with-ff/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 34,
     "commonCount": 10,
     "length": 5,
@@ -4884,7 +4884,7 @@
   {
     "route": "/5-letter-words-ending-with-g/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 123,
     "commonCount": 33,
     "type": "ending",
@@ -4894,7 +4894,7 @@
   {
     "route": "/5-letter-words-ending-with-ge/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 89,
     "commonCount": 31,
     "length": 5,
@@ -4904,7 +4904,7 @@
   {
     "route": "/5-letter-words-ending-with-gs/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 131,
     "commonCount": 20,
     "length": 5,
@@ -4924,7 +4924,7 @@
   {
     "route": "/5-letter-words-ending-with-ht/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 24,
     "commonCount": 10,
     "length": 5,
@@ -4934,7 +4934,7 @@
   {
     "route": "/5-letter-words-ending-with-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 221,
     "commonCount": 7,
     "type": "ending",
@@ -4944,7 +4944,7 @@
   {
     "route": "/5-letter-words-ending-with-ic/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 96,
     "commonCount": 19,
     "length": 5,
@@ -4954,7 +4954,7 @@
   {
     "route": "/5-letter-words-ending-with-id/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 77,
     "commonCount": 14,
     "length": 5,
@@ -4964,7 +4964,7 @@
   {
     "route": "/5-letter-words-ending-with-ie/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 76,
     "commonCount": 12,
     "length": 5,
@@ -4974,7 +4974,7 @@
   {
     "route": "/5-letter-words-ending-with-il/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 44,
     "commonCount": 15,
     "length": 5,
@@ -4984,7 +4984,7 @@
   {
     "route": "/5-letter-words-ending-with-in/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 109,
     "commonCount": 22,
     "length": 5,
@@ -4994,7 +4994,7 @@
   {
     "route": "/5-letter-words-ending-with-is/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 153,
     "commonCount": 10,
     "length": 5,
@@ -5004,7 +5004,7 @@
   {
     "route": "/5-letter-words-ending-with-it/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 67,
     "commonCount": 16,
     "length": 5,
@@ -5034,7 +5034,7 @@
   {
     "route": "/5-letter-words-ending-with-ke/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 37,
     "commonCount": 18,
     "length": 5,
@@ -5054,7 +5054,7 @@
   {
     "route": "/5-letter-words-ending-with-ky/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 102,
     "commonCount": 22,
     "length": 5,
@@ -5074,7 +5074,7 @@
   {
     "route": "/5-letter-words-ending-with-ld/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 33,
     "commonCount": 12,
     "length": 5,
@@ -5084,7 +5084,7 @@
   {
     "route": "/5-letter-words-ending-with-le/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 133,
     "commonCount": 29,
     "length": 5,
@@ -5094,7 +5094,7 @@
   {
     "route": "/5-letter-words-ending-with-ll/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 48,
     "commonCount": 17,
     "length": 5,
@@ -5114,7 +5114,7 @@
   {
     "route": "/5-letter-words-ending-with-ly/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 121,
     "commonCount": 38,
     "length": 5,
@@ -5124,7 +5124,7 @@
   {
     "route": "/5-letter-words-ending-with-m/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 163,
     "commonCount": 25,
     "type": "ending",
@@ -5134,7 +5134,7 @@
   {
     "route": "/5-letter-words-ending-with-ma/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 50,
     "commonCount": 11,
     "length": 5,
@@ -5144,7 +5144,7 @@
   {
     "route": "/5-letter-words-ending-with-me/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 60,
     "commonCount": 12,
     "length": 5,
@@ -5154,7 +5154,7 @@
   {
     "route": "/5-letter-words-ending-with-mp/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 31,
     "commonCount": 13,
     "length": 5,
@@ -5164,7 +5164,7 @@
   {
     "route": "/5-letter-words-ending-with-ms/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 131,
     "commonCount": 26,
     "length": 5,
@@ -5174,7 +5174,7 @@
   {
     "route": "/5-letter-words-ending-with-my/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 59,
     "commonCount": 11,
     "length": 5,
@@ -5194,7 +5194,7 @@
   {
     "route": "/5-letter-words-ending-with-nd/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 44,
     "commonCount": 20,
     "length": 5,
@@ -5204,7 +5204,7 @@
   {
     "route": "/5-letter-words-ending-with-ne/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 94,
     "commonCount": 21,
     "length": 5,
@@ -5214,7 +5214,7 @@
   {
     "route": "/5-letter-words-ending-with-ng/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 80,
     "commonCount": 33,
     "length": 5,
@@ -5224,7 +5224,7 @@
   {
     "route": "/5-letter-words-ending-with-nk/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 55,
     "commonCount": 22,
     "length": 5,
@@ -5234,7 +5234,7 @@
   {
     "route": "/5-letter-words-ending-with-ns/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 214,
     "commonCount": 37,
     "length": 5,
@@ -5244,7 +5244,7 @@
   {
     "route": "/5-letter-words-ending-with-nt/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 80,
     "commonCount": 26,
     "length": 5,
@@ -5254,7 +5254,7 @@
   {
     "route": "/5-letter-words-ending-with-ny/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 72,
     "commonCount": 21,
     "length": 5,
@@ -5274,7 +5274,7 @@
   {
     "route": "/5-letter-words-ending-with-on/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 116,
     "commonCount": 22,
     "length": 5,
@@ -5284,7 +5284,7 @@
   {
     "route": "/5-letter-words-ending-with-or/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 62,
     "commonCount": 26,
     "length": 5,
@@ -5294,7 +5294,7 @@
   {
     "route": "/5-letter-words-ending-with-p/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 141,
     "commonCount": 38,
     "type": "ending",
@@ -5304,7 +5304,7 @@
   {
     "route": "/5-letter-words-ending-with-ps/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 180,
     "commonCount": 44,
     "length": 5,
@@ -5334,7 +5334,7 @@
   {
     "route": "/5-letter-words-ending-with-ra/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 59,
     "commonCount": 11,
     "length": 5,
@@ -5344,7 +5344,7 @@
   {
     "route": "/5-letter-words-ending-with-rd/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 29,
     "commonCount": 10,
     "length": 5,
@@ -5354,7 +5354,7 @@
   {
     "route": "/5-letter-words-ending-with-re/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 91,
     "commonCount": 20,
     "length": 5,
@@ -5364,7 +5364,7 @@
   {
     "route": "/5-letter-words-ending-with-rs/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 161,
     "commonCount": 28,
     "length": 5,
@@ -5374,7 +5374,7 @@
   {
     "route": "/5-letter-words-ending-with-rt/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 43,
     "commonCount": 14,
     "length": 5,
@@ -5384,7 +5384,7 @@
   {
     "route": "/5-letter-words-ending-with-ry/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 89,
     "commonCount": 34,
     "length": 5,
@@ -5404,7 +5404,7 @@
   {
     "route": "/5-letter-words-ending-with-se/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 142,
     "commonCount": 45,
     "length": 5,
@@ -5414,7 +5414,7 @@
   {
     "route": "/5-letter-words-ending-with-sh/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 60,
     "commonCount": 18,
     "length": 5,
@@ -5424,7 +5424,7 @@
   {
     "route": "/5-letter-words-ending-with-ss/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 37,
     "commonCount": 16,
     "length": 5,
@@ -5434,7 +5434,7 @@
   {
     "route": "/5-letter-words-ending-with-st/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 99,
     "commonCount": 29,
     "length": 5,
@@ -5444,7 +5444,7 @@
   {
     "route": "/5-letter-words-ending-with-sy/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 67,
     "commonCount": 12,
     "length": 5,
@@ -5464,7 +5464,7 @@
   {
     "route": "/5-letter-words-ending-with-ta/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 64,
     "commonCount": 11,
     "length": 5,
@@ -5474,7 +5474,7 @@
   {
     "route": "/5-letter-words-ending-with-te/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 96,
     "commonCount": 28,
     "length": 5,
@@ -5484,7 +5484,7 @@
   {
     "route": "/5-letter-words-ending-with-th/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 77,
     "commonCount": 28,
     "length": 5,
@@ -5504,7 +5504,7 @@
   {
     "route": "/5-letter-words-ending-with-ty/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 130,
     "commonCount": 29,
     "length": 5,
@@ -5524,7 +5524,7 @@
   {
     "route": "/5-letter-words-ending-with-us/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 138,
     "commonCount": 11,
     "length": 5,
@@ -5534,7 +5534,7 @@
   {
     "route": "/5-letter-words-ending-with-ut/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 35,
     "commonCount": 11,
     "length": 5,
@@ -5554,7 +5554,7 @@
   {
     "route": "/5-letter-words-ending-with-ve/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 84,
     "commonCount": 25,
     "length": 5,
@@ -5564,7 +5564,7 @@
   {
     "route": "/5-letter-words-ending-with-w/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 57,
     "commonCount": 10,
     "type": "ending",
@@ -5574,7 +5574,7 @@
   {
     "route": "/5-letter-words-ending-with-wn/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 22,
     "commonCount": 13,
     "length": 5,
@@ -5584,7 +5584,7 @@
   {
     "route": "/5-letter-words-ending-with-ws/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 62,
     "commonCount": 13,
     "length": 5,
@@ -5594,7 +5594,7 @@
   {
     "route": "/5-letter-words-ending-with-x/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 64,
     "commonCount": 3,
     "type": "ending",
@@ -5614,7 +5614,7 @@
   {
     "route": "/5-letter-words-ending-with-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 27,
     "commonCount": 3,
     "type": "ending",
@@ -5624,7 +5624,7 @@
   {
     "route": "/5-letter-words-starting-with-a-ending-with-a/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 40,
     "commonCount": 5,
     "length": 5,
@@ -5634,7 +5634,7 @@
   {
     "route": "/5-letter-words-starting-with-a-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 50,
     "commonCount": 10,
     "length": 5,
@@ -5654,7 +5654,7 @@
   {
     "route": "/5-letter-words-starting-with-a-ending-with-g/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 10,
     "commonCount": 3,
     "length": 5,
@@ -5664,7 +5664,7 @@
   {
     "route": "/5-letter-words-starting-with-a-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 31,
     "commonCount": 4,
     "length": 5,
@@ -5674,7 +5674,7 @@
   {
     "route": "/5-letter-words-starting-with-a-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 43,
     "commonCount": 5,
     "length": 5,
@@ -5684,7 +5684,7 @@
   {
     "route": "/5-letter-words-starting-with-a-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 41,
     "commonCount": 7,
     "length": 5,
@@ -5694,7 +5694,7 @@
   {
     "route": "/5-letter-words-starting-with-a-ending-with-s/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 157,
     "commonCount": 11,
     "length": 5,
@@ -5704,7 +5704,7 @@
   {
     "route": "/5-letter-words-starting-with-a-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 54,
     "commonCount": 13,
     "length": 5,
@@ -5714,7 +5714,7 @@
   {
     "route": "/5-letter-words-starting-with-a-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 38,
     "commonCount": 8,
     "length": 5,
@@ -5734,7 +5734,7 @@
   {
     "route": "/5-letter-words-starting-with-al/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 82,
     "commonCount": 18,
     "length": 5,
@@ -5744,7 +5744,7 @@
   {
     "route": "/5-letter-words-starting-with-ar/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 75,
     "commonCount": 12,
     "length": 5,
@@ -5774,7 +5774,7 @@
   {
     "route": "/5-letter-words-starting-with-b-ending-with-g/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 10,
     "commonCount": 3,
     "length": 5,
@@ -5784,7 +5784,7 @@
   {
     "route": "/5-letter-words-starting-with-b-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 33,
     "commonCount": 12,
     "length": 5,
@@ -5794,7 +5794,7 @@
   {
     "route": "/5-letter-words-starting-with-b-ending-with-k/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 21,
     "commonCount": 10,
     "length": 5,
@@ -5804,7 +5804,7 @@
   {
     "route": "/5-letter-words-starting-with-b-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 25,
     "commonCount": 4,
     "length": 5,
@@ -5814,7 +5814,7 @@
   {
     "route": "/5-letter-words-starting-with-b-ending-with-m/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 9,
     "commonCount": 3,
     "length": 5,
@@ -5824,7 +5824,7 @@
   {
     "route": "/5-letter-words-starting-with-b-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 32,
     "commonCount": 11,
     "length": 5,
@@ -5834,7 +5834,7 @@
   {
     "route": "/5-letter-words-starting-with-b-ending-with-o/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 28,
     "commonCount": 4,
     "length": 5,
@@ -5844,7 +5844,7 @@
   {
     "route": "/5-letter-words-starting-with-b-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 25,
     "commonCount": 5,
     "length": 5,
@@ -5864,7 +5864,7 @@
   {
     "route": "/5-letter-words-starting-with-b-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 48,
     "commonCount": 10,
     "length": 5,
@@ -5874,7 +5874,7 @@
   {
     "route": "/5-letter-words-starting-with-b-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 102,
     "commonCount": 19,
     "length": 5,
@@ -5894,7 +5894,7 @@
   {
     "route": "/5-letter-words-starting-with-ba/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 149,
     "commonCount": 29,
     "length": 5,
@@ -5904,7 +5904,7 @@
   {
     "route": "/5-letter-words-starting-with-be/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 118,
     "commonCount": 26,
     "length": 5,
@@ -5914,7 +5914,7 @@
   {
     "route": "/5-letter-words-starting-with-bi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 84,
     "commonCount": 14,
     "length": 5,
@@ -5924,7 +5924,7 @@
   {
     "route": "/5-letter-words-starting-with-bl/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 84,
     "commonCount": 28,
     "length": 5,
@@ -5934,7 +5934,7 @@
   {
     "route": "/5-letter-words-starting-with-bo/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 161,
     "commonCount": 32,
     "length": 5,
@@ -5944,7 +5944,7 @@
   {
     "route": "/5-letter-words-starting-with-br/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 107,
     "commonCount": 32,
     "length": 5,
@@ -5954,7 +5954,7 @@
   {
     "route": "/5-letter-words-starting-with-bu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 110,
     "commonCount": 25,
     "length": 5,
@@ -5964,7 +5964,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-a/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 38,
     "commonCount": 5,
     "length": 5,
@@ -5974,7 +5974,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-c/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 12,
     "commonCount": 3,
     "length": 5,
@@ -5984,7 +5984,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 41,
     "commonCount": 12,
     "length": 5,
@@ -6004,7 +6004,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-g/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 8,
     "commonCount": 4,
     "length": 5,
@@ -6014,7 +6014,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 23,
     "commonCount": 9,
     "length": 5,
@@ -6024,7 +6024,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-k/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 39,
     "commonCount": 19,
     "length": 5,
@@ -6034,7 +6034,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 28,
     "commonCount": 8,
     "length": 5,
@@ -6044,7 +6044,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-m/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 10,
     "commonCount": 3,
     "length": 5,
@@ -6054,7 +6054,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 31,
     "commonCount": 9,
     "length": 5,
@@ -6064,7 +6064,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-o/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 36,
     "commonCount": 10,
     "length": 5,
@@ -6074,7 +6074,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-p/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 20,
     "commonCount": 9,
     "length": 5,
@@ -6084,7 +6084,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 39,
     "commonCount": 11,
     "length": 5,
@@ -6104,7 +6104,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 59,
     "commonCount": 15,
     "length": 5,
@@ -6114,7 +6114,7 @@
   {
     "route": "/5-letter-words-starting-with-c-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 71,
     "commonCount": 14,
     "length": 5,
@@ -6134,7 +6134,7 @@
   {
     "route": "/5-letter-words-starting-with-ca/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 158,
     "commonCount": 30,
     "length": 5,
@@ -6144,7 +6144,7 @@
   {
     "route": "/5-letter-words-starting-with-ch/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 138,
     "commonCount": 44,
     "length": 5,
@@ -6154,7 +6154,7 @@
   {
     "route": "/5-letter-words-starting-with-cl/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 91,
     "commonCount": 30,
     "length": 5,
@@ -6164,7 +6164,7 @@
   {
     "route": "/5-letter-words-starting-with-co/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 205,
     "commonCount": 41,
     "length": 5,
@@ -6174,7 +6174,7 @@
   {
     "route": "/5-letter-words-starting-with-cr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 101,
     "commonCount": 39,
     "length": 5,
@@ -6184,7 +6184,7 @@
   {
     "route": "/5-letter-words-starting-with-cu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 74,
     "commonCount": 14,
     "length": 5,
@@ -6194,7 +6194,7 @@
   {
     "route": "/5-letter-words-starting-with-d-ending-with-a/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 26,
     "commonCount": 3,
     "length": 5,
@@ -6204,7 +6204,7 @@
   {
     "route": "/5-letter-words-starting-with-d-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 30,
     "commonCount": 5,
     "length": 5,
@@ -6214,7 +6214,7 @@
   {
     "route": "/5-letter-words-starting-with-d-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 53,
     "commonCount": 9,
     "length": 5,
@@ -6224,7 +6224,7 @@
   {
     "route": "/5-letter-words-starting-with-d-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 14,
     "commonCount": 5,
     "length": 5,
@@ -6234,7 +6234,7 @@
   {
     "route": "/5-letter-words-starting-with-d-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 22,
     "commonCount": 4,
     "length": 5,
@@ -6244,7 +6244,7 @@
   {
     "route": "/5-letter-words-starting-with-d-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 21,
     "commonCount": 6,
     "length": 5,
@@ -6254,7 +6254,7 @@
   {
     "route": "/5-letter-words-starting-with-d-ending-with-o/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 17,
     "commonCount": 5,
     "length": 5,
@@ -6264,7 +6264,7 @@
   {
     "route": "/5-letter-words-starting-with-d-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 35,
     "commonCount": 5,
     "length": 5,
@@ -6284,7 +6284,7 @@
   {
     "route": "/5-letter-words-starting-with-d-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 36,
     "commonCount": 7,
     "length": 5,
@@ -6314,7 +6314,7 @@
   {
     "route": "/5-letter-words-starting-with-da/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 79,
     "commonCount": 15,
     "length": 5,
@@ -6324,7 +6324,7 @@
   {
     "route": "/5-letter-words-starting-with-de/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 125,
     "commonCount": 25,
     "length": 5,
@@ -6334,7 +6334,7 @@
   {
     "route": "/5-letter-words-starting-with-di/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 93,
     "commonCount": 15,
     "length": 5,
@@ -6344,7 +6344,7 @@
   {
     "route": "/5-letter-words-starting-with-do/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 137,
     "commonCount": 18,
     "length": 5,
@@ -6354,7 +6354,7 @@
   {
     "route": "/5-letter-words-starting-with-dr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 74,
     "commonCount": 27,
     "length": 5,
@@ -6364,7 +6364,7 @@
   {
     "route": "/5-letter-words-starting-with-du/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 76,
     "commonCount": 10,
     "length": 5,
@@ -6374,7 +6374,7 @@
   {
     "route": "/5-letter-words-starting-with-e-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 39,
     "commonCount": 7,
     "length": 5,
@@ -6384,7 +6384,7 @@
   {
     "route": "/5-letter-words-starting-with-e-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 11,
     "commonCount": 3,
     "length": 5,
@@ -6394,7 +6394,7 @@
   {
     "route": "/5-letter-words-starting-with-e-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 23,
     "commonCount": 6,
     "length": 5,
@@ -6404,7 +6404,7 @@
   {
     "route": "/5-letter-words-starting-with-e-ending-with-s/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 74,
     "commonCount": 7,
     "length": 5,
@@ -6414,7 +6414,7 @@
   {
     "route": "/5-letter-words-starting-with-e-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 32,
     "commonCount": 7,
     "length": 5,
@@ -6424,7 +6424,7 @@
   {
     "route": "/5-letter-words-starting-with-e-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 17,
     "commonCount": 9,
     "length": 5,
@@ -6434,7 +6434,7 @@
   {
     "route": "/5-letter-words-starting-with-e/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 264,
     "commonCount": 45,
     "type": "starting",
@@ -6444,7 +6444,7 @@
   {
     "route": "/5-letter-words-starting-with-f-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 39,
     "commonCount": 15,
     "length": 5,
@@ -6454,7 +6454,7 @@
   {
     "route": "/5-letter-words-starting-with-f-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 61,
     "commonCount": 14,
     "length": 5,
@@ -6464,7 +6464,7 @@
   {
     "route": "/5-letter-words-starting-with-f-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 22,
     "commonCount": 11,
     "length": 5,
@@ -6474,7 +6474,7 @@
   {
     "route": "/5-letter-words-starting-with-f-ending-with-k/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 13,
     "commonCount": 7,
     "length": 5,
@@ -6484,7 +6484,7 @@
   {
     "route": "/5-letter-words-starting-with-f-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 16,
     "commonCount": 3,
     "length": 5,
@@ -6494,7 +6494,7 @@
   {
     "route": "/5-letter-words-starting-with-f-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 13,
     "commonCount": 3,
     "length": 5,
@@ -6504,7 +6504,7 @@
   {
     "route": "/5-letter-words-starting-with-f-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 36,
     "commonCount": 11,
     "length": 5,
@@ -6524,7 +6524,7 @@
   {
     "route": "/5-letter-words-starting-with-f-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 35,
     "commonCount": 13,
     "length": 5,
@@ -6534,7 +6534,7 @@
   {
     "route": "/5-letter-words-starting-with-f-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 72,
     "commonCount": 18,
     "length": 5,
@@ -6554,7 +6554,7 @@
   {
     "route": "/5-letter-words-starting-with-fa/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 97,
     "commonCount": 25,
     "length": 5,
@@ -6564,7 +6564,7 @@
   {
     "route": "/5-letter-words-starting-with-fe/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 74,
     "commonCount": 13,
     "length": 5,
@@ -6574,7 +6574,7 @@
   {
     "route": "/5-letter-words-starting-with-fi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 83,
     "commonCount": 29,
     "length": 5,
@@ -6584,7 +6584,7 @@
   {
     "route": "/5-letter-words-starting-with-fl/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 92,
     "commonCount": 36,
     "length": 5,
@@ -6594,7 +6594,7 @@
   {
     "route": "/5-letter-words-starting-with-fo/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 75,
     "commonCount": 19,
     "length": 5,
@@ -6604,7 +6604,7 @@
   {
     "route": "/5-letter-words-starting-with-fr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 67,
     "commonCount": 17,
     "length": 5,
@@ -6614,7 +6614,7 @@
   {
     "route": "/5-letter-words-starting-with-fu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 59,
     "commonCount": 12,
     "length": 5,
@@ -6624,7 +6624,7 @@
   {
     "route": "/5-letter-words-starting-with-g-ending-with-a/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 25,
     "commonCount": 4,
     "length": 5,
@@ -6634,7 +6634,7 @@
   {
     "route": "/5-letter-words-starting-with-g-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 27,
     "commonCount": 7,
     "length": 5,
@@ -6654,7 +6654,7 @@
   {
     "route": "/5-letter-words-starting-with-g-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 18,
     "commonCount": 4,
     "length": 5,
@@ -6664,7 +6664,7 @@
   {
     "route": "/5-letter-words-starting-with-g-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 17,
     "commonCount": 6,
     "length": 5,
@@ -6684,7 +6684,7 @@
   {
     "route": "/5-letter-words-starting-with-g-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 40,
     "commonCount": 10,
     "length": 5,
@@ -6694,7 +6694,7 @@
   {
     "route": "/5-letter-words-starting-with-g-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 76,
     "commonCount": 11,
     "length": 5,
@@ -6714,7 +6714,7 @@
   {
     "route": "/5-letter-words-starting-with-ga/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 110,
     "commonCount": 13,
     "length": 5,
@@ -6724,7 +6724,7 @@
   {
     "route": "/5-letter-words-starting-with-gl/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 74,
     "commonCount": 11,
     "length": 5,
@@ -6734,7 +6734,7 @@
   {
     "route": "/5-letter-words-starting-with-go/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 93,
     "commonCount": 14,
     "length": 5,
@@ -6744,7 +6744,7 @@
   {
     "route": "/5-letter-words-starting-with-gr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 100,
     "commonCount": 35,
     "length": 5,
@@ -6754,7 +6754,7 @@
   {
     "route": "/5-letter-words-starting-with-h-ending-with-a/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 27,
     "commonCount": 3,
     "length": 5,
@@ -6764,7 +6764,7 @@
   {
     "route": "/5-letter-words-starting-with-h-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 32,
     "commonCount": 6,
     "length": 5,
@@ -6774,7 +6774,7 @@
   {
     "route": "/5-letter-words-starting-with-h-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 32,
     "commonCount": 8,
     "length": 5,
@@ -6784,7 +6784,7 @@
   {
     "route": "/5-letter-words-starting-with-h-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 19,
     "commonCount": 7,
     "length": 5,
@@ -6794,7 +6794,7 @@
   {
     "route": "/5-letter-words-starting-with-h-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 15,
     "commonCount": 3,
     "length": 5,
@@ -6804,7 +6804,7 @@
   {
     "route": "/5-letter-words-starting-with-h-ending-with-o/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 10,
     "commonCount": 3,
     "length": 5,
@@ -6814,7 +6814,7 @@
   {
     "route": "/5-letter-words-starting-with-h-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 23,
     "commonCount": 4,
     "length": 5,
@@ -6834,7 +6834,7 @@
   {
     "route": "/5-letter-words-starting-with-h-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 14,
     "commonCount": 5,
     "length": 5,
@@ -6844,7 +6844,7 @@
   {
     "route": "/5-letter-words-starting-with-h-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 65,
     "commonCount": 17,
     "length": 5,
@@ -6864,7 +6864,7 @@
   {
     "route": "/5-letter-words-starting-with-ha/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 135,
     "commonCount": 24,
     "length": 5,
@@ -6874,7 +6874,7 @@
   {
     "route": "/5-letter-words-starting-with-he/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 80,
     "commonCount": 20,
     "length": 5,
@@ -6884,7 +6884,7 @@
   {
     "route": "/5-letter-words-starting-with-ho/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 127,
     "commonCount": 33,
     "length": 5,
@@ -6894,7 +6894,7 @@
   {
     "route": "/5-letter-words-starting-with-i-ending-with-s/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 31,
     "commonCount": 5,
     "length": 5,
@@ -6904,7 +6904,7 @@
   {
     "route": "/5-letter-words-starting-with-i-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 18,
     "commonCount": 3,
     "length": 5,
@@ -6914,7 +6914,7 @@
   {
     "route": "/5-letter-words-starting-with-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 158,
     "commonCount": 20,
     "type": "starting",
@@ -6924,7 +6924,7 @@
   {
     "route": "/5-letter-words-starting-with-j-ending-with-s/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 77,
     "commonCount": 10,
     "length": 5,
@@ -6934,7 +6934,7 @@
   {
     "route": "/5-letter-words-starting-with-j-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 31,
     "commonCount": 11,
     "length": 5,
@@ -6944,7 +6944,7 @@
   {
     "route": "/5-letter-words-starting-with-j/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 183,
     "commonCount": 33,
     "type": "starting",
@@ -6954,7 +6954,7 @@
   {
     "route": "/5-letter-words-starting-with-k-ending-with-a/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 22,
     "commonCount": 3,
     "length": 5,
@@ -6964,7 +6964,7 @@
   {
     "route": "/5-letter-words-starting-with-k-ending-with-s/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 150,
     "commonCount": 9,
     "length": 5,
@@ -6974,7 +6974,7 @@
   {
     "route": "/5-letter-words-starting-with-k-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 14,
     "commonCount": 4,
     "length": 5,
@@ -6984,7 +6984,7 @@
   {
     "route": "/5-letter-words-starting-with-k/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 332,
     "commonCount": 26,
     "type": "starting",
@@ -6994,7 +6994,7 @@
   {
     "route": "/5-letter-words-starting-with-l-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 38,
     "commonCount": 7,
     "length": 5,
@@ -7004,7 +7004,7 @@
   {
     "route": "/5-letter-words-starting-with-l-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 51,
     "commonCount": 14,
     "length": 5,
@@ -7014,7 +7014,7 @@
   {
     "route": "/5-letter-words-starting-with-l-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 25,
     "commonCount": 7,
     "length": 5,
@@ -7024,7 +7024,7 @@
   {
     "route": "/5-letter-words-starting-with-l-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 11,
     "commonCount": 5,
     "length": 5,
@@ -7034,7 +7034,7 @@
   {
     "route": "/5-letter-words-starting-with-l-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 31,
     "commonCount": 6,
     "length": 5,
@@ -7044,7 +7044,7 @@
   {
     "route": "/5-letter-words-starting-with-l-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 39,
     "commonCount": 14,
     "length": 5,
@@ -7064,7 +7064,7 @@
   {
     "route": "/5-letter-words-starting-with-l-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 15,
     "commonCount": 4,
     "length": 5,
@@ -7074,7 +7074,7 @@
   {
     "route": "/5-letter-words-starting-with-l-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 62,
     "commonCount": 10,
     "length": 5,
@@ -7094,7 +7094,7 @@
   {
     "route": "/5-letter-words-starting-with-la/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 123,
     "commonCount": 25,
     "length": 5,
@@ -7104,7 +7104,7 @@
   {
     "route": "/5-letter-words-starting-with-le/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 86,
     "commonCount": 18,
     "length": 5,
@@ -7114,7 +7114,7 @@
   {
     "route": "/5-letter-words-starting-with-li/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 107,
     "commonCount": 22,
     "length": 5,
@@ -7124,7 +7124,7 @@
   {
     "route": "/5-letter-words-starting-with-lo/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 129,
     "commonCount": 32,
     "length": 5,
@@ -7134,7 +7134,7 @@
   {
     "route": "/5-letter-words-starting-with-lu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 62,
     "commonCount": 10,
     "length": 5,
@@ -7144,7 +7144,7 @@
   {
     "route": "/5-letter-words-starting-with-m-ending-with-a/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 46,
     "commonCount": 9,
     "length": 5,
@@ -7154,7 +7154,7 @@
   {
     "route": "/5-letter-words-starting-with-m-ending-with-c/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 12,
     "commonCount": 5,
     "length": 5,
@@ -7164,7 +7164,7 @@
   {
     "route": "/5-letter-words-starting-with-m-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 36,
     "commonCount": 5,
     "length": 5,
@@ -7174,7 +7174,7 @@
   {
     "route": "/5-letter-words-starting-with-m-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 66,
     "commonCount": 12,
     "length": 5,
@@ -7184,7 +7184,7 @@
   {
     "route": "/5-letter-words-starting-with-m-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 23,
     "commonCount": 7,
     "length": 5,
@@ -7194,7 +7194,7 @@
   {
     "route": "/5-letter-words-starting-with-m-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 20,
     "commonCount": 5,
     "length": 5,
@@ -7204,7 +7204,7 @@
   {
     "route": "/5-letter-words-starting-with-m-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 15,
     "commonCount": 5,
     "length": 5,
@@ -7214,7 +7214,7 @@
   {
     "route": "/5-letter-words-starting-with-m-ending-with-o/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 27,
     "commonCount": 6,
     "length": 5,
@@ -7224,7 +7224,7 @@
   {
     "route": "/5-letter-words-starting-with-m-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 36,
     "commonCount": 11,
     "length": 5,
@@ -7244,7 +7244,7 @@
   {
     "route": "/5-letter-words-starting-with-m-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 21,
     "commonCount": 6,
     "length": 5,
@@ -7254,7 +7254,7 @@
   {
     "route": "/5-letter-words-starting-with-m-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 82,
     "commonCount": 19,
     "length": 5,
@@ -7274,7 +7274,7 @@
   {
     "route": "/5-letter-words-starting-with-ma/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 178,
     "commonCount": 39,
     "length": 5,
@@ -7284,7 +7284,7 @@
   {
     "route": "/5-letter-words-starting-with-me/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 95,
     "commonCount": 22,
     "length": 5,
@@ -7294,7 +7294,7 @@
   {
     "route": "/5-letter-words-starting-with-mi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 101,
     "commonCount": 18,
     "length": 5,
@@ -7304,7 +7304,7 @@
   {
     "route": "/5-letter-words-starting-with-mo/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 152,
     "commonCount": 36,
     "length": 5,
@@ -7314,7 +7314,7 @@
   {
     "route": "/5-letter-words-starting-with-n-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 15,
     "commonCount": 3,
     "length": 5,
@@ -7324,7 +7324,7 @@
   {
     "route": "/5-letter-words-starting-with-n-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 30,
     "commonCount": 8,
     "length": 5,
@@ -7334,7 +7334,7 @@
   {
     "route": "/5-letter-words-starting-with-n-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 10,
     "commonCount": 3,
     "length": 5,
@@ -7344,7 +7344,7 @@
   {
     "route": "/5-letter-words-starting-with-n-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 19,
     "commonCount": 3,
     "length": 5,
@@ -7354,7 +7354,7 @@
   {
     "route": "/5-letter-words-starting-with-n-ending-with-s/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 113,
     "commonCount": 9,
     "length": 5,
@@ -7364,7 +7364,7 @@
   {
     "route": "/5-letter-words-starting-with-n-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 38,
     "commonCount": 8,
     "length": 5,
@@ -7374,7 +7374,7 @@
   {
     "route": "/5-letter-words-starting-with-n/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 295,
     "commonCount": 43,
     "type": "starting",
@@ -7384,7 +7384,7 @@
   {
     "route": "/5-letter-words-starting-with-na/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 75,
     "commonCount": 13,
     "length": 5,
@@ -7394,7 +7394,7 @@
   {
     "route": "/5-letter-words-starting-with-ne/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 58,
     "commonCount": 10,
     "length": 5,
@@ -7404,7 +7404,7 @@
   {
     "route": "/5-letter-words-starting-with-no/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 78,
     "commonCount": 11,
     "length": 5,
@@ -7414,7 +7414,7 @@
   {
     "route": "/5-letter-words-starting-with-o-ending-with-a/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 9,
     "commonCount": 3,
     "length": 5,
@@ -7424,7 +7424,7 @@
   {
     "route": "/5-letter-words-starting-with-o-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 27,
     "commonCount": 4,
     "length": 5,
@@ -7434,7 +7434,7 @@
   {
     "route": "/5-letter-words-starting-with-o-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 16,
     "commonCount": 4,
     "length": 5,
@@ -7444,7 +7444,7 @@
   {
     "route": "/5-letter-words-starting-with-o-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 25,
     "commonCount": 9,
     "length": 5,
@@ -7454,7 +7454,7 @@
   {
     "route": "/5-letter-words-starting-with-o/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 240,
     "commonCount": 28,
     "type": "starting",
@@ -7464,7 +7464,7 @@
   {
     "route": "/5-letter-words-starting-with-p-ending-with-a/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 48,
     "commonCount": 8,
     "length": 5,
@@ -7474,7 +7474,7 @@
   {
     "route": "/5-letter-words-starting-with-p-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 36,
     "commonCount": 9,
     "length": 5,
@@ -7494,7 +7494,7 @@
   {
     "route": "/5-letter-words-starting-with-p-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 19,
     "commonCount": 10,
     "length": 5,
@@ -7504,7 +7504,7 @@
   {
     "route": "/5-letter-words-starting-with-p-ending-with-k/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 12,
     "commonCount": 4,
     "length": 5,
@@ -7514,7 +7514,7 @@
   {
     "route": "/5-letter-words-starting-with-p-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 27,
     "commonCount": 7,
     "length": 5,
@@ -7524,7 +7524,7 @@
   {
     "route": "/5-letter-words-starting-with-p-ending-with-o/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 36,
     "commonCount": 7,
     "length": 5,
@@ -7534,7 +7534,7 @@
   {
     "route": "/5-letter-words-starting-with-p-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 32,
     "commonCount": 9,
     "length": 5,
@@ -7554,7 +7554,7 @@
   {
     "route": "/5-letter-words-starting-with-p-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 27,
     "commonCount": 6,
     "length": 5,
@@ -7584,7 +7584,7 @@
   {
     "route": "/5-letter-words-starting-with-pa/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 158,
     "commonCount": 35,
     "length": 5,
@@ -7594,7 +7594,7 @@
   {
     "route": "/5-letter-words-starting-with-pe/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 104,
     "commonCount": 22,
     "length": 5,
@@ -7604,7 +7604,7 @@
   {
     "route": "/5-letter-words-starting-with-pi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 102,
     "commonCount": 20,
     "length": 5,
@@ -7614,7 +7614,7 @@
   {
     "route": "/5-letter-words-starting-with-pl/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 59,
     "commonCount": 14,
     "length": 5,
@@ -7624,7 +7624,7 @@
   {
     "route": "/5-letter-words-starting-with-po/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 134,
     "commonCount": 27,
     "length": 5,
@@ -7634,7 +7634,7 @@
   {
     "route": "/5-letter-words-starting-with-pr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 96,
     "commonCount": 20,
     "length": 5,
@@ -7644,7 +7644,7 @@
   {
     "route": "/5-letter-words-starting-with-pu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 82,
     "commonCount": 15,
     "length": 5,
@@ -7654,7 +7654,7 @@
   {
     "route": "/5-letter-words-starting-with-q-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 10,
     "commonCount": 4,
     "length": 5,
@@ -7664,7 +7664,7 @@
   {
     "route": "/5-letter-words-starting-with-q-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 11,
     "commonCount": 3,
     "length": 5,
@@ -7674,7 +7674,7 @@
   {
     "route": "/5-letter-words-starting-with-q/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 72,
     "commonCount": 16,
     "type": "starting",
@@ -7684,7 +7684,7 @@
   {
     "route": "/5-letter-words-starting-with-qu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 66,
     "commonCount": 16,
     "length": 5,
@@ -7694,7 +7694,7 @@
   {
     "route": "/5-letter-words-starting-with-r-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 39,
     "commonCount": 8,
     "length": 5,
@@ -7704,7 +7704,7 @@
   {
     "route": "/5-letter-words-starting-with-r-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 62,
     "commonCount": 9,
     "length": 5,
@@ -7714,7 +7714,7 @@
   {
     "route": "/5-letter-words-starting-with-r-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 15,
     "commonCount": 5,
     "length": 5,
@@ -7724,7 +7724,7 @@
   {
     "route": "/5-letter-words-starting-with-r-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 24,
     "commonCount": 5,
     "length": 5,
@@ -7734,7 +7734,7 @@
   {
     "route": "/5-letter-words-starting-with-r-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 39,
     "commonCount": 8,
     "length": 5,
@@ -7744,7 +7744,7 @@
   {
     "route": "/5-letter-words-starting-with-r-ending-with-o/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 15,
     "commonCount": 6,
     "length": 5,
@@ -7754,7 +7754,7 @@
   {
     "route": "/5-letter-words-starting-with-r-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 34,
     "commonCount": 12,
     "length": 5,
@@ -7774,7 +7774,7 @@
   {
     "route": "/5-letter-words-starting-with-r-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 30,
     "commonCount": 5,
     "length": 5,
@@ -7784,7 +7784,7 @@
   {
     "route": "/5-letter-words-starting-with-r-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 61,
     "commonCount": 15,
     "length": 5,
@@ -7804,7 +7804,7 @@
   {
     "route": "/5-letter-words-starting-with-ra/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 131,
     "commonCount": 27,
     "length": 5,
@@ -7814,7 +7814,7 @@
   {
     "route": "/5-letter-words-starting-with-re/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 173,
     "commonCount": 24,
     "length": 5,
@@ -7824,7 +7824,7 @@
   {
     "route": "/5-letter-words-starting-with-ri/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 71,
     "commonCount": 19,
     "length": 5,
@@ -7834,7 +7834,7 @@
   {
     "route": "/5-letter-words-starting-with-ro/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 115,
     "commonCount": 30,
     "length": 5,
@@ -7844,7 +7844,7 @@
   {
     "route": "/5-letter-words-starting-with-s-ending-with-a/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 59,
     "commonCount": 7,
     "length": 5,
@@ -7854,7 +7854,7 @@
   {
     "route": "/5-letter-words-starting-with-s-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 72,
     "commonCount": 16,
     "length": 5,
@@ -7874,7 +7874,7 @@
   {
     "route": "/5-letter-words-starting-with-s-ending-with-f/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 21,
     "commonCount": 8,
     "length": 5,
@@ -7884,7 +7884,7 @@
   {
     "route": "/5-letter-words-starting-with-s-ending-with-g/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 25,
     "commonCount": 7,
     "length": 5,
@@ -7894,7 +7894,7 @@
   {
     "route": "/5-letter-words-starting-with-s-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 44,
     "commonCount": 7,
     "length": 5,
@@ -7914,7 +7914,7 @@
   {
     "route": "/5-letter-words-starting-with-s-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 70,
     "commonCount": 17,
     "length": 5,
@@ -7924,7 +7924,7 @@
   {
     "route": "/5-letter-words-starting-with-s-ending-with-m/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 27,
     "commonCount": 6,
     "length": 5,
@@ -7934,7 +7934,7 @@
   {
     "route": "/5-letter-words-starting-with-s-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 60,
     "commonCount": 17,
     "length": 5,
@@ -7944,7 +7944,7 @@
   {
     "route": "/5-letter-words-starting-with-s-ending-with-p/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 46,
     "commonCount": 19,
     "length": 5,
@@ -7954,7 +7954,7 @@
   {
     "route": "/5-letter-words-starting-with-s-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 81,
     "commonCount": 15,
     "length": 5,
@@ -8004,7 +8004,7 @@
   {
     "route": "/5-letter-words-starting-with-sa/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 147,
     "commonCount": 27,
     "length": 5,
@@ -8014,7 +8014,7 @@
   {
     "route": "/5-letter-words-starting-with-sc/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 96,
     "commonCount": 22,
     "length": 5,
@@ -8024,7 +8024,7 @@
   {
     "route": "/5-letter-words-starting-with-se/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 110,
     "commonCount": 22,
     "length": 5,
@@ -8034,7 +8034,7 @@
   {
     "route": "/5-letter-words-starting-with-sh/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 145,
     "commonCount": 46,
     "length": 5,
@@ -8044,7 +8044,7 @@
   {
     "route": "/5-letter-words-starting-with-si/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 89,
     "commonCount": 17,
     "length": 5,
@@ -8054,7 +8054,7 @@
   {
     "route": "/5-letter-words-starting-with-sl/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 78,
     "commonCount": 24,
     "length": 5,
@@ -8064,7 +8064,7 @@
   {
     "route": "/5-letter-words-starting-with-sm/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 38,
     "commonCount": 12,
     "length": 5,
@@ -8074,7 +8074,7 @@
   {
     "route": "/5-letter-words-starting-with-sn/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 60,
     "commonCount": 13,
     "length": 5,
@@ -8084,7 +8084,7 @@
   {
     "route": "/5-letter-words-starting-with-so/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 120,
     "commonCount": 17,
     "length": 5,
@@ -8094,7 +8094,7 @@
   {
     "route": "/5-letter-words-starting-with-sp/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 137,
     "commonCount": 35,
     "length": 5,
@@ -8114,7 +8114,7 @@
   {
     "route": "/5-letter-words-starting-with-su/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 67,
     "commonCount": 10,
     "length": 5,
@@ -8124,7 +8124,7 @@
   {
     "route": "/5-letter-words-starting-with-sw/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 66,
     "commonCount": 22,
     "length": 5,
@@ -8134,7 +8134,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-a/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 45,
     "commonCount": 4,
     "length": 5,
@@ -8144,7 +8144,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-c/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 11,
     "commonCount": 3,
     "length": 5,
@@ -8154,7 +8154,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 44,
     "commonCount": 12,
     "length": 5,
@@ -8164,7 +8164,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 85,
     "commonCount": 16,
     "length": 5,
@@ -8174,7 +8174,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 18,
     "commonCount": 10,
     "length": 5,
@@ -8184,7 +8184,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-k/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 28,
     "commonCount": 8,
     "length": 5,
@@ -8194,7 +8194,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 26,
     "commonCount": 6,
     "length": 5,
@@ -8204,7 +8204,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 29,
     "commonCount": 8,
     "length": 5,
@@ -8214,7 +8214,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-o/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 17,
     "commonCount": 5,
     "length": 5,
@@ -8224,7 +8224,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-p/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 13,
     "commonCount": 5,
     "length": 5,
@@ -8234,7 +8234,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 41,
     "commonCount": 7,
     "length": 5,
@@ -8254,7 +8254,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 30,
     "commonCount": 11,
     "length": 5,
@@ -8264,7 +8264,7 @@
   {
     "route": "/5-letter-words-starting-with-t-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 62,
     "commonCount": 14,
     "length": 5,
@@ -8284,7 +8284,7 @@
   {
     "route": "/5-letter-words-starting-with-ta/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 152,
     "commonCount": 24,
     "length": 5,
@@ -8294,7 +8294,7 @@
   {
     "route": "/5-letter-words-starting-with-te/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 98,
     "commonCount": 23,
     "length": 5,
@@ -8304,7 +8304,7 @@
   {
     "route": "/5-letter-words-starting-with-th/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 69,
     "commonCount": 25,
     "length": 5,
@@ -8314,7 +8314,7 @@
   {
     "route": "/5-letter-words-starting-with-ti/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 72,
     "commonCount": 17,
     "length": 5,
@@ -8324,7 +8324,7 @@
   {
     "route": "/5-letter-words-starting-with-to/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 131,
     "commonCount": 25,
     "length": 5,
@@ -8334,7 +8334,7 @@
   {
     "route": "/5-letter-words-starting-with-tr/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 108,
     "commonCount": 32,
     "length": 5,
@@ -8344,7 +8344,7 @@
   {
     "route": "/5-letter-words-starting-with-tu/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 60,
     "commonCount": 10,
     "length": 5,
@@ -8354,7 +8354,7 @@
   {
     "route": "/5-letter-words-starting-with-u-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 22,
     "commonCount": 4,
     "length": 5,
@@ -8364,7 +8364,7 @@
   {
     "route": "/5-letter-words-starting-with-u-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 10,
     "commonCount": 5,
     "length": 5,
@@ -8374,7 +8374,7 @@
   {
     "route": "/5-letter-words-starting-with-u-ending-with-s/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 21,
     "commonCount": 3,
     "length": 5,
@@ -8384,7 +8384,7 @@
   {
     "route": "/5-letter-words-starting-with-u/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 166,
     "commonCount": 22,
     "type": "starting",
@@ -8394,7 +8394,7 @@
   {
     "route": "/5-letter-words-starting-with-v-ending-with-a/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 21,
     "commonCount": 5,
     "length": 5,
@@ -8404,7 +8404,7 @@
   {
     "route": "/5-letter-words-starting-with-v-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 14,
     "commonCount": 4,
     "length": 5,
@@ -8414,7 +8414,7 @@
   {
     "route": "/5-letter-words-starting-with-v-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 25,
     "commonCount": 8,
     "length": 5,
@@ -8424,7 +8424,7 @@
   {
     "route": "/5-letter-words-starting-with-v-ending-with-l/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 13,
     "commonCount": 5,
     "length": 5,
@@ -8434,7 +8434,7 @@
   {
     "route": "/5-letter-words-starting-with-v-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 17,
     "commonCount": 3,
     "length": 5,
@@ -8444,7 +8444,7 @@
   {
     "route": "/5-letter-words-starting-with-v-ending-with-s/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 71,
     "commonCount": 11,
     "length": 5,
@@ -8454,7 +8454,7 @@
   {
     "route": "/5-letter-words-starting-with-v-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 9,
     "commonCount": 4,
     "length": 5,
@@ -8464,7 +8464,7 @@
   {
     "route": "/5-letter-words-starting-with-v/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 217,
     "commonCount": 44,
     "type": "starting",
@@ -8474,7 +8474,7 @@
   {
     "route": "/5-letter-words-starting-with-ve/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 50,
     "commonCount": 10,
     "length": 5,
@@ -8484,7 +8484,7 @@
   {
     "route": "/5-letter-words-starting-with-vi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 69,
     "commonCount": 16,
     "length": 5,
@@ -8494,7 +8494,7 @@
   {
     "route": "/5-letter-words-starting-with-vo/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 37,
     "commonCount": 11,
     "length": 5,
@@ -8504,7 +8504,7 @@
   {
     "route": "/5-letter-words-starting-with-w-ending-with-d/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 30,
     "commonCount": 8,
     "length": 5,
@@ -8514,7 +8514,7 @@
   {
     "route": "/5-letter-words-starting-with-w-ending-with-e/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 31,
     "commonCount": 14,
     "length": 5,
@@ -8524,7 +8524,7 @@
   {
     "route": "/5-letter-words-starting-with-w-ending-with-h/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 16,
     "commonCount": 10,
     "length": 5,
@@ -8534,7 +8534,7 @@
   {
     "route": "/5-letter-words-starting-with-w-ending-with-n/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 14,
     "commonCount": 4,
     "length": 5,
@@ -8544,7 +8544,7 @@
   {
     "route": "/5-letter-words-starting-with-w-ending-with-r/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 18,
     "commonCount": 5,
     "length": 5,
@@ -8564,7 +8564,7 @@
   {
     "route": "/5-letter-words-starting-with-w-ending-with-t/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 19,
     "commonCount": 4,
     "length": 5,
@@ -8574,7 +8574,7 @@
   {
     "route": "/5-letter-words-starting-with-w-ending-with-y/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 48,
     "commonCount": 8,
     "length": 5,
@@ -8594,7 +8594,7 @@
   {
     "route": "/5-letter-words-starting-with-wa/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 105,
     "commonCount": 25,
     "length": 5,
@@ -8604,7 +8604,7 @@
   {
     "route": "/5-letter-words-starting-with-we/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 48,
     "commonCount": 12,
     "length": 5,
@@ -8614,7 +8614,7 @@
   {
     "route": "/5-letter-words-starting-with-wh/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 64,
     "commonCount": 19,
     "length": 5,
@@ -8624,7 +8624,7 @@
   {
     "route": "/5-letter-words-starting-with-wi/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 71,
     "commonCount": 19,
     "length": 5,
@@ -8634,7 +8634,7 @@
   {
     "route": "/5-letter-words-starting-with-wo/",
     "family": "digram",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 51,
     "commonCount": 15,
     "length": 5,
@@ -8654,7 +8654,7 @@
   {
     "route": "/5-letter-words-starting-with-y-ending-with-s/",
     "family": "start-end",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 82,
     "commonCount": 9,
     "length": 5,
@@ -8664,7 +8664,7 @@
   {
     "route": "/5-letter-words-starting-with-y/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 161,
     "commonCount": 18,
     "type": "starting",
@@ -8674,7 +8674,7 @@
   {
     "route": "/5-letter-words-starting-with-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 99,
     "commonCount": 3,
     "type": "starting",
@@ -8714,7 +8714,7 @@
   {
     "route": "/5-letter-words-with-b-as-fourth-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 211,
     "commonCount": 37,
     "length": 5,
@@ -8724,7 +8724,7 @@
   {
     "route": "/5-letter-words-with-b-as-second-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 75,
     "commonCount": 9,
     "length": 5,
@@ -8734,7 +8734,7 @@
   {
     "route": "/5-letter-words-with-b-as-third-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 311,
     "commonCount": 44,
     "length": 5,
@@ -8754,7 +8754,7 @@
   {
     "route": "/5-letter-words-with-c-as-second-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 165,
     "commonCount": 30,
     "length": 5,
@@ -8784,7 +8784,7 @@
   {
     "route": "/5-letter-words-with-d-as-second-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 78,
     "commonCount": 14,
     "length": 5,
@@ -8834,7 +8834,7 @@
   {
     "route": "/5-letter-words-with-f-as-fourth-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 222,
     "commonCount": 31,
     "length": 5,
@@ -8844,7 +8844,7 @@
   {
     "route": "/5-letter-words-with-f-as-third-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 161,
     "commonCount": 20,
     "length": 5,
@@ -8864,7 +8864,7 @@
   {
     "route": "/5-letter-words-with-g-as-second-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 68,
     "commonCount": 5,
     "length": 5,
@@ -8884,7 +8884,7 @@
   {
     "route": "/5-letter-words-with-h-as-fourth-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 211,
     "commonCount": 28,
     "length": 5,
@@ -8904,7 +8904,7 @@
   {
     "route": "/5-letter-words-with-h-as-third-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 100,
     "commonCount": 10,
     "length": 5,
@@ -8954,7 +8954,7 @@
   {
     "route": "/5-letter-words-with-k-as-second-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 80,
     "commonCount": 9,
     "length": 5,
@@ -8964,7 +8964,7 @@
   {
     "route": "/5-letter-words-with-k-as-third-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 232,
     "commonCount": 31,
     "length": 5,
@@ -9014,7 +9014,7 @@
   {
     "route": "/5-letter-words-with-m-as-second-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 171,
     "commonCount": 25,
     "length": 5,
@@ -9104,7 +9104,7 @@
   {
     "route": "/5-letter-words-with-p-as-second-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 209,
     "commonCount": 44,
     "length": 5,
@@ -9164,7 +9164,7 @@
   {
     "route": "/5-letter-words-with-s-as-second-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 88,
     "commonCount": 15,
     "length": 5,
@@ -9214,7 +9214,7 @@
   {
     "route": "/5-letter-words-with-u-as-fourth-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 369,
     "commonCount": 46,
     "length": 5,
@@ -9244,7 +9244,7 @@
   {
     "route": "/5-letter-words-with-v-as-fourth-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 144,
     "commonCount": 33,
     "length": 5,
@@ -9254,7 +9254,7 @@
   {
     "route": "/5-letter-words-with-v-as-second-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 48,
     "commonCount": 7,
     "length": 5,
@@ -9274,7 +9274,7 @@
   {
     "route": "/5-letter-words-with-w-as-fourth-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 119,
     "commonCount": 32,
     "length": 5,
@@ -9284,7 +9284,7 @@
   {
     "route": "/5-letter-words-with-w-as-second-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 143,
     "commonCount": 38,
     "length": 5,
@@ -9294,7 +9294,7 @@
   {
     "route": "/5-letter-words-with-w-as-third-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 239,
     "commonCount": 27,
     "length": 5,
@@ -9304,7 +9304,7 @@
   {
     "route": "/5-letter-words-with-x-as-second-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 52,
     "commonCount": 7,
     "length": 5,
@@ -9314,7 +9314,7 @@
   {
     "route": "/5-letter-words-with-x-as-third-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 120,
     "commonCount": 18,
     "length": 5,
@@ -9324,7 +9324,7 @@
   {
     "route": "/5-letter-words-with-y-as-second-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 242,
     "commonCount": 18,
     "length": 5,
@@ -9334,7 +9334,7 @@
   {
     "route": "/5-letter-words-with-y-as-third-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 178,
     "commonCount": 15,
     "length": 5,
@@ -9344,7 +9344,7 @@
   {
     "route": "/5-letter-words-with-z-as-fourth-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 101,
     "commonCount": 14,
     "length": 5,
@@ -9354,7 +9354,7 @@
   {
     "route": "/5-letter-words-with-z-as-third-letter/",
     "family": "position",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 118,
     "commonCount": 9,
     "length": 5,
@@ -9462,7 +9462,7 @@
   {
     "route": "/6-letter-words-containing-j/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 386,
     "commonCount": 42,
     "type": "containing",
@@ -9532,7 +9532,7 @@
   {
     "route": "/6-letter-words-containing-q/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 198,
     "commonCount": 22,
     "type": "containing",
@@ -9602,7 +9602,7 @@
   {
     "route": "/6-letter-words-containing-x/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 389,
     "commonCount": 41,
     "type": "containing",
@@ -9622,7 +9622,7 @@
   {
     "route": "/6-letter-words-containing-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 513,
     "commonCount": 34,
     "type": "containing",
@@ -9632,7 +9632,7 @@
   {
     "route": "/6-letter-words-ending-with-a/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 604,
     "commonCount": 44,
     "type": "ending",
@@ -9652,7 +9652,7 @@
   {
     "route": "/6-letter-words-ending-with-c/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 263,
     "commonCount": 27,
     "type": "ending",
@@ -9682,7 +9682,7 @@
   {
     "route": "/6-letter-words-ending-with-f/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 43,
     "commonCount": 6,
     "type": "ending",
@@ -9712,7 +9712,7 @@
   {
     "route": "/6-letter-words-ending-with-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 201,
     "commonCount": 8,
     "type": "ending",
@@ -9732,7 +9732,7 @@
   {
     "route": "/6-letter-words-ending-with-k/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 162,
     "commonCount": 12,
     "type": "ending",
@@ -9752,7 +9752,7 @@
   {
     "route": "/6-letter-words-ending-with-m/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 294,
     "commonCount": 38,
     "type": "ending",
@@ -9772,7 +9772,7 @@
   {
     "route": "/6-letter-words-ending-with-o/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 251,
     "commonCount": 30,
     "type": "ending",
@@ -9782,7 +9782,7 @@
   {
     "route": "/6-letter-words-ending-with-p/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 162,
     "commonCount": 14,
     "type": "ending",
@@ -9852,7 +9852,7 @@
   {
     "route": "/6-letter-words-ending-with-w/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 103,
     "commonCount": 25,
     "type": "ending",
@@ -9862,7 +9862,7 @@
   {
     "route": "/6-letter-words-ending-with-x/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 86,
     "commonCount": 6,
     "type": "ending",
@@ -9972,7 +9972,7 @@
   {
     "route": "/6-letter-words-starting-with-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 329,
     "commonCount": 46,
     "type": "starting",
@@ -9982,7 +9982,7 @@
   {
     "route": "/6-letter-words-starting-with-j/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 263,
     "commonCount": 31,
     "type": "starting",
@@ -9992,7 +9992,7 @@
   {
     "route": "/6-letter-words-starting-with-k/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 366,
     "commonCount": 28,
     "type": "starting",
@@ -10052,7 +10052,7 @@
   {
     "route": "/6-letter-words-starting-with-q/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 99,
     "commonCount": 5,
     "type": "starting",
@@ -10092,7 +10092,7 @@
   {
     "route": "/6-letter-words-starting-with-u/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 469,
     "commonCount": 45,
     "type": "starting",
@@ -10102,7 +10102,7 @@
   {
     "route": "/6-letter-words-starting-with-v/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 334,
     "commonCount": 44,
     "type": "starting",
@@ -10132,7 +10132,7 @@
   {
     "route": "/6-letter-words-starting-with-y/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 130,
     "commonCount": 7,
     "type": "starting",
@@ -10142,7 +10142,7 @@
   {
     "route": "/6-letter-words-starting-with-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 112,
     "commonCount": 3,
     "type": "starting",
@@ -10250,7 +10250,7 @@
   {
     "route": "/7-letter-words-containing-j/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 469,
     "commonCount": 39,
     "type": "containing",
@@ -10320,7 +10320,7 @@
   {
     "route": "/7-letter-words-containing-q/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 326,
     "commonCount": 36,
     "type": "containing",
@@ -10390,7 +10390,7 @@
   {
     "route": "/7-letter-words-containing-x/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 560,
     "commonCount": 45,
     "type": "containing",
@@ -10410,7 +10410,7 @@
   {
     "route": "/7-letter-words-containing-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 685,
     "commonCount": 27,
     "type": "containing",
@@ -10420,7 +10420,7 @@
   {
     "route": "/7-letter-words-ending-with-a/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 698,
     "commonCount": 30,
     "type": "ending",
@@ -10430,7 +10430,7 @@
   {
     "route": "/7-letter-words-ending-with-b/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 25,
     "commonCount": 4,
     "type": "ending",
@@ -10440,7 +10440,7 @@
   {
     "route": "/7-letter-words-ending-with-c/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 405,
     "commonCount": 25,
     "type": "ending",
@@ -10470,7 +10470,7 @@
   {
     "route": "/7-letter-words-ending-with-f/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 61,
     "commonCount": 7,
     "type": "ending",
@@ -10490,7 +10490,7 @@
   {
     "route": "/7-letter-words-ending-with-h/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 401,
     "commonCount": 33,
     "type": "ending",
@@ -10500,7 +10500,7 @@
   {
     "route": "/7-letter-words-ending-with-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 169,
     "commonCount": 4,
     "type": "ending",
@@ -10520,7 +10520,7 @@
   {
     "route": "/7-letter-words-ending-with-k/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 291,
     "commonCount": 17,
     "type": "ending",
@@ -10540,7 +10540,7 @@
   {
     "route": "/7-letter-words-ending-with-m/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 359,
     "commonCount": 30,
     "type": "ending",
@@ -10560,7 +10560,7 @@
   {
     "route": "/7-letter-words-ending-with-o/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 192,
     "commonCount": 20,
     "type": "ending",
@@ -10570,7 +10570,7 @@
   {
     "route": "/7-letter-words-ending-with-p/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 177,
     "commonCount": 10,
     "type": "ending",
@@ -10640,7 +10640,7 @@
   {
     "route": "/7-letter-words-ending-with-w/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 81,
     "commonCount": 7,
     "type": "ending",
@@ -10650,7 +10650,7 @@
   {
     "route": "/7-letter-words-ending-with-x/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 89,
     "commonCount": 6,
     "type": "ending",
@@ -10770,7 +10770,7 @@
   {
     "route": "/7-letter-words-starting-with-j/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 332,
     "commonCount": 25,
     "type": "starting",
@@ -10780,7 +10780,7 @@
   {
     "route": "/7-letter-words-starting-with-k/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 374,
     "commonCount": 20,
     "type": "starting",
@@ -10810,7 +10810,7 @@
   {
     "route": "/7-letter-words-starting-with-n/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 516,
     "commonCount": 43,
     "type": "starting",
@@ -10840,7 +10840,7 @@
   {
     "route": "/7-letter-words-starting-with-q/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 139,
     "commonCount": 13,
     "type": "starting",
@@ -10880,7 +10880,7 @@
   {
     "route": "/7-letter-words-starting-with-u/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 594,
     "commonCount": 31,
     "type": "starting",
@@ -10890,7 +10890,7 @@
   {
     "route": "/7-letter-words-starting-with-v/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 411,
     "commonCount": 47,
     "type": "starting",
@@ -10920,7 +10920,7 @@
   {
     "route": "/7-letter-words-starting-with-y/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 107,
     "commonCount": 4,
     "type": "starting",
@@ -11038,7 +11038,7 @@
   {
     "route": "/8-letter-words-containing-j/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 435,
     "commonCount": 24,
     "type": "containing",
@@ -11108,7 +11108,7 @@
   {
     "route": "/8-letter-words-containing-q/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 463,
     "commonCount": 28,
     "type": "containing",
@@ -11178,7 +11178,7 @@
   {
     "route": "/8-letter-words-containing-x/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 717,
     "commonCount": 41,
     "type": "containing",
@@ -11198,7 +11198,7 @@
   {
     "route": "/8-letter-words-containing-z/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 886,
     "commonCount": 20,
     "type": "containing",
@@ -11208,7 +11208,7 @@
   {
     "route": "/8-letter-words-ending-with-a/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 580,
     "commonCount": 17,
     "type": "ending",
@@ -11228,7 +11228,7 @@
   {
     "route": "/8-letter-words-ending-with-c/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 642,
     "commonCount": 34,
     "type": "ending",
@@ -11258,7 +11258,7 @@
   {
     "route": "/8-letter-words-ending-with-f/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 47,
     "commonCount": 5,
     "type": "ending",
@@ -11278,7 +11278,7 @@
   {
     "route": "/8-letter-words-ending-with-h/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 477,
     "commonCount": 14,
     "type": "ending",
@@ -11288,7 +11288,7 @@
   {
     "route": "/8-letter-words-ending-with-i/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 130,
     "commonCount": 4,
     "type": "ending",
@@ -11308,7 +11308,7 @@
   {
     "route": "/8-letter-words-ending-with-k/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 382,
     "commonCount": 22,
     "type": "ending",
@@ -11328,7 +11328,7 @@
   {
     "route": "/8-letter-words-ending-with-m/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 581,
     "commonCount": 21,
     "type": "ending",
@@ -11348,7 +11348,7 @@
   {
     "route": "/8-letter-words-ending-with-o/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 169,
     "commonCount": 7,
     "type": "ending",
@@ -11358,7 +11358,7 @@
   {
     "route": "/8-letter-words-ending-with-p/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 158,
     "commonCount": 9,
     "type": "ending",
@@ -11428,7 +11428,7 @@
   {
     "route": "/8-letter-words-ending-with-w/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 82,
     "commonCount": 7,
     "type": "ending",
@@ -11438,7 +11438,7 @@
   {
     "route": "/8-letter-words-ending-with-x/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 79,
     "commonCount": 4,
     "type": "ending",
@@ -11558,7 +11558,7 @@
   {
     "route": "/8-letter-words-starting-with-j/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 249,
     "commonCount": 12,
     "type": "starting",
@@ -11568,7 +11568,7 @@
   {
     "route": "/8-letter-words-starting-with-k/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 367,
     "commonCount": 13,
     "type": "starting",
@@ -11578,7 +11578,7 @@
   {
     "route": "/8-letter-words-starting-with-l/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 1007,
     "commonCount": 47,
     "type": "starting",
@@ -11598,7 +11598,7 @@
   {
     "route": "/8-letter-words-starting-with-n/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 616,
     "commonCount": 36,
     "type": "starting",
@@ -11628,7 +11628,7 @@
   {
     "route": "/8-letter-words-starting-with-q/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 173,
     "commonCount": 7,
     "type": "starting",
@@ -11668,7 +11668,7 @@
   {
     "route": "/8-letter-words-starting-with-u/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 917,
     "commonCount": 24,
     "type": "starting",
@@ -11678,7 +11678,7 @@
   {
     "route": "/8-letter-words-starting-with-v/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 536,
     "commonCount": 33,
     "type": "starting",
@@ -11708,7 +11708,7 @@
   {
     "route": "/8-letter-words-starting-with-y/",
     "family": "length-letter",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 89,
     "commonCount": 5,
     "type": "starting",
@@ -12174,7 +12174,7 @@
   {
     "route": "/words-that-end-with/u/",
     "family": "letter-hub",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 300,
     "commonCount": 27,
     "type": "ending",
@@ -12201,7 +12201,7 @@
   {
     "route": "/words-that-end-with/x/",
     "family": "letter-hub",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 459,
     "commonCount": 47,
     "type": "ending",
@@ -12219,7 +12219,7 @@
   {
     "route": "/words-that-end-with/z/",
     "family": "letter-hub",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 141,
     "commonCount": 16,
     "type": "ending",
@@ -12461,7 +12461,7 @@
   {
     "route": "/words-that-start-with/z/",
     "family": "letter-hub",
-    "indexable": true,
+    "indexable": false,
     "broadCount": 721,
     "commonCount": 20,
     "type": "starting",
