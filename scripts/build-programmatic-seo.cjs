@@ -213,6 +213,9 @@ function generateLengthHubs() {
       indexable: true,
       family: 'programmatic',
       breadcrumbItems: [['Word Lists', '/word-lists/']],
+      customSections: length === 5
+        ? '<div class="hero-guidance" data-hero-guidance><div><small>Best for</small><strong>Browsing five-letter words by clue</strong></div><div><small>Use instead</small><strong><a href="/wordle-solver/">Wordle Solver</a> when green, yellow and excluded letters matter</strong></div><div><small>Trust</small><strong>Documented word data · common-use examples first</strong></div></div>'
+        : '',
       related,
       faqs: [
         [`How many ${length} letter words are in this list?`, `The broad list currently contains ${broad.length.toLocaleString('en-US')} ${length}-letter entries, with ${common.length.toLocaleString('en-US')} marked as common English words.`],
