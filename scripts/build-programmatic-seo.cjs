@@ -31,8 +31,10 @@ function uniq(values) {
   return [...new Set(values)];
 }
 
-function sampleEven(words, limit) {
-  const clean = uniq(words);
+const previewExcludedWords = new Set(['dicks', 'nazis', 'shits']);
+
+function sampleEven(words, limit, { cleanPreview = false } = {}) {
+  const clean = uniq(words).filter((word) => !cleanPreview || !previewExcludedWords.has(word));
   if (clean.length <= limit) return clean;
   return Array.from({ length: limit }, (_, index) => clean[Math.floor(index * clean.length / limit)]);
 }
@@ -112,7 +114,7 @@ function renderPage({
   faqs = [],
 }) {
   const canonical = `${origin}${route}`;
-  const quick = sampleEven(commonMatches, 48);
+  const quick = sampleEven(commonMatches, 48, { cleanPreview: true });
   const more = sampleEven(broadMatches, 180);
   const breadcrumb = crumbs([
     ['Home', '/'],
@@ -538,7 +540,7 @@ function patchHomepageAndWordLists() {
     ['/words-that-start-with/', 'Words that start with...'],
     ['/words-that-end-with/', 'Words that end with...'],
     ['/words-containing/', 'Words containing...'],
-  ])}<h2>Browse by word length</h2>${linkGrid(lengths.map((length) => [`/${length}-letter-words/`, `${length} letter words`]))}`;
+  ])}`;
   patchSection('word-lists/index.html', '<!-- programmatic-clusters:start -->', '<!-- programmatic-clusters:end -->', listBlock, '</section>');
 }
 
