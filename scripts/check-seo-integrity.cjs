@@ -149,6 +149,18 @@ for (const hub of ['word-lists/index.html', '5-letter-words/index.html']) {
     if (isRuntimeNoindex(route)) failures.push(`${hub} links directly to runtime-noindex inventory: ${route}`);
   }
 }
+const heroGuidanceFiles = [
+  'index.html',
+  'anagram-solver/index.html',
+  'word-finder/index.html',
+  'wordle-solver/index.html',
+  'crossword-solver/index.html',
+  '5-letter-words/index.html',
+];
+for (const file of heroGuidanceFiles) {
+  if (!read(file).includes('data-hero-guidance')) failures.push(`Missing hero guidance layer: ${file}`);
+}
+
 const fiveLetterHub = read('5-letter-words/index.html');
 for (const route of promotedRoutes) {
   if (!fiveLetterHub.includes(`href="${route}"`)) failures.push(`5-letter hub does not link to promoted page: ${route}`);
