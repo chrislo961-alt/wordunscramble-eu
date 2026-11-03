@@ -144,6 +144,18 @@ for (const route of uniqueSitemap) {
 
 const homepage = read('index.html');
 const wordLists = read('word-lists/index.html');
+const fiveLetterHub = read('5-letter-words/index.html');
+const previewBlockedWords = ['dicks', 'nazis', 'shits'];
+for (const word of previewBlockedWords) {
+  if (fiveLetterHub.includes(`<div class="word">${word}</div>`)) {
+    failures.push(`5-letter common-use preview contains blocked presentation word: ${word}`);
+  }
+}
+if ((wordLists.match(/<h2>Browse by word length<\/h2>/g) || []).length > 1) {
+  failures.push('Word Lists repeats the word-length browse section');
+}
+
+
 for (const route of ['/words-that-start-with/', '/words-that-end-with/', '/words-containing/']) {
   if (!homepage.includes(`href="${route}"`)) failures.push(`Homepage does not link to ${route}`);
   if (!wordLists.includes(`href="${route}"`)) failures.push(`Word Lists does not link to ${route}`);
