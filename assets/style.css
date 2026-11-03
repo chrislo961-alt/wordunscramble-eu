@@ -773,3 +773,38 @@ footer p {
   .sample-group{grid-template-columns:1fr 1fr}
   .sample-group strong{grid-column:1/-1}
 }
+
+/* Hero guidance: clarify intent without adding page clutter. */
+.hero-guidance{
+  max-width:920px;
+  margin:-8px auto 22px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+.hero-guidance>div{
+  min-width:0;
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:rgba(255,255,255,.82);
+  box-shadow:0 8px 28px rgba(42,67,104,.05);
+}
+.hero-guidance small{
+  display:block;
+  margin-bottom:4px;
+  color:var(--muted);
+  font-size:.68rem;
+  font-weight:850;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.hero-guidance strong{
+  display:block;
+  font-size:.86rem;
+  line-height:1.45;
+}
+.hero-guidance a{text-decoration:none}
+@media(max-width:760px){
+  .hero-guidance{grid-template-columns:1fr;margin:-6px auto 18px}
+}
