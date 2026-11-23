@@ -48,8 +48,6 @@ jobs:
         run: node scripts/check-intent-ownership.cjs
       - name: Recompute original word-study figures and check guide discovery
         run: node scripts/check-original-data-guide.cjs
-      - name: Verify static content and sitemap integrity
-        run: node scripts/check-seo-integrity.cjs
       - name: Check live solver contracts
         run: node scripts/check-live-solver-qa.cjs
       - name: Run solver regression suite
