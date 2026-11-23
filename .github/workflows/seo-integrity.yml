@@ -19,6 +19,9 @@ on:
       - 'scripts/check-intent-ownership.cjs'
       - 'scripts/check-live-solver-qa.cjs'
       - 'scripts/check-solver-regressions.cjs'
+      - 'scripts/check-original-data-guide.cjs'
+      - 'guides/**'
+      - 'about/index.html'
       - 'assets/app.js'
       - '.github/workflows/seo-integrity.yml'
 
@@ -43,6 +46,10 @@ jobs:
         run: node scripts/materialize-site-chrome.cjs
       - name: Check search intent ownership
         run: node scripts/check-intent-ownership.cjs
+      - name: Recompute original word-study figures and check guide discovery
+        run: node scripts/check-original-data-guide.cjs
+      - name: Verify static content and sitemap integrity
+        run: node scripts/check-seo-integrity.cjs
       - name: Check live solver contracts
         run: node scripts/check-live-solver-qa.cjs
       - name: Run solver regression suite
